@@ -27,10 +27,10 @@ const Projects = () => {
           <h2>John Doe mountain birds photo gallery</h2>
           <p>
             It is a web photo gallery for a fictional photographer named John
-            Doe. The website includes a blog about his adventures in some of the
-            most wonderful mountain landscapes, a gallery with images of a
-            variety of wild birds each one coming with a short description, and
-            links to John’s social media accounts.
+            Doe. The website includes a blog about his adventures in some superb
+            mountain landscapes, a gallery with images of a variety of wild
+            birds, each one coming with a short description, and links to John's
+            social media accounts.
           </p>
         </ProjectItem>
         <ProjectItem
@@ -52,8 +52,8 @@ const Projects = () => {
         >
           <h2>Meme Generator web app</h2>
           <p>
-            It is a website for making your own memes come to life as easily and
-            fast as possible.
+            It is a website for making your memes come to life as easy and fast
+            as possible.
           </p>
         </ProjectItem>
       </Carousel>

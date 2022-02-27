@@ -11,10 +11,10 @@ const Introduction = ({ scrolledOver }: { scrolledOver: boolean }) => {
           <div className={styles["text-content"]}>
             <p className={styles.greeting}>Hi.</p>
             <h1>
-              I’m <span>Tiberiu Boșcan</span>.
+              I'm <span>Tiberiu Boșcan</span>.
             </h1>
             <p className={styles.description}>
-              I’m an ambitios and persevering <span>front-end developer</span>.
+              I'm an ambitious and perseverant <span>front-end developer</span>.
             </p>
           </div>
           <div className={styles.links}>

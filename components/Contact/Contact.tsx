@@ -11,7 +11,7 @@ const Contact = () => {
       <div className={styles.contact__info}>
         <div className={styles.contact__info__email}>
           <h2>Email</h2>
-          <p>workingonit@example.com</p>
+          <p>tiberiuioan35@gmail.com</p>
         </div>
         <div className={styles.contact__info__social}>
           <h2>Follow me</h2>
@@ -33,12 +33,20 @@ const Contact = () => {
               </Link>
             </li>
             <li>
-              <Image
-                src="/images/icons/linkedin-logo-white.svg"
-                alt="My Linkedin"
-                width="30"
-                height="30"
-              />
+              <Link href="https://www.linkedin.com/in/tiberiu-boscan/">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="my linkedin"
+                >
+                  <Image
+                    src="/images/icons/linkedin-logo-white.svg"
+                    alt="My Linkedin"
+                    width="30"
+                    height="30"
+                  />{" "}
+                </a>
+              </Link>
             </li>
           </ul>
         </div>
