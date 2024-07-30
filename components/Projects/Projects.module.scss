@@ -1,4 +1,4 @@
-@import "../../styles/utils/variables";
+@import '../../styles/utils/variables';
 
 .projects {
   margin-top: 15vh;
@@ -11,11 +11,15 @@
   }
 
   .carousel {
+    display: inline;
+
     &__item {
       border-radius: 10px;
       background-color: $white;
       width: 85%;
-      max-width: 1000px;
+      height: 950px;
+      margin: auto;
+      margin-bottom: 50px;
 
       img {
         border-radius: 10px 10px 0 0;
@@ -51,6 +55,8 @@
 
           img {
             margin-right: 25px;
+            width: 25px;
+            height: 25px;
           }
         }
 

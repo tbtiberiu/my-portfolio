@@ -15,17 +15,20 @@ Ensure you have Node.js installed on your local machine.
 ### Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/tbtiberiu/my-portfolio.git
    cd my-portfolio
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
 
 3. **Build and start the application:**
+
    ```bash
    npm run build
    npm start

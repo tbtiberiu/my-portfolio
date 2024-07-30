@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react";
-import Head from "next/head";
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
 
-import Navbar from "../components/Navbar/Navbar";
-import Introduction from "../components/Introduction/Introduction";
-import Technologies from "../components/Technologies/Technologies";
-import Projects from "../components/Projects/Projects";
-import About from "../components/About/About";
-import Contact from "../components/Contact/Contact";
+import Navbar from '../components/Navbar/Navbar';
+import Introduction from '../components/Introduction/Introduction';
+import Technologies from '../components/Technologies/Technologies';
+import Projects from '../components/Projects/Projects';
+import About from '../components/About/About';
+import Contact from '../components/Contact/Contact';
 
-import styles from "../styles/pages/Home.module.scss";
+import styles from '../styles/pages/Home.module.scss';
 
 export default function Home() {
   const [scrolledOver, setScrolledOver] = useState<boolean>(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", scrollHandler);
+    window.addEventListener('scroll', scrollHandler);
   }, []);
 
   const scrollHandler = () => {

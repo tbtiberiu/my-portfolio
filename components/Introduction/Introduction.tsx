@@ -1,40 +1,40 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
-import styles from "./Introduction.module.scss";
+import styles from './Introduction.module.scss';
 
 const Introduction = ({ scrolledOver }: { scrolledOver: boolean }) => {
   return (
-    <div className={styles["first-section"]}>
+    <div className={styles['first-section']}>
       <div className={styles.introduction}>
         <div className={styles.content}>
-          <div className={styles["text-content"]}>
+          <div className={styles['text-content']}>
             <p className={styles.greeting}>Hi.</p>
             <h1>
-              I'm <span>Tiberiu Boșcan</span>.
+              I&apos;m <span>Tiberiu Boșcan</span>.
             </h1>
             <p className={styles.description}>
-              I'm an ambitious and perseverant <span>front-end developer</span>.
+              I&apos;m an ambitious and perseverant{' '}
+              <span>front-end developer</span>.
             </p>
           </div>
           <div className={styles.links}>
-            <Link href="#projects">
-              <a className={styles["portfolio-button"]}>Check out my work</a>
+            <Link href="#projects" className={styles['portfolio-button']}>
+              Check out my work
             </Link>
-            <Link href="https://github.com/TibiTiberiu35">
-              <a
-                className={styles["github-button"]}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/images/icons/github-logo.svg"
-                  alt="My Github"
-                  width="50"
-                  height="50"
-                />
-                <p>My GitHub</p>
-              </a>
+            <Link
+              href="https://github.com/tbtiberiu/"
+              className={styles['github-button']}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/icons/github-logo.svg"
+                alt="My Github"
+                width="50"
+                height="50"
+              />
+              <p>My GitHub</p>
             </Link>
           </div>
         </div>
@@ -48,12 +48,12 @@ const Introduction = ({ scrolledOver }: { scrolledOver: boolean }) => {
         </div>
       </div>
       <div
-        className={`${styles["what-is-next-container"]} ${
+        className={`${styles['what-is-next-container']} ${
           scrolledOver ? null : null
         }`}
       >
-        <p>Technologies that I'm comfortable with</p>
-        <img
+        <p>Technologies that I&apos;m comfortable with</p>
+        <Image
           src="/images/icons/arrow-down.svg"
           alt="scroll down"
           width="42"
