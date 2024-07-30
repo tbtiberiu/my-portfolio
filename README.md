@@ -3,7 +3,7 @@
 I am a junior front-end developer and this is my first portfolio. Hope you read it!
 
 ## Live Website URL
-### https://btiberiu.vercel.app/
+### https://boscantiberiu.vercel.app/
 Website is live
 
 ## Cloning and Running the Application in local
