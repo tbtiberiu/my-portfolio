@@ -1,35 +1,53 @@
-# Boșcan Tiberiu - Front-end Web Developer Portfolio
+# Tiberiu-Ioan Boșcan - Front-end Web Developer Portfolio
 
-I am a junior front-end developer and this is my first portfolio. Hope you read it!
+Welcome to my portfolio! I am a junior front-end developer excited to share my projects with you.
 
-## Live Website URL
-### https://boscantiberiu.vercel.app/
-Website is live
+## Live Website
 
-## Cloning and Running the Application in local
+Check out my live website: [boscantiberiu.vercel.app](https://boscantiberiu.vercel.app/)
 
-**Required**: NodeJS
+## Installation Guide
 
-*Clone the project into local*
+### Prerequisites
 
-Install all the npm packages. Go into the project folder and type the following command to install all npm packages
+Ensure you have Node.js installed on your local machine.
 
-```bash
-npm install
-```
+### Installation
 
-In order to run the application type the following commands
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/tbtiberiu/my-portfolio.git
+   cd my-portfolio
+   ```
 
-```bash
-npm run build
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-npm run start
-```
+3. **Build and start the application:**
+   ```bash
+   npm run build
+   npm start
+   ```
 
-The website will start running on **localhost:3000**
+4. Open your browser and navigate to `http://localhost:3000`
 
-## Resources
+## Technologies Used
 
-- **NextJS**: https://nextjs.org/ and for the API reference https://nextjs.org/docs/api-reference/create-next-app
-- **SASS**: https://sass-lang.com/, I used .scss for this project
-- **@brainhubeu/react-carousel**: https://www.npmjs.com/package/@brainhubeu/react-carousel for the carousel that I used
+- **Next.js:** A React framework for server-side rendering and static site generation. [Next.js Documentation](https://nextjs.org/docs)
+- **SASS:** A CSS preprocessor to write cleaner and more maintainable styles. [SASS Documentation](https://sass-lang.com/)
+- **React Carousel:** A React component for creating carousels. [React Carousel Documentation](https://www.npmjs.com/package/@brainhubeu/react-carousel)
+
+## Features
+
+- **Responsive Design:** The website is fully responsive, ensuring a great user experience on all devices.
+- **Carousel:** A dynamic carousel component to showcase various projects.
+- **Modern UI/UX:** Clean and intuitive user interface for easy navigation.
+
+## Contact
+
+Feel free to reach out:
+
+- Email: tiberiuioan35@gmail.com
+- LinkedIn: [@tiberiu-boscan](https://www.linkedin.com/in/tiberiu-boscan/)
