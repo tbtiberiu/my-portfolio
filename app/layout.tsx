@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { lato } from './ui/fonts';
+import Navbar from './ui/navbar/navbar';
 
 export const metadata: Metadata = {
   title: 'Boșcan Tiberiu-Ioan - Portfolio',
@@ -15,7 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lato.className} antialiased`}>{children}</body>
+      <body className={`${lato.className} antialiased`}>
+        <div className="flex h-screen flex-col">
+          <div className="fixed w-full top-0 z-50 bg-transparent">
+            <Navbar />
+          </div>
+          <main className="flex-1 overflow-y-auto">{children}</main>
+        </div>
+      </body>
     </html>
   );
 }
