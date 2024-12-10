@@ -1,10 +1,10 @@
 'use client';
 
 import { Canvas, useFrame } from '@react-three/fiber';
-import { useEffect, useRef, useState } from 'react';
+import { JSX, useEffect, useRef, useState } from 'react';
 import { Mesh } from 'three';
 
-const Sphere: React.FC<any> = (props) => {
+const Sphere: React.FC<JSX.IntrinsicElements['mesh']> = (props) => {
   const meshRef = useRef<Mesh>(null);
 
   return (
