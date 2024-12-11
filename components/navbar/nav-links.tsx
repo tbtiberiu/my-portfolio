@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import clsx from 'clsx';
-import Link from 'next/link';
-import { poppins } from '../fonts';
+import { poppins } from '@/app/fonts'
+import clsx from 'clsx'
+import Link from 'next/link'
 
 const links = [
   {
@@ -11,10 +11,10 @@ const links = [
   },
   { name: 'Experience', href: '/experience' },
   { name: 'About', href: '/about' },
-];
+]
 
 export default function NavLinks() {
-  //   const pathname = usePathname(); // TODO
+  // const pathname = usePathname() // TODO
 
   return (
     <>
@@ -25,13 +25,13 @@ export default function NavLinks() {
             href={link.href}
             className={clsx(
               poppins.className,
-              'flex text-xl hover:text-blue-500 uppercase grow items-center justify-center gap-2'
+              'flex text-xl hover:text-primary uppercase grow items-center justify-center gap-2'
             )}
           >
             <p className="hidden md:block">{link.name}</p>
           </Link>
-        );
+        )
       })}
     </>
-  );
+  )
 }

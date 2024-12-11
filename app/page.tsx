@@ -1,4 +1,4 @@
-import Background from './three/spheres';
+import Background from '@/components/three/spheres'
 
 export default function Home() {
   return (
@@ -6,5 +6,5 @@ export default function Home() {
       <Background />
       <main>Content Here</main>
     </div>
-  );
+  )
 }

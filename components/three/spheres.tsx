@@ -1,31 +1,31 @@
-'use client';
+'use client'
 
-import { Canvas, useFrame } from '@react-three/fiber';
-import { JSX, useEffect, useRef, useState } from 'react';
-import { Mesh } from 'three';
+import { Canvas, useFrame } from '@react-three/fiber'
+import { JSX, useEffect, useRef, useState } from 'react'
+import { Mesh } from 'three'
 
 const Sphere: React.FC<JSX.IntrinsicElements['mesh']> = (props) => {
-  const meshRef = useRef<Mesh>(null);
+  const meshRef = useRef<Mesh>(null)
 
   return (
     <mesh {...props} ref={meshRef}>
       <sphereGeometry args={[1, 64, 32]} />
       <meshStandardMaterial color="#1A78C3" />
     </mesh>
-  );
-};
+  )
+}
 
 const Background = () => {
-  const [scrollY, setScrollY] = useState(0);
+  const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
+      setScrollY(window.scrollY)
+    }
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <div className="background">
@@ -40,17 +40,17 @@ const Background = () => {
         <Spheres scrollY={scrollY} />
       </Canvas>
     </div>
-  );
-};
+  )
+}
 
 const Spheres: React.FC<{ scrollY: number }> = ({ scrollY }) => {
-  const groupRef = useRef<Mesh>(null);
+  const groupRef = useRef<Mesh>(null)
 
   useFrame(() => {
     if (groupRef.current) {
-      groupRef.current.position.y = scrollY * 0.01;
+      groupRef.current.position.y = scrollY * 0.01
     }
-  });
+  })
 
   return (
     <group ref={groupRef}>
@@ -58,7 +58,7 @@ const Spheres: React.FC<{ scrollY: number }> = ({ scrollY }) => {
       <Sphere position={[1, -1, 0]} scale={2} />
       <Sphere position={[5, -8, 0]} scale={3} />
     </group>
-  );
-};
+  )
+}
 
-export default Background;
+export default Background
