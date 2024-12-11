@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import './globals.scss'
 import { lato } from '@/app/fonts'
 import Navbar from '@/components/navbar/navbar'
 
