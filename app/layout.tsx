@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.scss'
 import { lato } from '@/app/fonts'
 import Navbar from '@/components/navbar/navbar'
+import Background from '@/components/three/spheres'
 
 export const metadata: Metadata = {
   title: 'Boșcan Tiberiu-Ioan - Portfolio',
@@ -17,11 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lato.className} antialiased`}>
-        <div className="flex h-screen flex-col">
-          <div className="fixed w-full top-0 z-50 bg-transparent">
+        <Background />
+        <div className="flex w-full h-full flex-col items-center">
+          <div className="sticky top-0 w-full max-w-screen-xl flex flex-col items-center z-50">
             <Navbar />
           </div>
-          <main className="flex-1 overflow-y-auto">{children}</main>
+          {children}
         </div>
       </body>
     </html>
