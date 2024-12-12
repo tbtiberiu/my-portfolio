@@ -5,7 +5,7 @@ import ThemeToggle from './theme-toggle'
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between w-full px-3 py-4 md:px-2">
+    <nav className="flex justify-between w-full px-2 py-4">
       <Link href="/">
         <div className="w-16 text-foreground">
           <BoldIcon />
