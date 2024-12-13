@@ -15,19 +15,19 @@ export default function ProfileSection() {
       </p>
 
       <div className="flex items-center mt-10 space-x-2">
-        <div className="w-6 text-white">
+        <div className="w-6 text-black dark:text-white">
           <MapPinIcon />
         </div>
         <p>Bucharest, Romania</p>
       </div>
 
-      <p className="text-gray-300 mt-4">
+      <p className="mt-4">
         As a frontend developer, I specialize in crafting engaging, responsive
         web applications. My expertise in HTML, CSS, JavaScript, and frameworks
         like Angular and React enables me to build dynamic and user-friendly
         interfaces.
       </p>
-      <p className="text-gray-300 mt-4">
+      <p className="mt-4">
         I&apos;m passionate about merging aesthetics with functionality to
         create projects that are both visually appealing and high-performing. My
         strong problem-solving skills and understanding of coding best
