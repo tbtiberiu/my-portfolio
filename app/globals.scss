@@ -3,15 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --background: #ededed;
+  --background: #f0f8ff;
   --foreground: #0a0a0a;
+  --black: #0a0a0a;
+  --white: #f0f8ff;
   --primary: #1a75ff;
   --secondary: #0052cc;
 
   &.dark {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #f0f8ff;
   }
+}
+
+* {
+  box-sizing: border-box;
+  background: none;
 }
 
 body {
@@ -28,4 +35,5 @@ body {
   position: absolute;
   width: 100%;
   height: 200vh;
+  z-index: -50;
 }

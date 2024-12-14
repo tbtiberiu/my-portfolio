@@ -1,8 +1,8 @@
-// components/ProfileSection.tsx
 import { poppins } from '@/app/fonts'
 import { ArrowDownTrayIcon } from '@heroicons/react/24/outline'
 import { MapPinIcon } from '@heroicons/react/24/solid'
 import React from 'react'
+import LinkButton from '../shared/link-button/link-button'
 
 export default function ProfileSection() {
   return (
@@ -35,12 +35,19 @@ export default function ProfileSection() {
         deliver high-quality, scalable solutions.
       </p>
 
-      <button className="mt-8 px-6 py-3 bg-primary space-x-2 text-white font-medium rounded-full flex items-center justify-center shadow-md hover:bg-secondary transition">
-        <p>Download Resume</p>
-        <div className="w-6 text-white">
-          <ArrowDownTrayIcon />
-        </div>
-      </button>
+      <div className="mt-8">
+        <LinkButton
+          href="Tiberiu-Ioan_Boscan-resume.pdf"
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p>Download Resume</p>
+          <div className="w-6">
+            <ArrowDownTrayIcon />
+          </div>
+        </LinkButton>
+      </div>
     </div>
   )
 }
