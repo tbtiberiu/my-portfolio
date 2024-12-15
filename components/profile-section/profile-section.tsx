@@ -6,7 +6,7 @@ import LinkButton from '../shared/link-button/link-button'
 
 export default function ProfileSection() {
   return (
-    <div className="w-full max-w-4xl py-16 px-8">
+    <section className="w-full max-w-4xl py-20 px-5">
       <h1 className={`${poppins.className} text-5xl uppercase`}>
         Boșcan Tiberiu-Ioan
       </h1>
@@ -48,6 +48,6 @@ export default function ProfileSection() {
           </div>
         </LinkButton>
       </div>
-    </div>
+    </section>
   )
 }

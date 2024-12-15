@@ -28,7 +28,7 @@ const Background = () => {
   }, [])
 
   return (
-    <div className="background absolute -z-50">
+    <div className="background absolute">
       <Canvas
         camera={{
           position: [0, 0, 10],
@@ -48,15 +48,15 @@ const Spheres: React.FC<{ scrollY: number }> = ({ scrollY }) => {
 
   useFrame(() => {
     if (groupRef.current) {
-      groupRef.current.position.y = scrollY * 0.01
+      groupRef.current.position.y = scrollY * 0.005
     }
   })
 
   return (
     <group ref={groupRef}>
-      <Sphere position={[4.5, 4.5, 0]} scale={1.5} />
-      <Sphere position={[1, -1, 0]} scale={2} />
-      <Sphere position={[5, -8, 0]} scale={3} />
+      <Sphere position={[3, 4.7, 0]} scale={1} />
+      <Sphere position={[1, 0.5, 0]} scale={1.5} />
+      <Sphere position={[4, -6, 0]} scale={3} />
     </group>
   )
 }
