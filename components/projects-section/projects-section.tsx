@@ -83,11 +83,11 @@ export default function ProjectsSection() {
         ))}
       </div>
 
-      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
         {filteredProjects.map((project, index) => (
           <div
             key={index}
-            className="flex flex-col justify-between bg-white dark:bg-gray-900 border-2 border-primary dark:border-0 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2"
+            className="flex flex-col justify-between bg-white dark:bg-gray-900 border-2 border-primary dark:border-0 rounded-lg overflow-hidden shadow-lg hover:shadow-primary hover:shadow-md transition-transform transform hover:-translate-y-2"
           >
             <Image
               src={project.image}

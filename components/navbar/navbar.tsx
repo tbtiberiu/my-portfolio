@@ -14,7 +14,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between space-x-20">
         <NavLinks />
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center px-3">
         <ThemeToggle />
       </div>
     </nav>

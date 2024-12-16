@@ -35,7 +35,7 @@ const Background = () => {
           fov: 50,
         }}
       >
-        <ambientLight intensity={1.2} />
+        <ambientLight intensity={1.25} />
         <directionalLight position={[-5, 5, 10]} intensity={2} />
         <Spheres scrollY={scrollY} />
       </Canvas>
