@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${lato.className} antialiased`}>
         <Background />
-        <div className="flex w-full h-full flex-col items-center -z-20">
+        <div className="flex w-full h-full flex-col items-center">
           <div className="sticky top-0 w-full max-w-screen-xl flex flex-col items-center z-50">
             <Navbar />
           </div>
