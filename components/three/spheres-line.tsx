@@ -34,7 +34,7 @@ const Spheres: React.FC = () => {
       <Sphere position={[13, 1, 0]} scale={1} />
       <Sphere position={[10, -2, 0]} scale={1.5} />
       <Sphere position={[-14, 3, 0]} scale={1} />
-      <Sphere position={[17, -2, 0]} scale={0.5} />
+      <Sphere position={[17, -2, 0]} scale={1.5} />
       <Sphere position={[-17, -2, 0]} scale={1.5} />
     </group>
   )
