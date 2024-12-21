@@ -2,8 +2,8 @@
 
 import { poppins } from '@/app/fonts'
 import React, { useState } from 'react'
-import Image from 'next/image'
 import Project from '@/types/project'
+import ProjectCard from './project-card/project-card'
 
 const projects: Project[] = [
   {
@@ -58,11 +58,11 @@ export default function ProjectsSection() {
 
   return (
     <section className="py-10 px-5">
-      <h1
+      <h2
         className={`${poppins.className} text-3xl md:text-4xl font-bold uppercase mb-6`}
       >
         Projects
-      </h1>
+      </h2>
 
       <div className="flex items-center mb-8 text-xl">
         <p>
@@ -85,35 +85,7 @@ export default function ProjectsSection() {
 
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
         {filteredProjects.map((project, index) => (
-          <div
-            key={index}
-            className="flex flex-col justify-between bg-white dark:bg-gray-900 border-2 border-primary dark:border-0 rounded-lg overflow-hidden shadow-lg hover:shadow-primary hover:shadow-md transition-transform transform hover:-translate-y-2"
-          >
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={600}
-              height={500}
-              className="w-full object-cover"
-            />
-            <div className="p-6">
-              <div className="flex flex-wrap gap-2 mb-2">
-                {project.tags.map((tag, i) => (
-                  <span
-                    key={i}
-                    className="text-sm bg-transparent text-black dark:text-white border-2 border-black dark:border-white px-3 py-1 rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-              <p className="text-sm">{project.description}</p>
-              <span className="block mt-4 text-gray-600 dark:text-gray-400 text-sm">
-                {project.year}
-              </span>
-            </div>
-          </div>
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
     </section>
