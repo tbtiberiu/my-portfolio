@@ -6,7 +6,7 @@ import LinkButton from '../shared/link-button/link-button'
 
 export default function ProfileSection() {
   return (
-    <section className="w-full max-w-4xl py-20 px-5 z-0">
+    <section className="profile-section w-full max-w-4xl py-20 px-5">
       <div className="relative -z-20">
         <h1 className={`${poppins.className} text-5xl uppercase`}>
           Boșcan Tiberiu-Ioan

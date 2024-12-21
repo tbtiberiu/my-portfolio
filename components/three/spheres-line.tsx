@@ -15,7 +15,7 @@ const Sphere: React.FC<JSX.IntrinsicElements['mesh']> = (props) => {
   )
 }
 
-const Background = () => {
+const SpheresLine = () => {
   const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Background = () => {
   }, [])
 
   return (
-    <div className="background absolute w-full top-0 -z-10">
+    <div className="spheres-line absolute w-full h-full top-0 -z-10 -mt-40">
       <Canvas
         camera={{
           position: [0, 0, 10],
@@ -61,4 +61,4 @@ const Spheres: React.FC<{ scrollY: number }> = ({ scrollY }) => {
   )
 }
 
-export default Background
+export default SpheresLine

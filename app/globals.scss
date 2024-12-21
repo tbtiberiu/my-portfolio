@@ -36,3 +36,13 @@ body {
   width: 100%;
   height: 300vh;
 }
+
+@media screen and (min-width: 1280px) {
+  .sticky-socials {
+    margin-right: calc((100% - 1280px) / 2 + 20px);
+  }
+
+  .profile-section {
+    margin-left: calc((100% - 1280px) / 2);
+  }
+}
