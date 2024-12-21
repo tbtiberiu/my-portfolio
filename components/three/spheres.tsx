@@ -1,19 +1,9 @@
 'use client'
 
 import { Canvas, useFrame } from '@react-three/fiber'
-import { JSX, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Mesh } from 'three'
-
-const Sphere: React.FC<JSX.IntrinsicElements['mesh']> = (props) => {
-  const meshRef = useRef<Mesh>(null)
-
-  return (
-    <mesh {...props} ref={meshRef}>
-      <sphereGeometry args={[1, 64, 32]} />
-      <meshStandardMaterial color="#1A78C3" />
-    </mesh>
-  )
-}
+import Sphere from './sphere'
 
 const Background = () => {
   const [scrollY, setScrollY] = useState(0)

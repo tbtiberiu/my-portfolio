@@ -1,32 +1,11 @@
 'use client'
 
-import { Canvas, useFrame } from '@react-three/fiber'
-import { JSX, useEffect, useRef, useState } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { useRef } from 'react'
 import { Mesh } from 'three'
-
-const Sphere: React.FC<JSX.IntrinsicElements['mesh']> = (props) => {
-  const meshRef = useRef<Mesh>(null)
-
-  return (
-    <mesh {...props} ref={meshRef}>
-      <sphereGeometry args={[1, 64, 32]} />
-      <meshStandardMaterial color="#1A78C3" />
-    </mesh>
-  )
-}
+import Sphere from './sphere'
 
 const SpheresLine = () => {
-  const [scrollY, setScrollY] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   return (
     <div className="spheres-line absolute w-full h-full top-0 -z-10 -mt-40">
       <Canvas
@@ -37,26 +16,26 @@ const SpheresLine = () => {
       >
         <ambientLight intensity={1.25} />
         <directionalLight position={[-5, 5, 10]} intensity={2} />
-        <Spheres scrollY={scrollY} />
+        <Spheres />
       </Canvas>
     </div>
   )
 }
 
-const Spheres: React.FC<{ scrollY: number }> = ({ scrollY }) => {
+const Spheres: React.FC = () => {
   const groupRef = useRef<Mesh>(null)
-
-  useFrame(() => {
-    if (groupRef.current) {
-      groupRef.current.position.y = scrollY * 0.005
-    }
-  })
-
   return (
     <group ref={groupRef}>
-      <Sphere position={[3, 4.7, 0]} scale={1} />
       <Sphere position={[1, 0.5, 0]} scale={1.5} />
-      <Sphere position={[4, -6, 0]} scale={3} />
+      <Sphere position={[-10, 0, 0]} scale={1} />
+      <Sphere position={[-5, 1, 0]} scale={1} />
+      <Sphere position={[-3, -2, 0]} scale={1} />
+      <Sphere position={[6, 0.5, 0]} scale={1} />
+      <Sphere position={[13, 1, 0]} scale={1} />
+      <Sphere position={[10, -2, 0]} scale={1.5} />
+      <Sphere position={[-14, 3, 0]} scale={1} />
+      <Sphere position={[17, -2, 0]} scale={0.5} />
+      <Sphere position={[-17, -2, 0]} scale={1.5} />
     </group>
   )
 }
