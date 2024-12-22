@@ -1,7 +1,7 @@
 'use client'
 
 import { poppins } from '@/app/fonts'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Project from '@/types/project'
 import ProjectCard from './project-card/project-card'
 

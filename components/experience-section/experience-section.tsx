@@ -1,4 +1,3 @@
-import React from 'react'
 import ExperienceInfo from '@/types/experience-info'
 import ExperienceCard from './experience-card/experience-card'
 import { poppins } from '@/app/fonts'

@@ -7,7 +7,7 @@ import Sphere from './sphere'
 
 const SpheresLine = () => {
   return (
-    <div className="spheres-line absolute w-full h-full top-0 -z-10 -mt-40">
+    <div className="spheres-line absolute w-full h-full top-0 -z-20 -mt-40">
       <Canvas
         camera={{
           position: [0, 0, 10],

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
 import ExperienceInfo from '@/types/experience-info'
 import { ClockIcon, MapPinIcon } from '@heroicons/react/24/solid'

@@ -25,7 +25,7 @@ const Background = () => {
           fov: 50,
         }}
       >
-        <ambientLight intensity={1.25} />
+        <ambientLight intensity={1.5} />
         <directionalLight position={[-5, 5, 10]} intensity={2} />
         <Spheres scrollY={scrollY} />
       </Canvas>
@@ -44,8 +44,8 @@ const Spheres: React.FC<{ scrollY: number }> = ({ scrollY }) => {
 
   return (
     <group ref={groupRef}>
-      <Sphere position={[3, 4.7, 0]} scale={1} />
-      <Sphere position={[1, 0.5, 0]} scale={1.5} />
+      <Sphere position={[3.7, 4.8, 0]} scale={1.3} />
+      <Sphere position={[1, 0, 0]} scale={1.7} />
       <Sphere position={[4, -6, 0]} scale={3} />
     </group>
   )

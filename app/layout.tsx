@@ -4,7 +4,6 @@ import { lato } from '@/app/fonts'
 import Navbar from '@/components/navbar/navbar'
 import Background from '@/components/three/spheres'
 import SocialLinks from '@/components/social-links/social-links'
-import ProfileSection from '@/components/profile-section/profile-section'
 
 export const metadata: Metadata = {
   title: 'Boșcan Tiberiu-Ioan - Portfolio',
@@ -21,15 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${lato.className} antialiased`}>
         <Background />
-        <div className="w-full">
-          <div className="sticky top-0 m-auto max-w-screen-xl items-center z-50">
-            <Navbar />
-          </div>
-          <div className="sticky-socials sticky float-end top-24 mt-44 mx-5 z-50">
-            <SocialLinks />
-          </div>
-          {children}
-        </div>
+        <Navbar />
+        <SocialLinks />
+        {children}
       </body>
     </html>
   )

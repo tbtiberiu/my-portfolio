@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  --background-rgb: 240, 248, 255;
+  --foreground-rgb: 10, 10, 10;
   --background: #f0f8ff;
   --foreground: #0a0a0a;
   --black: #0a0a0a;
@@ -11,6 +13,8 @@
   --secondary: #0052cc;
 
   &.dark {
+    --background-rgb: 10, 10, 10;
+    --foreground-rgb: 240, 248, 255;
     --background: #0a0a0a;
     --foreground: #f0f8ff;
   }
@@ -34,10 +38,39 @@ body {
 .background {
   position: absolute;
   width: 100%;
-  height: 300vh;
+  height: 250vh;
+}
+
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: background 0.3s ease;
+}
+
+.scroll-progress-left {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 4px;
+  background: var(--primary);
+}
+
+.scroll-progress-right {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  height: 4px;
+  background: var(--primary);
 }
 
 @media screen and (min-width: 1280px) {
+  .sticky-navbar {
+    background: var(--background);
+    padding-left: calc((100% - 1280px) / 2);
+    padding-right: calc((100% - 1280px) / 2);
+  }
+
   .sticky-socials {
     margin-right: calc((100% - 1280px) / 2 + 20px);
   }

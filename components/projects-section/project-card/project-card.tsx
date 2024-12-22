@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 import Project from '@/types/project'
 
@@ -8,7 +7,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="flex flex-col justify-between bg-white dark:bg-gray-900 border-2 border-primary dark:border-0 rounded-lg overflow-hidden shadow-lg hover:shadow-primary hover:shadow-sm transition-transform transform hover:-translate-y-2">
+    <div className="flex flex-col justify-between bg-white dark:bg-gray-900 dark:border-transparent border-2 border-primary rounded-lg overflow-hidden shadow-lg hover:shadow-primary hover:shadow-sm transition-transform transform hover:-translate-y-2">
       <Image
         src={project.image}
         alt={project.title}

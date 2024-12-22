@@ -1,7 +1,6 @@
 import { poppins } from '@/app/fonts'
 import { ArrowDownTrayIcon } from '@heroicons/react/24/outline'
 import { MapPinIcon } from '@heroicons/react/24/solid'
-import React from 'react'
 import LinkButton from '../shared/link-button/link-button'
 
 export default function ProfileSection() {
