@@ -5,17 +5,12 @@ import clsx from 'clsx'
 import Link from 'next/link'
 
 const links = [
-  {
-    name: 'Projects',
-    href: '/projects',
-  },
-  { name: 'Experience', href: '/experience' },
-  { name: 'About', href: '/about' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'About', href: '#about' },
 ]
 
 export default function NavLinks() {
-  // const pathname = usePathname() // TODO
-
   return (
     <>
       {links.map((link) => {

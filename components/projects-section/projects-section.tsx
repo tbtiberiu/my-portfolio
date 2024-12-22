@@ -57,7 +57,7 @@ export default function ProjectsSection() {
         )
 
   return (
-    <section className="py-10 px-5 m-auto max-w-screen-xl">
+    <section id="projects" className="py-10 px-5 m-auto max-w-screen-xl">
       <h2
         className={`${poppins.className} text-3xl md:text-4xl font-bold uppercase mb-6`}
       >

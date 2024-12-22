@@ -11,7 +11,7 @@ export default function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="w-16 h-16 bg-primary rounded-full flex justify-center items-center">
+          <div className="w-16 h-16 bg-primary hover:bg-secondary rounded-full flex justify-center items-center">
             <div className="w-8 text-white">
               <LinkedinIcon />
             </div>
@@ -22,7 +22,7 @@ export default function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="w-16 h-16 bg-primary rounded-full flex justify-center items-center">
+          <div className="w-16 h-16 bg-primary hover:bg-secondary rounded-full flex justify-center items-center">
             <div className="w-8 text-white">
               <GithubIcon />
             </div>
