@@ -16,7 +16,7 @@ export default function AboutSection() {
       >
         About Me
       </h2>
-      <div className="bg-[rgba(255,255,255,0.9)] dark:bg-[rgba(17,17,17,0.9)] rounded-lg flex shadow-lg border-2 border-primary z-10 md:mx-20">
+      <div className="bg-[rgba(255,255,255,0.9)] dark:bg-[rgba(17,17,17,0.9)] rounded-lg flex shadow-lg border-2 border-primary z-10 md:mr-20">
         <div className="w-1/3 hidden md:block">
           <Image
             src="/images/about-me.jpeg"
