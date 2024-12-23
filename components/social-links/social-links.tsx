@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import GithubIcon from '../shared/icons/github/GithubIcon'
-import LinkedinIcon from '../shared/icons/linkedin/LinkedinIcon'
+import GithubIcon from '../shared/icons/github/github-icon'
+import LinkedinIcon from '../shared/icons/linkedin/linkedin-icon'
 
 export default function SocialLinks() {
   return (

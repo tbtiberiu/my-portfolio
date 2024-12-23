@@ -1,4 +1,4 @@
-export default function EndavaLogo() {
+export default function EndavaIcon() {
   return (
     <svg
       version="1.0"

@@ -1,4 +1,4 @@
-export default function WatersLogo() {
+export default function WatersIcon() {
   return (
     <svg
       version="1.1"

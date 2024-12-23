@@ -74,8 +74,8 @@ export default function ProjectsSection() {
             onClick={() => setSelectedCategory(category)}
             className={`mr-4 px-4 py-1 rounded-full transition-colors duration-300 ${
               selectedCategory === category
-                ? 'bg-primary'
-                : 'cursor-pointer hover:bg-secondary'
+                ? 'bg-primary text-white'
+                : 'cursor-pointer hover:bg-secondary hover:text-white'
             }`}
           >
             {category}

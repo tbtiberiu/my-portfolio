@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
 import ExperienceInfo from '@/types/experience-info'
 import { ClockIcon, MapPinIcon } from '@heroicons/react/24/solid'
-import WatersLogo from '@/components/shared/icons/waters/WatersLogo'
-import EndavaLogo from '@/components/shared/icons/endava/EndavaLogo'
+import WatersLogo from '@/components/shared/icons/waters/waters-icon'
+import EndavaLogo from '@/components/shared/icons/endava/endava-icon'
 import clsx from 'clsx'
 
 interface ExperienceCardProps {
