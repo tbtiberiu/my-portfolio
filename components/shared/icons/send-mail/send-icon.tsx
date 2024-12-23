@@ -18,10 +18,10 @@ export default function SendIcon() {
           y2="183.063"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2299F8" />
-          <stop offset="0.379264" stop-color="#2F92E2" />
-          <stop offset="0.664732" stop-color="#257ABE" />
-          <stop offset="1" stop-color="#194D76" />
+          <stop stopColor="#2299F8" />
+          <stop offset="0.379264" stopColor="#2F92E2" />
+          <stop offset="0.664732" stopColor="#257ABE" />
+          <stop offset="1" stopColor="#194D76" />
         </linearGradient>
       </defs>
     </svg>
