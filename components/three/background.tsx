@@ -18,7 +18,7 @@ const Background = () => {
   }, [])
 
   return (
-    <div className="background absolute w-full top-0 -z-10">
+    <div className="absolute top-0 w-full h-[250vh] -z-10">
       <Canvas
         camera={{
           position: [0, 0, 10],

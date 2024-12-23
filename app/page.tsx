@@ -2,6 +2,7 @@ import AboutSection from '@/components/about-section/about-section'
 import ExperienceSection from '@/components/experience-section/experience-section'
 import ProfileSection from '@/components/profile-section/profile-section'
 import ProjectsSection from '@/components/projects-section/projects-section'
+import SingleSphere from '@/components/three/single-sphere'
 import SpheresLine from '@/components/three/spheres-line'
 
 export default function Home() {
@@ -13,7 +14,10 @@ export default function Home() {
         <SpheresLine />
         <ExperienceSection />
       </div>
-      <AboutSection />
+      <div className="relative mt-10">
+        <SingleSphere />
+        <AboutSection />
+      </div>
     </main>
   )
 }

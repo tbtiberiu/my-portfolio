@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.scss'
 import { lato } from '@/app/fonts'
 import Navbar from '@/components/navbar/navbar'
-import Background from '@/components/three/spheres'
+import Background from '@/components/three/background'
 import SocialLinks from '@/components/social-links/social-links'
 
 export const metadata: Metadata = {

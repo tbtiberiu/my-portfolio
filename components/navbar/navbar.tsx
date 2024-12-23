@@ -1,13 +1,14 @@
 'use client'
 
-import Link from 'next/link'
 import { BoldIcon } from '@heroicons/react/24/outline'
 import NavLinks from './nav-links'
 import ThemeToggle from './theme-toggle'
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function Navbar() {
   const [scrollProgress, setScrollProgress] = useState(0)
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,14 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const handleBoldIconClick = () => {
+    if (window.location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      router.push('/')
+    }
+  }
+
   return (
     <div
       className="sticky-navbar sticky top-0 items-center z-50"
@@ -30,23 +39,24 @@ export default function Navbar() {
           scrollProgress / 10,
           1
         )})`,
-        color: `rgba(var(--foreground-rgb), 1)`,
+        color: `rgb(var(--foreground-rgb))`,
       }}
     >
       <div
-        className="scroll-progress-left"
+        className="absolute top-0 left-1/2 h-1 bg-primary"
         style={{ width: `${scrollProgress / 2}%` }}
       ></div>
       <div
-        className="scroll-progress-right"
+        className="absolute top-0 right-1/2 h-1 bg-primary"
         style={{ width: `${scrollProgress / 2}%` }}
       ></div>
       <nav className="flex justify-between w-full px-2 py-4">
-        <Link href="/">
-          <div className="w-12 text-foreground">
-            <BoldIcon />
-          </div>
-        </Link>
+        <div
+          className="w-12 text-foreground cursor-pointer"
+          onClick={handleBoldIconClick}
+        >
+          <BoldIcon />
+        </div>
         <div className="flex items-center justify-between space-x-20">
           <NavLinks />
         </div>
