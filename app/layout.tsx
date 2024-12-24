@@ -4,6 +4,7 @@ import { lato } from '@/app/fonts'
 import Navbar from '@/components/navbar/navbar'
 import Background from '@/components/three/background'
 import SocialLinks from '@/components/social-links/social-links'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
   title: 'Boșcan Tiberiu-Ioan - Portfolio',
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Navbar />
         <SocialLinks />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
