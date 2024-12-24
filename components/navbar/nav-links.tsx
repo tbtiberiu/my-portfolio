@@ -20,10 +20,10 @@ export default function NavLinks() {
             href={link.href}
             className={clsx(
               poppins.className,
-              'flex text-xl hover:text-primary uppercase grow items-center justify-center gap-2'
+              'flex text-sm md:text-xl hover:text-primary uppercase grow items-center justify-center gap-2'
             )}
           >
-            <p className="hidden md:block">{link.name}</p>
+            <p className="">{link.name}</p>
           </Link>
         )
       })}

@@ -36,7 +36,7 @@ export default function Navbar() {
       className="sticky-navbar sticky top-0 items-center z-50"
       style={{
         background: `rgba(var(--background-rgb), ${Math.min(
-          scrollProgress / 10,
+          scrollProgress / 5,
           1
         )})`,
         color: `rgb(var(--foreground-rgb))`,
@@ -50,14 +50,14 @@ export default function Navbar() {
         className="absolute top-0 right-1/2 h-1 bg-primary"
         style={{ width: `${scrollProgress / 2}%` }}
       ></div>
-      <nav className="flex justify-between w-full px-2 py-4">
+      <nav className="flex justify-between w-full px-2 py-4 gap-4">
         <div
-          className="w-12 text-foreground cursor-pointer"
+          className="w-12 text-foreground cursor-pointer hidden xs:block"
           onClick={handleBoldIconClick}
         >
           <BoldIcon />
         </div>
-        <div className="flex items-center justify-between space-x-20">
+        <div className="flex items-center justify-between gap-6 md:gap-20">
           <NavLinks />
         </div>
         <div className="flex items-center px-3">

@@ -14,6 +14,7 @@ const projects: Project[] = [
     categories: ['Web Development'],
     year: '2024',
     image: '/images/nova-app.png',
+    github: 'https://github.com/tbtiberiu/nova-app',
   },
   {
     title: 'Chess Snapshot - Chess Recognition',
@@ -23,6 +24,7 @@ const projects: Project[] = [
     categories: ['Computer Vision'],
     year: '2024',
     image: '/images/chess-snapshot.png',
+    github: 'https://github.com/tbtiberiu/chess_snapshot_app',
   },
   {
     title: 'Acme Shop - E-commerce Website Template',
@@ -32,6 +34,7 @@ const projects: Project[] = [
     categories: ['Web Development'],
     year: '2022',
     image: '/images/acme-shop.png',
+    github: 'https://github.com/tbtiberiu/acme-shop',
   },
   {
     title: 'John Doe Mountain - Birds Photo Gallery',
@@ -41,6 +44,7 @@ const projects: Project[] = [
     categories: ['Web Development'],
     year: '2019',
     image: '/images/john-doe-gallery.png',
+    github: 'https://github.com/tbtiberiu/John-Doe-Photo-Gallery',
   },
 ]
 
@@ -57,30 +61,35 @@ export default function ProjectsSection() {
         )
 
   return (
-    <section id="projects" className="py-28 px-5 m-auto max-w-screen-xl">
+    <section
+      id="projects"
+      className="lg:pt-24 pb-24 px-5 m-auto max-w-screen-xl"
+    >
       <h2
-        className={`${poppins.className} text-3xl md:text-4xl font-bold uppercase mb-6`}
+        className={`${poppins.className} text-3xl md:text-4xl font-bold uppercase mb-4`}
       >
         Projects
       </h2>
 
-      <div className="flex items-center mb-8 text-xl">
-        <p>
+      <div className="flex md:items-center mb-8 text-xs md:text-lg flex-col md:flex-row">
+        <p className="pb-2 md:pb-0 md:font-normal hidden md:inline">
           Filter by <span className="px-2">&#8226;</span>{' '}
         </p>
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={`mr-4 px-4 py-1 rounded-full transition-colors duration-300 ${
-              selectedCategory === category
-                ? 'bg-primary text-white'
-                : 'cursor-pointer hover:bg-secondary hover:text-white'
-            }`}
-          >
-            {category}
-          </button>
-        ))}
+        <div>
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`mr-2 md:mr-0 md:ml-2 px-2 md:px-4 py-1 rounded-full transition-colors duration-300 ${
+                selectedCategory === category
+                  ? 'bg-primary text-white'
+                  : 'cursor-pointer hover:bg-secondary hover:text-white'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2">

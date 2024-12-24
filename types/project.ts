@@ -5,4 +5,5 @@ export default interface Project {
   categories: string[]
   year: string
   image: string
+  github: string
 }

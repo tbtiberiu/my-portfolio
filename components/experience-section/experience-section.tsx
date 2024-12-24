@@ -36,7 +36,7 @@ const ExperienceSection: React.FC = () => {
   return (
     <section
       id="experience"
-      className="pt-28 pb-10 px-5 m-auto max-w-screen-xl"
+      className="lg:pt-24 pb-10 px-5 m-auto max-w-screen-xl"
     >
       <h2
         className={`${poppins.className} text-3xl md:text-4xl font-bold uppercase mb-6`}

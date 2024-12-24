@@ -17,6 +17,9 @@ export default {
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
       },
+      screens: {
+        xs: '430px',
+      },
     },
   },
   plugins: [],
