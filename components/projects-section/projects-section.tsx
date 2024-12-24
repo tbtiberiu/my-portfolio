@@ -7,40 +7,40 @@ import ProjectCard from './project-card/project-card'
 
 const projects: Project[] = [
   {
-    title: 'Nova Cars - Future Cars Dealership',
+    title: 'Nova Cars - Futuristic Cars Dealership',
     description:
-      "I'm a UX/UI and Product Designer with 5+ years of experience in creating and scaling user-centric designs for over 48 million users.",
+      'Nova App is a concept website showcasing futuristic cars, developed with Node.js, Express, Handlebars, and MySQL. It features user authentication, dynamic content, and database integration. Deployed on Heroku, the app allows users to register, log in, and explore concept vehicles. Created as part of a Web Application Development course, the project earned a perfect score and includes independently explored features like server setup and deployment.',
     tags: ['Web Development', 'Handlebars · CSS · Node.js · MySQL'],
     categories: ['Web Development'],
     year: '2024',
     image: '/images/nova-app.png',
   },
   {
-    title: 'John Doe Mountain Birds Photo Gallery',
+    title: 'Chess Snapshot - Chess Recognition',
     description:
-      "I'm a UX/UI and Product Designer with 5+ years of experience in creating and scaling user-centric designs for over 48 million users.",
+      'Chess Snapshot is an innovative computer vision project that automates the recognition of chessboard states from images. By using advanced image processing techniques and machine learning, it accurately identifies the positions of pieces on a chessboard, making it easy for chess enthusiasts to document and analyze games without manual input.',
+    tags: ['Computer Vision', 'Python · OpenCV · TensorFlow · Flutter'],
+    categories: ['Computer Vision'],
+    year: '2024',
+    image: '/images/chess-snapshot.png',
+  },
+  {
+    title: 'Acme Shop - E-commerce Website Template',
+    description:
+      "Acme Shop is a dynamic e-commerce website template built with ReactJS and Redux, inspired by Webflow's Biznus Template. It features product listings, efficient state management, and smooth navigation with React Router. Easily customizable and perfect for online stores, the project is simple to set up and run locally.",
+    tags: ['Web Development', 'HTML · CSS · React.js'],
+    categories: ['Web Development'],
+    year: '2022',
+    image: '/images/acme-shop.png',
+  },
+  {
+    title: 'John Doe Mountain - Birds Photo Gallery',
+    description:
+      'John Doe Mountain Birds Photo Gallery is a web-based showcase of stunning images captured by the fictional photographer, John Doe. This project was designed using Adobe XD and implemented using HTML and Sass.',
     tags: ['Web Development', 'HTML · CSS · Adobe XD'],
     categories: ['Web Development'],
     year: '2019',
     image: '/images/john-doe-gallery.png',
-  },
-  {
-    title: 'Chess Snapshot - Chess Recognition',
-    description:
-      'This project explores image processing using Python and TensorFlow to analyze chess positions and identify the current state of a chess game.',
-    tags: ['Computer Vision', 'Python · OpenCV · TensorFlow · Flutter'],
-    categories: ['Computer Vision'],
-    year: '2019',
-    image: '/images/chess-snapshot.png',
-  },
-  {
-    title: 'Acme Shop - Lorem Ipsum',
-    description:
-      'COVID-19 has forced us to close our retail space, but we need support from patrons like yourself more than ever.',
-    tags: ['Web Development', 'HTML · CSS · React.js'],
-    categories: ['Web Development'],
-    year: '2024',
-    image: '/images/acme-shop.png',
   },
 ]
 
@@ -57,7 +57,7 @@ export default function ProjectsSection() {
         )
 
   return (
-    <section id="projects" className="py-10 px-5 m-auto max-w-screen-xl">
+    <section id="projects" className="py-28 px-5 m-auto max-w-screen-xl">
       <h2
         className={`${poppins.className} text-3xl md:text-4xl font-bold uppercase mb-6`}
       >

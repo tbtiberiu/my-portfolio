@@ -10,11 +10,11 @@ export default function Home() {
     <main>
       <ProfileSection />
       <ProjectsSection />
-      <div className="relative mt-10">
+      <div className="relative">
         <SpheresLine />
         <ExperienceSection />
       </div>
-      <div className="relative mt-10">
+      <div className="relative">
         <SingleSphere />
         <AboutSection />
       </div>
