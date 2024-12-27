@@ -49,7 +49,11 @@ const Cursor = () => {
 
     const onMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e
-      gsap.to(cursor, { x: clientX, y: clientY })
+      gsap.to(cursor, {
+        x: clientX,
+        y: clientY,
+        duration: 0,
+      })
     }
 
     const onMouseEnterElement = (event: Event) => {
@@ -58,14 +62,14 @@ const Cursor = () => {
         target.classList.contains(`cursor-${cls}`)
       )
 
-      gsap.to(cursor, { scale: 2.5 })
+      gsap.to(cursor, { scale: 2.5, duration: 0.2 })
       if (matchingClass && cursorTexts[matchingClass]) {
         cursorTexts[matchingClass]!.style.display = 'block'
       }
     }
 
     const onMouseLeaveElement = () => {
-      gsap.to(cursor, { scale: 1 })
+      gsap.to(cursor, { scale: 1, duration: 0.2 })
       Object.values(cursorTexts).forEach((el) => {
         if (el) el.style.display = 'none'
       })
