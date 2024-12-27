@@ -1,6 +1,5 @@
 'use client'
-
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
 import { Mesh } from 'three'
 import Sphere from './sphere'
@@ -24,6 +23,13 @@ const SingleSphere = () => {
 
 const Spheres: React.FC = () => {
   const groupRef = useRef<Mesh>(null)
+
+  useFrame((state) => {
+    if (!groupRef.current) return
+    const scale = Math.sin(state.clock.getElapsedTime()) * 0.01 + 1
+    groupRef.current.scale.set(scale, scale, scale)
+  })
+
   return (
     <group ref={groupRef}>
       <Sphere position={[0, 0, 0]} scale={4} />
