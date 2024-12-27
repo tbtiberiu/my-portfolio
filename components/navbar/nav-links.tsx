@@ -5,9 +5,9 @@ import clsx from 'clsx'
 import Link from 'next/link'
 
 const links = [
-  { name: 'Projects', href: '#projects' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'About', href: '#about' },
+  { name: 'Projects', href: '#projects', cursor: 'cursor-projects' },
+  { name: 'Experience', href: '#experience', cursor: 'cursor-experience' },
+  { name: 'About', href: '#about', cursor: 'cursor-about' },
 ]
 
 export default function NavLinks() {
@@ -20,10 +20,11 @@ export default function NavLinks() {
             href={link.href}
             className={clsx(
               poppins.className,
+              link.cursor,
               'flex text-sm md:text-xl hover:text-primary uppercase grow items-center justify-center gap-2'
             )}
           >
-            <p className="">{link.name}</p>
+            <span className="p-2">{link.name}</span>
           </Link>
         )
       })}

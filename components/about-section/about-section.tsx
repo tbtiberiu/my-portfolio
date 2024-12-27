@@ -16,13 +16,13 @@ export default function AboutSection() {
       >
         About Me
       </h2>
-      <div className="bg-[rgba(255,255,255,0.9)] dark:bg-[rgba(17,17,17,0.9)] rounded-lg flex shadow-lg border-2 border-primary z-10 md:mr-20">
+      <div className="bg-[rgba(255,255,255,0.9)] dark:bg-[rgba(17,17,17,0.9)] rounded-lg flex shadow-lg border-2 border-primary md:mr-20">
         <div className="relative lg:w-1/4 hidden md:block">
           <Image
             src="/images/about-me.jpeg"
             alt="Image with me coding at a hackathon"
+            fill
             className="rounded-md h-full object-cover object-left dark:brightness-50"
-            layout="fill"
           />
         </div>
         <div className="w-full lg:w-3/4 pl-8 p-10 flex flex-col justify-center leading-relaxed text-sm lg:text-base">
@@ -59,7 +59,7 @@ export default function AboutSection() {
         href="mailto:tiberiuioan35@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="p-2 bg-gradient-to-r from-primary to-secondary rounded-full shadow-md absolute m-auto left-0 right-0 md:right-16 bottom-0 w-72 md:w-96 md:mr-0"
+        className="cursor-mail p-2 bg-gradient-to-r from-primary to-secondary rounded-full shadow-md absolute m-auto left-0 right-0 md:right-16 bottom-0 w-72 md:w-96 md:mr-0"
       >
         <div className="w-full h-full px-6 py-3 text-black bg-white dark:text-white dark:bg-black font-medium rounded-full flex items-center justify-center">
           <div className="flex flex-col items-center">

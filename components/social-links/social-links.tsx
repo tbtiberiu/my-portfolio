@@ -10,6 +10,7 @@ export default function SocialLinks() {
           href="https://www.linkedin.com/in/tiberiu-boscan/"
           target="_blank"
           rel="noopener noreferrer"
+          className="cursor-linkedin"
         >
           <div className="w-16 h-16 bg-primary hover:bg-secondary rounded-full flex justify-center items-center">
             <div className="w-8 text-white">
@@ -21,6 +22,7 @@ export default function SocialLinks() {
           href="https://github.com/tbtiberiu/"
           target="_blank"
           rel="noopener noreferrer"
+          className="cursor-github"
         >
           <div className="w-16 h-16 bg-primary hover:bg-secondary rounded-full flex justify-center items-center">
             <div className="w-8 text-white">

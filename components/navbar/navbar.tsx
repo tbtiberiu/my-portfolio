@@ -51,16 +51,16 @@ export default function Navbar() {
         style={{ width: `${scrollProgress / 2}%` }}
       ></div>
       <nav className="flex justify-between w-full px-2 py-4 gap-4">
-        <div
-          className="w-12 text-foreground cursor-pointer hidden xs:block"
+        <button
+          className="cursor-logo w-12 text-foreground hidden xs:block"
           onClick={handleBoldIconClick}
         >
           <BoldIcon />
-        </div>
+        </button>
         <div className="flex items-center justify-between gap-6 md:gap-20">
           <NavLinks />
         </div>
-        <div className="flex items-center px-3">
+        <div className="cursor-view flex items-center px-3">
           <ThemeToggle />
         </div>
       </nav>

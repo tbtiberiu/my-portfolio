@@ -29,6 +29,7 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 body {
@@ -37,11 +38,32 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+a,
+button {
+  cursor: none;
+}
+
 .sticky-navbar {
   position: sticky;
   top: 0;
   z-index: 50;
   transition: background 0.3s ease;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: var(--primary);
+  z-index: 1000;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 1280px) {

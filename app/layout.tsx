@@ -5,6 +5,7 @@ import Navbar from '@/components/navbar/navbar'
 import Background from '@/components/three/background'
 import SocialLinks from '@/components/social-links/social-links'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import Cursor from '@/components/shared/cursor/cursor'
 
 export const metadata: Metadata = {
   title: 'Boșcan Tiberiu-Ioan - Portfolio',
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lato.className} antialiased`}>
+        <Cursor />
         <Background />
         <Navbar />
         <SocialLinks />

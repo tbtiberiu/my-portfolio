@@ -22,8 +22,8 @@ export default function ThemeToggle() {
   }, [darkMode])
 
   return (
-    <div
-      className="relative w-16 h-8 flex item-center dark:bg-gray-900 bg-primary cursor-pointer rounded-full p-1"
+    <button
+      className="cursor-theme-toggle relative w-16 h-8 flex item-center dark:bg-gray-900 bg-primary rounded-full p-1"
       onClick={() => setDarkMode(!darkMode)}
     >
       <div className="w-6 text-white">
@@ -36,6 +36,6 @@ export default function ThemeToggle() {
       <div className="ml-auto w-6 text-yellow-400">
         <SunIcon />
       </div>
-    </div>
+    </button>
   )
 }

@@ -18,7 +18,7 @@ export default {
         secondary: 'var(--secondary)',
       },
       screens: {
-        xs: '430px',
+        xs: '460px',
       },
     },
   },

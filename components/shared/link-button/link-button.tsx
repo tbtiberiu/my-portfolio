@@ -20,7 +20,7 @@ export default function LinkButton({
     >
       <Link
         {...linkAttributes}
-        className="w-full h-full px-6 py-3 text-black bg-white dark:text-white dark:bg-black space-x-2 font-medium rounded-full flex items-center justify-center"
+        className="cursor-download w-full h-full px-6 py-3 text-black bg-white dark:text-white dark:bg-black space-x-2 font-medium rounded-full flex items-center justify-center"
       >
         {children}
       </Link>

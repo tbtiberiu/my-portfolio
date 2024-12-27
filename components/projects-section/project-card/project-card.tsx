@@ -12,14 +12,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       href={project.github}
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-white dark:bg-gray-900 dark:border-transparent border-2 border-primary rounded-lg overflow-hidden shadow-lg hover:shadow-primary hover:shadow-sm transition-transform transform hover:-translate-y-2"
+      className="cursor-view bg-white dark:bg-gray-900 dark:border-transparent border-2 border-primary rounded-lg shadow-lg hover:shadow-primary hover:shadow-sm transition-transform transform hover:-translate-y-2"
     >
       <div className="relative h-48 md:h-52">
         <Image
           src={project.image}
           alt={project.title}
-          layout="fill"
-          className="object-top object-cover"
+          fill
+          className="object-cover object-top"
         />
       </div>
       <div className="flex flex-col justify-between p-6">
