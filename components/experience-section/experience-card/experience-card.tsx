@@ -35,7 +35,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={clsx(
-          'w-full px-6 py-2 flex justify-between items-center rounded-lg overflow-hidden text-white mb-2',
+          'w-full px-6 py-2 flex justify-between items-center rounded-lg text-white mb-2 transition-all ease-in-out duration-300',
           {
             'bg-[#2272b2]': isOpen,
             'bg-[#394148]': !isOpen,
@@ -51,44 +51,51 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
           {isOpen ? <ChevronDownIcon /> : <ChevronUpIcon />}
         </div>
       </button>
-      {isOpen && (
-        <div className="p-6 rounded-lg overflow-hidden bg-[#ffffff] dark:bg-gray-900 flex flex-col md:flex-row items-center gap-2">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-4 text-xs md:text-sm text-[#498dc4] font-semibold mb-2">
-              <div className="flex items-center gap-1">
-                <div className="w-6">
-                  <MapPinIcon />
+      <div
+        className={clsx('grid transition-all ease-in-out duration-300', {
+          'grid-rows-[0fr]': !isOpen,
+          'grid-rows-[1fr]': isOpen,
+        })}
+      >
+        <div className="rounded-lg overflow-hidden bg-[#ffffff] dark:bg-gray-900">
+          <div className="p-6 flex flex-col md:flex-row items-center gap-2">
+            <div className="max-w-3xl">
+              <div className="flex items-center gap-4 text-xs md:text-sm text-[#498dc4] font-semibold mb-2">
+                <div className="flex items-center gap-1">
+                  <div className="w-6">
+                    <MapPinIcon />
+                  </div>
+                  <p>{experienceInfo.location}</p>
                 </div>
-                <p>{experienceInfo.location}</p>
+                <div className="flex items-center gap-1">
+                  <div className="w-6">
+                    <ClockIcon />
+                  </div>
+                  <p>{experienceInfo.dates}</p>
+                </div>
               </div>
-              <div className="flex items-center gap-1">
-                <div className="w-6">
-                  <ClockIcon />
-                </div>
-                <p>{experienceInfo.dates}</p>
+              <p className="text-sm md:text-md mb-4">
+                {experienceInfo.description}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {experienceInfo.technologies.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="text-xs md:text-sm bg-gray-200 dark:bg-gray-800 px-3 py-1 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
-            <p className="text-sm md:text-md mb-4">
-              {experienceInfo.description}
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {experienceInfo.technologies.map((tech, i) => (
-                <span
-                  key={i}
-                  className="text-xs md:text-sm bg-gray-200 dark:bg-gray-800 px-3 py-1 rounded-full"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div className="flex-1 flex justify-center p-6">
-            <div className="flex justify-center w-40 text-foreground">
-              {renderCompanyLogo(experienceInfo.company)}
+            <div className="flex-1 flex justify-center p-6">
+              <div className="flex justify-center w-40 text-foreground">
+                {renderCompanyLogo(experienceInfo.company)}
+              </div>
             </div>
           </div>
         </div>
-      )}
+      </div>
     </div>
   )
 }
