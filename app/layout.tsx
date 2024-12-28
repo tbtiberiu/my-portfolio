@@ -8,7 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import Cursor from '@/components/shared/cursor/cursor'
 
 export const metadata: Metadata = {
-  title: 'Boșcan Tiberiu-Ioan - Portfolio',
+  title: 'Tiberiu-Ioan Boșcan - Portfolio',
   description:
     'I specialize in creating visually appealing and interactive web applications using HTML, CSS, JavaScript, and frameworks like Angular and React. With a strong commitment to coding best practices and staying updated on industry trends, I deliver scalable, high-quality solutions and embrace new challenges.',
 }

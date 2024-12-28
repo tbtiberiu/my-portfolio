@@ -38,7 +38,7 @@ const CURSOR_CLASSES = [
 
 const Cursor = () => {
   useEffect(() => {
-    const cursor = document.getElementById('custom-cursor')
+    const cursor = document.getElementById('custom-cursor') as HTMLDivElement
     const cursorTexts: Record<string, HTMLSpanElement | null> = {}
 
     CURSOR_CLASSES.forEach((cls) => {
@@ -75,10 +75,26 @@ const Cursor = () => {
       })
     }
 
+    const onClick = (event: Event) => {
+      const target = event.target as HTMLElement
+      const matchingClass = CURSOR_CLASSES.find((cls) =>
+        target.classList.contains(`cursor-${cls}`)
+      )
+
+      if (matchingClass === 'collapse') {
+        cursorTexts['expand']!.style.display = 'block'
+        cursorTexts['collapse']!.style.display = 'none'
+      } else if (matchingClass === 'expand') {
+        cursorTexts['expand']!.style.display = 'none'
+        cursorTexts['collapse']!.style.display = 'block'
+      }
+    }
+
     const addListeners = (elements: NodeListOf<Element>) => {
       elements.forEach((element) => {
         element.addEventListener('mouseenter', onMouseEnterElement)
         element.addEventListener('mouseleave', onMouseLeaveElement)
+        element.addEventListener('click', onClick)
       })
     }
 
@@ -103,7 +119,7 @@ const Cursor = () => {
   return (
     <div
       id="custom-cursor"
-      className="custom-cursor text-white tracking-wide font-semibold border-[1px] border-secondary"
+      className="custom-cursor text-white tracking-wide font-semibold"
     >
       {CURSOR_CLASSES.map((cls) => (
         <span
