@@ -1,10 +1,10 @@
 'use client'
 
-import { BoldIcon } from '@heroicons/react/24/outline'
 import NavLinks from './nav-links'
 import ThemeToggle from './theme-toggle'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import MyLogo from '../shared/icons/my-logo/my-logo'
 
 export default function Navbar() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -55,7 +55,7 @@ export default function Navbar() {
           className="cursor-logo w-12 text-foreground hidden xs:block"
           onClick={handleBoldIconClick}
         >
-          <BoldIcon />
+          <MyLogo />
         </button>
         <div className="flex items-center justify-between gap-6 md:gap-20">
           <NavLinks />

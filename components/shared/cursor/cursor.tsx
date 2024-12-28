@@ -4,7 +4,6 @@ import {
   ArchiveBoxIcon,
   ArrowDownTrayIcon,
   ArrowUpRightIcon,
-  BoldIcon,
   BriefcaseIcon,
   ChevronDownIcon,
   ChevronUpIcon,
@@ -19,6 +18,7 @@ import { gsap } from 'gsap'
 import { JSX, useEffect } from 'react'
 import GithubIcon from '../icons/github/github-icon'
 import LinkedinIcon from '../icons/linkedin/linkedin-icon'
+import MyLogo from '../icons/my-logo/my-logo'
 
 const CURSOR_CLASSES = [
   'view',
@@ -141,7 +141,7 @@ const getIcon = (cls: string) => {
     view: <ArrowUpRightIcon />,
     expand: <ChevronDownIcon />,
     collapse: <ChevronUpIcon />,
-    logo: <BoldIcon />,
+    logo: <MyLogo />,
     github: <GithubIcon />,
     linkedin: <LinkedinIcon />,
     download: <ArrowDownTrayIcon />,
