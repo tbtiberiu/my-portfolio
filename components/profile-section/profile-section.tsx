@@ -1,7 +1,6 @@
 import { poppins } from '@/app/fonts'
-import { ArrowDownTrayIcon } from '@heroicons/react/24/outline'
 import { MapPinIcon } from '@heroicons/react/24/solid'
-import LinkButton from '../shared/link-button/link-button'
+import DownloadButton from '../shared/download-button/download-button'
 
 export default function ProfileSection() {
   return (
@@ -41,17 +40,7 @@ export default function ProfileSection() {
       </div>
 
       <div className="mt-8">
-        <LinkButton
-          href="Tiberiu-Ioan_Boscan-resume.pdf"
-          download
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <p>Download Resume</p>
-          <div className="w-6">
-            <ArrowDownTrayIcon />
-          </div>
-        </LinkButton>
+        <DownloadButton href="Tiberiu-Ioan_Boscan-resume.pdf" />
       </div>
     </section>
   )
