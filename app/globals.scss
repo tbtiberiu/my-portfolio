@@ -61,6 +61,12 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .sticky-navbar {
     background: var(--background);
