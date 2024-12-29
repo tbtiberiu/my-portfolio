@@ -52,7 +52,7 @@ export default function Navbar() {
       ></div>
       <nav className="flex justify-between w-full px-2 py-4 gap-4">
         <button
-          className="cursor-logo w-12 text-foreground hidden xs:block"
+          className="cursor-logo mx-3 w-12 text-foreground hidden xs:block"
           onClick={handleBoldIconClick}
         >
           <MyLogo />
@@ -60,7 +60,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between gap-6 md:gap-20">
           <NavLinks />
         </div>
-        <div className="cursor-view flex items-center px-3">
+        <div className="cursor-view flex items-center mx-3">
           <ThemeToggle />
         </div>
       </nav>

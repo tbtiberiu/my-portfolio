@@ -9,16 +9,16 @@
   --foreground: #0a0a0a;
   --black: #0a0a0a;
   --white: #f0f8ff;
-  --primary: #1a75ff;
-  --secondary: #0052cc;
+  --primary: #2d81ff;
+  --secondary: #004ebb;
 
   &.dark {
     --background-rgb: 10, 10, 10;
     --foreground-rgb: 240, 248, 255;
     --background: #0a0a0a;
     --foreground: #f0f8ff;
-    --primary: #2299f8;
-    --secondary: #2272b2;
+    --primary: #3293e2;
+    --secondary: #115c9a;
   }
 }
 

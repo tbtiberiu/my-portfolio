@@ -1,0 +1,39 @@
+.downloadButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.downloadButtonInner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0.5rem;
+}
+
+.downloadButton::before {
+  content: '';
+  display: block;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  z-index: 0;
+  animation: rotate 1s linear infinite;
+}
+
+.downloadButton:hover::before {
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

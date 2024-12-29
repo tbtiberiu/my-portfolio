@@ -1,0 +1,37 @@
+.sendMailButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sendMailButtonInner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.sendMailButton::before {
+  content: '';
+  display: block;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  z-index: 0;
+  animation: rotate 2s linear infinite;
+}
+
+.sendMailButton:hover::before {
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

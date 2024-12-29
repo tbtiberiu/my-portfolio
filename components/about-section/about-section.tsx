@@ -2,8 +2,7 @@
 
 import Image from 'next/image'
 import { poppins } from '@/app/fonts'
-import Link from 'next/link'
-import SendIcon from '../shared/icons/send-mail/send-icon'
+import SendMailButton from '../shared/send-mail-button/send-mail-button'
 
 export default function AboutSection() {
   return (
@@ -19,13 +18,13 @@ export default function AboutSection() {
       <div className="bg-[rgba(255,255,255,0.9)] dark:bg-[rgba(17,17,17,0.9)] rounded-lg flex shadow-lg border-2 border-primary md:mr-20">
         <div className="relative lg:w-1/4 hidden md:block">
           <Image
-            src="/images/about-me.jpeg"
+            src="/images/about-me.jpg"
             alt="Image with me coding at a hackathon"
             fill
-            className="rounded-md h-full object-cover object-left dark:brightness-50"
+            className="rounded-md h-full object-cover object-left"
           />
         </div>
-        <div className="w-full lg:w-3/4 pl-8 p-10 flex flex-col justify-center leading-relaxed text-sm lg:text-base">
+        <div className="cursor-default w-full lg:w-3/4 pl-8 p-10 flex flex-col justify-center leading-relaxed text-sm lg:text-base">
           <p className="mb-6">
             I discovered programming at the start of high school when a friend
             taught me my first lines of C++ code, along with the basics of HTML
@@ -55,26 +54,7 @@ export default function AboutSection() {
           </p>
         </div>
       </div>
-      <Link
-        href="mailto:tiberiuioan35@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="cursor-mail p-2 bg-gradient-to-r from-primary to-secondary rounded-full shadow-md absolute m-auto left-0 right-0 md:right-16 bottom-0 w-72 md:w-96 md:mr-0"
-      >
-        <div className="w-full h-full px-6 py-3 text-black bg-white dark:text-white dark:bg-black font-medium rounded-full flex items-center justify-center">
-          <div className="flex flex-col items-center">
-            <p
-              className={`${poppins.className} text-lg md:text-2xl font-bold uppercase leading-tight`}
-            >
-              Contact Me
-            </p>
-            <p className="font-thin leading-tight">(tiberiuioan35@gmail.com)</p>
-          </div>
-          <div className="w-36 absolute bottom-0 right-0 -mr-9 hidden md:block">
-            <SendIcon />
-          </div>
-        </div>
-      </Link>
+      <SendMailButton title="Contact Me" mail="tiberiuioan35@gmail.com" />
     </section>
   )
 }
