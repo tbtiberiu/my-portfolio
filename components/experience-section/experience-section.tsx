@@ -7,7 +7,7 @@ const experiences: ExperienceInfo[] = [
     title: 'Junior Frontend Developer',
     company: 'Waters Corporation',
     location: 'Brasov, Romania (Remote)',
-    dates: 'December 2023 - Present',
+    dates: 'December 2023 - December 2024',
     description:
       'Developed new user stories, fix bugs, create and review pull requests in multiple Angular projects such as the Alliance iS HPLC System Kiosk, Console, and Method Editor apps to meet specific team goals.',
     technologies: ['HTML', 'CSS', 'Typescript', 'Angular', 'Git'],
