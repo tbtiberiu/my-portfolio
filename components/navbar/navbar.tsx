@@ -24,8 +24,8 @@ export default function Navbar() {
   }, [])
 
   const handleLogoIconClick = () => {
+    window.history.replaceState(null, '', window.location.pathname)
     window.scrollTo({ top: 0, behavior: 'smooth' })
-    router.push('/')
   }
 
   return (
