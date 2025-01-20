@@ -1,12 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
 import ExperienceInfo from '@/types/experience-info'
 import { ClockIcon, MapPinIcon } from '@heroicons/react/24/solid'
 import WatersLogo from '@/components/shared/icons/waters/waters-icon'
 import EndavaLogo from '@/components/shared/icons/endava/endava-icon'
 import clsx from 'clsx'
+import { gsap } from 'gsap'
 
 interface ExperienceCardProps {
   experienceInfo: ExperienceInfo
@@ -18,6 +19,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   defaultOpen = false,
 }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen)
+  const contentRef = useRef<HTMLDivElement>(null)
 
   const renderCompanyLogo = (company: string) => {
     switch (company.toLowerCase()) {
@@ -29,6 +31,24 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         return <div className="w-40 h-40 bg-gray-300 rounded-lg"></div>
     }
   }
+
+  useEffect(() => {
+    if (contentRef.current) {
+      if (isOpen) {
+        gsap.fromTo(
+          contentRef.current,
+          { opacity: 0, height: 0 },
+          { opacity: 1, height: 'auto', duration: 0.3 }
+        )
+      } else {
+        gsap.to(contentRef.current, {
+          opacity: 0,
+          height: 0,
+          duration: 0.3,
+        })
+      }
+    }
+  }, [isOpen])
 
   return (
     <div className="mb-2">
@@ -51,12 +71,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
           {isOpen ? <ChevronDownIcon /> : <ChevronUpIcon />}
         </div>
       </button>
-      <div
-        className={clsx('grid transition-all ease-in-out duration-300', {
-          'grid-rows-[0fr]': !isOpen,
-          'grid-rows-[1fr]': isOpen,
-        })}
-      >
+      <div ref={contentRef} className="overflow-hidden">
         <div className="rounded-lg overflow-hidden bg-[#ffffff] dark:bg-gray-900">
           <div className="p-6 flex flex-col md:flex-row items-center gap-2">
             <div className="max-w-3xl">

@@ -26,7 +26,7 @@ const Spheres: React.FC = () => {
 
   useFrame((state) => {
     if (!groupRef.current) return
-    const scale = Math.sin(state.clock.getElapsedTime()) * 0.01 + 1
+    const scale = 1 + Math.sin(state.clock.getElapsedTime()) * 0.02
     groupRef.current.scale.set(scale, scale, scale)
   })
 

@@ -6,6 +6,7 @@
   --background-rgb: 240, 248, 255;
   --foreground-rgb: 10, 10, 10;
   --background: #f0f8ff;
+  --background-start: #e7eff7;
   --foreground: #0a0a0a;
   --black: #0a0a0a;
   --white: #f0f8ff;
@@ -16,6 +17,7 @@
     --background-rgb: 17, 17, 17;
     --foreground-rgb: 240, 248, 255;
     --background: #111111;
+    --background-start: #25292c;
     --foreground: #f0f8ff;
     --primary: #3293e2;
     --secondary: #115c9a;
@@ -33,8 +35,26 @@ html {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  // background: var(--background);
+  background: linear-gradient(
+    180deg,
+    var(--background-start),
+    var(--background) 30% 100%
+  );
+  animation: gradientShift 5s ease infinite;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .sticky-navbar {

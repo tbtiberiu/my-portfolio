@@ -1,13 +1,35 @@
 'use client'
 
 import { Canvas } from '@react-three/fiber'
-import { useRef } from 'react'
-import { Mesh } from 'three'
+import { useRef, useEffect } from 'react'
+import { Mesh, Group } from 'three'
+import gsap from 'gsap'
 import Sphere from './sphere'
 
 const SpheresLine = () => {
+  const canvasGroupRef = useRef<Group>(null)
+
+  useEffect(() => {
+    const onScroll = () => {
+      const scrollY = window.scrollY
+      const positionX = scrollY / 100
+
+      if (canvasGroupRef.current) {
+        gsap.to(canvasGroupRef.current.position, {
+          x: positionX - 10,
+          duration: 0.3,
+        })
+      }
+    }
+
+    window.addEventListener('scroll', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+    }
+  }, [])
+
   return (
-    <div className="spheres-line absolute w-full h-full top-0 -z-20 -mt-40">
+    <div className="spheres-line absolute w-full h-[800px] top-0 -z-20 -mt-80">
       <Canvas
         camera={{
           position: [0, 0, 10],
@@ -16,7 +38,9 @@ const SpheresLine = () => {
       >
         <ambientLight intensity={1.25} />
         <directionalLight position={[-5, 5, 10]} intensity={2} />
-        <Spheres />
+        <group ref={canvasGroupRef}>
+          <Spheres />
+        </group>
       </Canvas>
     </div>
   )

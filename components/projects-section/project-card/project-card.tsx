@@ -12,9 +12,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       href={project.github}
       target="_blank"
       rel="noopener noreferrer"
-      className="cursor-view bg-white dark:bg-gray-900 dark:border-transparent border-2 border-primary rounded-lg shadow-lg hover:shadow-primary hover:shadow-sm transition-transform transform hover:-translate-y-2"
+      className="cursor-view bg-white dark:bg-gray-900 dark:border-transparent border-2 border-primary rounded-lg shadow-lg hover:shadow-lg hover:border-primary transition-all transform hover:scale-105 hover:-translate-y-2"
     >
-      <div className="relative h-48 md:h-52">
+      <div className="relative h-48 md:h-52 overflow-hidden rounded-t-lg">
         <Image
           src={project.image}
           alt={project.title}

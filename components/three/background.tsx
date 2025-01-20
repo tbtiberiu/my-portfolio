@@ -1,7 +1,8 @@
 'use client'
 
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import { useEffect, useRef, useState } from 'react'
+import { gsap } from 'gsap'
 import { Mesh } from 'three'
 import Sphere from './sphere'
 
@@ -36,17 +37,33 @@ const Background = () => {
 const Spheres: React.FC<{ scrollY: number }> = ({ scrollY }) => {
   const groupRef = useRef<Mesh>(null)
 
-  useFrame(() => {
+  useEffect(() => {
     if (groupRef.current) {
-      groupRef.current.position.y = scrollY * 0.005
+      gsap.to(groupRef.current.children[0].position, {
+        x: 3.7 + scrollY * 0.001,
+        y: 4.8 + scrollY * 0.005,
+        duration: 0.3,
+      })
+
+      gsap.to(groupRef.current.children[1].position, {
+        x: 1 + scrollY * 0.001,
+        y: scrollY * 0.005,
+        duration: 0.3,
+      })
+
+      gsap.to(groupRef.current.children[2].position, {
+        x: 4 - scrollY * 0.002,
+        y: -6 + scrollY * 0.005,
+        duration: 0.3,
+      })
     }
-  })
+  }, [scrollY])
 
   return (
     <group ref={groupRef}>
       <Sphere position={[3.7, 4.8, 0]} scale={1.3} />
       <Sphere position={[1, 0, 0]} scale={1.7} />
-      <Sphere position={[4, -6, 0]} scale={3} />
+      <Sphere position={[4, -6, 0]} scale={2.7} />
     </group>
   )
 }

@@ -23,12 +23,9 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleBoldIconClick = () => {
-    if (window.location.pathname === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    } else {
-      router.push('/')
-    }
+  const handleLogoIconClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    router.push('/')
   }
 
   return (
@@ -37,7 +34,7 @@ export default function Navbar() {
       style={{
         background: `rgba(var(--background-rgb), ${Math.min(
           scrollProgress / 5,
-          1
+          0.9
         )})`,
         color: `rgb(var(--foreground-rgb))`,
       }}
@@ -53,7 +50,7 @@ export default function Navbar() {
       <nav className="flex justify-between w-full px-2 py-4 gap-4">
         <button
           className="cursor-logo mx-3 w-12 text-foreground hidden xs:block"
-          onClick={handleBoldIconClick}
+          onClick={handleLogoIconClick}
         >
           <MyLogo />
         </button>
