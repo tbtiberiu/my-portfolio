@@ -3,12 +3,10 @@
 import NavLinks from './nav-links'
 import ThemeToggle from './theme-toggle'
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
 import MyLogo from '../shared/icons/my-logo/my-logo'
 
 export default function Navbar() {
   const [scrollProgress, setScrollProgress] = useState(0)
-  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
