@@ -32,10 +32,10 @@ export default function ProfileSection() {
           In addition to frontend development, I am pursuing a master&apos;s
           degree in Advanced Digital Imaging Techniques (TAID) at the University
           Politehnica of Bucharest, focusing on computer vision and image
-          processing. I have a bachelor&apos;s degree in computer science (2024)
-          and a versatile background spanning frontend, backend, game, and
-          mobile development. This diverse experience allows me to adapt to
-          different project needs and craft seamless, full-stack solutions.
+          processing. I have a bachelor&apos;s degree in computer science and a
+          versatile background spanning frontend, backend, game, and mobile
+          development. This diverse experience allows me to adapt to different
+          project needs and craft seamless, full-stack solutions.
         </p>
       </div>
 

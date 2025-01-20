@@ -30,7 +30,7 @@ export default function SendMailButton({ title, mail }: ButtonProps) {
         <div
           className={clsx(
             styles.sendMailButtonInner,
-            'w-full h-full px-6 py-3 text-black bg-white dark:text-white dark:bg-black font-medium rounded-full flex items-center justify-center'
+            'w-full h-full px-6 py-3 text-black bg-background dark:text-white font-medium rounded-full flex items-center justify-center'
           )}
         >
           <div className="flex flex-col items-center">
