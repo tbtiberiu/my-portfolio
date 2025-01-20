@@ -4,7 +4,7 @@ import DownloadButton from '../shared/download-button/download-button'
 
 export default function ProfileSection() {
   return (
-    <section className="profile-section w-full max-w-4xl pt-10 pb-24 lg:py-24 px-5">
+    <section className="profile-section w-full max-w-4xl pt-10 pb-24 lg:py-20 px-5">
       <div className="relative -z-20">
         <h1 className={`${poppins.className} text-5xl uppercase`}>
           Tiberiu-Ioan Boșcan
