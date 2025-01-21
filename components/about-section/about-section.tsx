@@ -27,30 +27,60 @@ export default function AboutSection() {
         <div className="cursor-default w-full lg:w-3/4 pl-8 p-10 flex flex-col justify-center leading-relaxed text-sm lg:text-base">
           <p className="mb-6">
             I discovered programming at the start of high school when a friend
-            taught me my first lines of C++ code, along with the basics of HTML
-            and CSS. That initial spark led me to develop a strong interest in
-            web development. In school, I quickly became skilled at solving
-            problems in pseudocode, which deepened my passion for building and
-            creating. I attended the PepinTeen coding bootcamp and participated
-            in various contests, but the majority of my learning came from
-            watching online tutorials and building personal projects.
+            taught me my first lines of{' '}
+            <span className="text-primary font-bold">C++</span> code, along with
+            the basics of <span className="text-primary font-bold">HTML</span>{' '}
+            and <span className="text-primary font-bold">CSS</span>. That
+            initial spark led me to develop a strong interest in{' '}
+            <span className="text-primary font-bold">web development</span>. In
+            school, I quickly became skilled at solving problems in pseudocode,
+            which deepened my passion for building and creating. I attended the
+            PepinTeen coding bootcamp and participated in various contests, but
+            the majority of my learning came from watching{' '}
+            <span className="text-primary font-bold">online tutorials</span> and{' '}
+            <span className="text-primary font-bold">
+              building personal projects
+            </span>
+            .
           </p>
           <p className="mb-6">
             During university, I expanded beyond frontend development, diving
-            into backend, mobile, IoT technologies, and more. I earned my
-            computer science degree by developing a robust algorithm for
-            detecting the state of a chess game, blending problem-solving and
-            machine learning with practical application. Now, with two years of
-            professional software development experience and a portfolio of
-            diverse projects, I continue to push the boundaries of what I can
-            create, always eager to learn and grow.
+            into <span className="text-primary font-bold">backend</span>,{' '}
+            <span className="text-primary font-bold">mobile</span>,{' '}
+            <span className="text-primary font-bold">IoT technologies</span>,
+            and more. I earned my{' '}
+            <span className="text-primary font-bold">
+              computer science degree
+            </span>{' '}
+            by developing a robust algorithm for detecting the state of a chess
+            game, blending{' '}
+            <span className="text-primary font-bold">problem-solving</span> and{' '}
+            <span className="text-primary font-bold">machine learning</span>{' '}
+            with practical application. Now, with{' '}
+            <span className="text-primary font-bold">
+              two years of professional software development experience
+            </span>{' '}
+            and a portfolio of diverse projects, I continue to push the
+            boundaries of what I can create, always eager to{' '}
+            <span className="text-primary font-bold">learn</span>.
           </p>
           <p className="mb-6">
-            I&apos;m always excited to take on new challenges and collaborate on
-            innovative projects. With a solid background in development and a
-            passion for problem-solving, I&apos;m confident I can contribute to
-            your next digital venture. Feel free to reach out, and let&apos;s
-            discuss how I can bring value to your team.
+            I&apos;m always excited to take on new challenges and collaborate on{' '}
+            <span className="text-primary font-bold">innovative projects</span>.
+            With a solid{' '}
+            <span className="text-primary font-bold">
+              background in development
+            </span>{' '}
+            and a{' '}
+            <span className="text-primary font-bold">
+              passion for problem-solving
+            </span>
+            , I&apos;m confident I can contribute to your next digital venture.
+            Feel free to reach out, and let&apos;s discuss how{' '}
+            <span className="text-primary font-bold">
+              I can bring value to your team
+            </span>
+            .
           </p>
         </div>
       </div>

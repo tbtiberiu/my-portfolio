@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.scss'
-import { lato } from '@/app/fonts'
+import { nunito } from '@/app/fonts'
 import Navbar from '@/components/navbar/navbar'
 import Background from '@/components/three/background'
 import SocialLinks from '@/components/social-links/social-links'
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lato.className} antialiased`}>
+      <body className={`${nunito.className} antialiased`}>
         <Cursor />
         <Background />
         <Navbar />

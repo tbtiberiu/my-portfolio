@@ -38,11 +38,11 @@ export default function Navbar() {
       }}
     >
       <div
-        className="absolute top-0 left-1/2 h-1 bg-primary"
+        className="absolute top-0 left-1/2 h-[2px] bg-primary"
         style={{ width: `${scrollProgress / 2}%` }}
       ></div>
       <div
-        className="absolute top-0 right-1/2 h-1 bg-primary"
+        className="absolute top-0 right-1/2 h-[2px] bg-primary"
         style={{ width: `${scrollProgress / 2}%` }}
       ></div>
       <nav className="flex justify-between w-full px-2 py-4 gap-4">

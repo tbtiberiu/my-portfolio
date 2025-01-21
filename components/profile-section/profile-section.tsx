@@ -34,8 +34,8 @@ export default function ProfileSection() {
           Politehnica of Bucharest, focusing on computer vision and image
           processing. I have a bachelor&apos;s degree in computer science and a
           versatile background spanning frontend, backend, game, and mobile
-          development. This diverse experience allows me to adapt to different
-          project needs and craft seamless, full-stack solutions.
+          development. This diverse experience allows me to quickly adapt to
+          different project needs.
         </p>
       </div>
 
