@@ -61,8 +61,8 @@ export default function AboutSection() {
               two years of professional software development experience
             </span>{' '}
             and a portfolio of diverse projects, I continue to push the
-            boundaries of what I can create, always eager to{' '}
-            <span className="text-primary font-bold">learn</span>.
+            boundaries of what I can create, always{' '}
+            <span className="text-primary font-bold">eager to learn</span>.
           </p>
           <p className="mb-6">
             I&apos;m always excited to take on new challenges and collaborate on{' '}
