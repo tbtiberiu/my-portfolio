@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://boscantiberiu.vercel.app/favicon.ico',
+        url: 'https://boscantiberiu.vercel.app/og-icon.svg',
         width: 1200,
         height: 1200,
-        alt: 'Tiberiu-Ioan Boșcan Portfolio Favicon',
+        alt: 'Tiberiu-Ioan Boșcan Portfolio Icon',
       },
     ],
   },
