@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: 'Tiberiu-Ioan Boșcan - Portfolio',
     description:
       'Frontend Developer skilled in React, Angular, and TypeScript. Building high-performance, scalable applications.',
-    images: ['https://boscantiberiu.vercel.app/favicon.ico'], // Set favicon as Twitter image
+    images: ['https://boscantiberiu.vercel.app/og-icon.png'],
     creator: '@tiberiuboscan',
   },
   alternates: {
