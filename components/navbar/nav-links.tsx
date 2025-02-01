@@ -5,9 +5,9 @@ import clsx from 'clsx'
 import Link from 'next/link'
 
 const links = [
-  { name: 'Projects', href: '#projects', cursor: 'cursor-projects' },
-  { name: 'Experience', href: '#experience', cursor: 'cursor-experience' },
-  { name: 'About', href: '#about', cursor: 'cursor-about' },
+  { name: 'Projects', href: '/#projects', cursor: 'cursor-projects' },
+  { name: 'Experience', href: '/#experience', cursor: 'cursor-experience' },
+  { name: 'About', href: '/#about', cursor: 'cursor-about' },
 ]
 
 export default function NavLinks() {

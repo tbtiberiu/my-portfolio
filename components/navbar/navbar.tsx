@@ -22,7 +22,7 @@ export default function Navbar() {
   }, [])
 
   const handleLogoIconClick = () => {
-    window.history.replaceState(null, '', window.location.pathname)
+    window.history.replaceState(null, '', '/')
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 

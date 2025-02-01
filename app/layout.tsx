@@ -10,7 +10,41 @@ import Cursor from '@/components/shared/cursor/cursor'
 export const metadata: Metadata = {
   title: 'Tiberiu-Ioan Boșcan - Portfolio',
   description:
-    'I specialize in creating visually appealing and interactive web applications using HTML, CSS, JavaScript, and frameworks like Angular and React. With a strong commitment to coding best practices and staying updated on industry trends, I deliver scalable, high-quality solutions and embrace new challenges.',
+    'Experienced Frontend Developer specializing in modern web technologies like React, Angular, and TypeScript. Passionate about building interactive, scalable, and high-performance web applications.',
+  authors: [
+    { name: 'Tiberiu-Ioan Boșcan', url: 'https://boscantiberiu.vercel.app' },
+  ],
+  creator: 'Tiberiu-Ioan Boșcan',
+  publisher: 'Tiberiu-Ioan Boșcan',
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Tiberiu-Ioan Boșcan - Portfolio',
+    description:
+      'Experienced Frontend Developer specializing in React, Angular, and TypeScript. Passionate about building high-performance web applications.',
+    url: 'https://boscantiberiu.vercel.app',
+    siteName: 'Tiberiu-Ioan Boșcan Portfolio',
+    type: 'website',
+    images: [
+      {
+        url: 'https://boscantiberiu.vercel.app/favicon.ico',
+        width: 1200,
+        height: 1200,
+        alt: 'Tiberiu-Ioan Boșcan Portfolio Favicon',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tiberiu-Ioan Boșcan - Portfolio',
+    description:
+      'Frontend Developer skilled in React, Angular, and TypeScript. Building high-performance, scalable applications.',
+    images: ['https://boscantiberiu.vercel.app/favicon.ico'], // Set favicon as Twitter image
+    creator: '@tiberiuboscan',
+  },
+  alternates: {
+    canonical: 'https://boscantiberiu.vercel.app',
+  },
+  metadataBase: new URL('https://boscantiberiu.vercel.app'),
 }
 
 export default function RootLayout({
