@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://boscantiberiu.vercel.app/og-icon.svg',
-        width: 1200,
-        height: 1200,
+        url: 'https://boscantiberiu.vercel.app/og-icon.png',
+        width: 1500,
+        height: 1500,
         alt: 'Tiberiu-Ioan Boșcan Portfolio Icon',
       },
     ],
