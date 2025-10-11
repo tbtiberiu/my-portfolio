@@ -45,9 +45,9 @@ export default function Navbar() {
         className="absolute top-0 right-1/2 h-[2px] bg-primary"
         style={{ width: `${scrollProgress / 2}%` }}
       ></div>
-      <nav className="flex justify-between w-full px-2 py-4 gap-4">
+      <nav className="flex justify-between w-full px-3 py-4 gap-4">
         <button
-          className="cursor-logo mx-3 w-12 text-foreground hidden xs:block"
+          className="cursor-logo mx-3 w-12 text-foreground hidden sm:block"
           onClick={handleLogoIconClick}
         >
           <MyLogo />

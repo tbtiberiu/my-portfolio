@@ -73,14 +73,14 @@ export default function ProjectsSection() {
 
       <div className="flex md:items-center mb-8 text-xs md:text-lg flex-col md:flex-row">
         <p className="pb-2 md:pb-0 md:font-normal hidden md:inline">
-          Filter by <span className="px-2">&#8226;</span>{' '}
+          Filter by <span className="px-3">&#8226;</span>{' '}
         </p>
         <div>
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`cursor-filter mr-2 md:mr-0 md:ml-2 px-2 md:px-4 py-1 rounded-full transition-colors duration-300 ${
+              className={`cursor-filter mr-2 md:mr-0 md:ml-2 px-3 md:px-4 py-1 rounded-full transition-colors duration-300 ${
                 selectedCategory === category
                   ? 'bg-primary text-white'
                   : 'hover:bg-secondary hover:text-white'

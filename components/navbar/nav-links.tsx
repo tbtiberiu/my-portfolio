@@ -21,7 +21,7 @@ export default function NavLinks() {
             className={clsx(
               poppins.className,
               link.cursor,
-              'flex text-sm md:text-xl hover:text-primary uppercase grow items-center justify-center gap-2'
+              'flex text-md md:text-xl hover:text-primary uppercase grow items-center justify-center gap-2'
             )}
           >
             <span className="p-2">{link.name}</span>
