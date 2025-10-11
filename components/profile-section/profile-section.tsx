@@ -13,7 +13,7 @@ export default function ProfileSection() {
           Frontend Developer interested in Computer Vision
         </p>
 
-        <div className="flex items-center mt-10 space-x-2">
+        <div className="flex items-center mt-10 gap-1">
           <div className="w-6 text-md text-black dark:text-white">
             <MapPinIcon />
           </div>
