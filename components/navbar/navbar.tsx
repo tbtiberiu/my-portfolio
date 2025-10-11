@@ -30,11 +30,11 @@ export default function Navbar() {
     <div
       className="sticky-navbar sticky top-0 items-center z-50"
       style={{
-        background: `rgba(var(--background-rgb), ${Math.min(
+        background: `rgba(var(--color-background-rgb), ${Math.min(
           scrollProgress / 5,
           0.9
         )})`,
-        color: `rgb(var(--foreground-rgb))`,
+        color: `rgb(var(--color-foreground-rgb))`,
       }}
     >
       <div

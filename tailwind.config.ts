@@ -9,15 +9,6 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
-      colors: {
-        backgroundStart: 'var(--background-start)',
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
-        black: 'var(--black)',
-        white: 'var(--white)',
-        primary: 'var(--primary)',
-        secondary: 'var(--secondary)',
-      },
       screens: {
         xs: '500px',
       },

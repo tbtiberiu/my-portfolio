@@ -1,46 +1,52 @@
 @import "tailwindcss";
 
-:root {
-  --background-rgb: 240, 248, 255;
-  --foreground-rgb: 10, 10, 10;
-  --background: #f0f8ff;
-  --background-start: #e7eff7;
-  --foreground: #0a0a0a;
-  --black: #0a0a0a;
-  --white: #f0f8ff;
-  --primary: #2d81ff;
-  --secondary: #004ebb;
+@custom-variant dark (&:where(.dark, .dark *));
 
-  &.dark {
-    --background-rgb: 17, 17, 17;
-    --foreground-rgb: 240, 248, 255;
-    --background: #111111;
-    --background-start: #1e2225;
-    --foreground: #f0f8ff;
-    --primary: #3293e2;
-    --secondary: #115c9a;
+@theme {
+  --color-background-rgb: 240, 248, 255;
+  --color-foreground-rgb: 10, 10, 10;
+  --color-background: #f0f8ff;
+  --color-background-start: #e7eff7;
+  --color-foreground: #0a0a0a;
+  --color-black: #0a0a0a;
+  --color-white: #f0f8ff;
+  --color-primary: #2d81ff;
+  --color-secondary: #004ebb;
+}
+
+@layer base {
+  :root {
+    &.dark {
+      --color-background-rgb: 17, 17, 17;
+      --color-foreground-rgb: 240, 248, 255;
+      --color-background: #111111;
+      --color-background-start: #1e2225;
+      --color-foreground: #f0f8ff;
+      --color-primary: #3293e2;
+      --color-secondary: #115c9a;
+    }
   }
-}
 
-* {
-  box-sizing: border-box;
-  background: none;
-}
+  * {
+    box-sizing: border-box;
+    background: none;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  color: var(--foreground);
-  // background: var(--background);
-  background: linear-gradient(
-    180deg,
-    var(--background-start),
-    var(--background) 30% 100%
-  );
-  animation: gradientShift 5s ease infinite;
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    color: var(---color-foreground);
+    // background: var(--background);
+    background: linear-gradient(
+      180deg,
+      var(--color-background-start),
+      var(--color-background) 30% 100%
+    );
+    animation: gradientShift 5s ease infinite;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 }
 
 @keyframes gradientShift {
@@ -70,7 +76,7 @@ body {
   height: 30px;
   border-radius: 50%;
   pointer-events: none;
-  background: var(--primary);
+  background: var(--color-primary);
   transform: translate(-50%, -50%);
   z-index: 1000;
   padding: 10px;
@@ -87,7 +93,7 @@ body {
 
 @media screen and (min-width: 1280px) {
   .sticky-navbar {
-    background: var(--background);
+    background: var(--color-background);
     padding-left: calc((100% - 1280px) / 2);
     padding-right: calc((100% - 1280px) / 2);
   }
