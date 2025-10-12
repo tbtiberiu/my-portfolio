@@ -1,11 +1,12 @@
-import type { Metadata } from 'next'
-import './globals.scss'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import type { Metadata } from 'next'
 import { nunito } from '@/app/fonts'
 import Navbar from '@/components/navbar/navbar'
 import Cursor from '@/components/shared/cursor/cursor'
 import SocialLinks from '@/components/social-links/social-links'
 import Background from '@/components/three/background'
+
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Tiberiu-Ioan Boșcan - Portfolio',
