@@ -10,7 +10,7 @@ export default function ProfileSection() {
           Tiberiu-Ioan Boșcan
         </h1>
         <p className={`${poppins.className} text-2xl mt-2`}>
-          Frontend Developer interested in Computer Vision
+          Web Developer with an interest in Computer Vision
         </p>
 
         <div className='flex items-center mt-10 gap-1'>
@@ -21,21 +21,23 @@ export default function ProfileSection() {
         </div>
 
         <p className='mt-4'>
-          As a frontend developer, I design and build engaging, responsive web
-          applications that blend aesthetics with functionality. I have hands-on
-          experience with HTML, CSS, JavaScript, and frameworks like Angular and
-          React, enabling me to craft dynamic user experiences and scalable
-          solutions. I focus on writing clean, efficient code and staying up to
-          date with industry trends to deliver high-quality products.
+          As a full-stack developer, I design and build robust, scalable web
+          applications that combine seamless functionality with engaging user
+          experiences. I have hands-on experience with frontend technologies
+          like HTML, CSS, JavaScript, Angular, and React, as well as backend
+          development using Java and Spring Boot, enabling me to deliver
+          end-to-end solutions. I focus on writing clean, efficient code and
+          keeping up with the latest industry trends to build high-quality
+          products.
         </p>
         <p className='mt-4'>
-          In addition to frontend development, I am pursuing a master&apos;s
+          In addition to my professional work, I am pursuing a master&apos;s
           degree in Advanced Digital Imaging Techniques (TAID) at the University
-          Politehnica of Bucharest, focusing on computer vision and image
-          processing. I have a bachelor&apos;s degree in computer science and a
-          versatile background spanning frontend, backend, game, and mobile
-          development. This diverse experience allows me to quickly adapt to
-          different project needs.
+          Politehnica of Bucharest, specializing in computer vision and image
+          processing. I hold a bachelor&apos;s degree in computer science and
+          have a versatile background spanning frontend, backend, game, and
+          mobile development, which allows me to adapt quickly to diverse
+          project requirements.
         </p>
       </div>
 

@@ -11,7 +11,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Tiberiu-Ioan Boșcan - Portfolio',
   description:
-    'Experienced Frontend Developer specializing in modern web technologies like React, Angular, and TypeScript. Passionate about building interactive, scalable, and high-performance web applications.',
+    'Experienced Web Developer specializing in modern web technologies like React, Angular, and TypeScript on the frontend side, and Java with Spring Boot on backend. Passionate about building interactive, scalable, and high-performance web applications.',
   authors: [
     { name: 'Tiberiu-Ioan Boșcan', url: 'https://boscantiberiu.vercel.app' },
   ],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Tiberiu-Ioan Boșcan - Portfolio',
     description:
-      'Experienced Frontend Developer specializing in React, Angular, and TypeScript. Passionate about building high-performance web applications.',
+      'Experienced Web Developer specializing in React, TypeScript, Java and Spring Boot. Passionate about building high-performance web applications.',
     url: 'https://boscantiberiu.vercel.app',
     siteName: 'Tiberiu-Ioan Boșcan Portfolio',
     type: 'website',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Tiberiu-Ioan Boșcan - Portfolio',
     description:
-      'Frontend Developer skilled in React, Angular, and TypeScript. Building high-performance, scalable applications.',
+      'Web Developer skilled in React, TypeScript, Java and Spring Boot. Building high-performance, scalable applications.',
     images: ['https://boscantiberiu.vercel.app/og-icon.png'],
     creator: '@tiberiuboscan',
   },
