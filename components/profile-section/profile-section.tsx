@@ -42,7 +42,7 @@ export default function ProfileSection() {
       <div className="mt-8">
         <DownloadButton
           title="Download Resume"
-          href="Tiberiu-Ioan_Boscan-resume.pdf"
+          href="Tiberiu-Ioan_Boscan_resume.pdf"
         />
       </div>
     </section>
