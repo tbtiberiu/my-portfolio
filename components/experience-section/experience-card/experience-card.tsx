@@ -51,11 +51,11 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   }, [isOpen])
 
   return (
-    <div className="mb-2">
+    <div className="mb-2 overflow-hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={clsx(
-          'w-full px-6 py-2 flex justify-between items-center rounded-lg text-white mb-2 transition-all ease-in-out duration-300',
+          'w-full overflow-hidden px-6 py-2 flex justify-between items-center rounded-lg text-white mb-2 transition-all ease-in-out duration-300',
           {
             'bg-[#2272b2] cursor-collapse': isOpen,
             'bg-[#394148] cursor-expand': !isOpen,

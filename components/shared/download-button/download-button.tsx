@@ -25,7 +25,7 @@ export default function DownloadButton({ title, href }: ButtonProps) {
       <div
         className={clsx(
           styles.downloadButtonInner,
-          'w-full h-full px-6 py-3 text-black bg-backgroundStart dark:text-white font-medium rounded-full flex flex-row gap-2 items-center justify-around'
+          'w-full h-full px-6 py-3 text-white bg-backgroundStart font-medium rounded-full flex flex-row gap-2 items-center justify-around'
         )}
       >
         <p>{title}</p>
