@@ -1,3 +1,5 @@
+/** biome-ignore-all lint/complexity/useLiteralKeys: Recommendation is wrong */
+/** biome-ignore-all lint/style/noNonNullAssertion: Recommendation is wrong */
 'use client'
 
 import {
@@ -15,7 +17,7 @@ import {
 } from '@heroicons/react/24/outline'
 import clsx from 'clsx'
 import { gsap } from 'gsap'
-import { JSX, useEffect } from 'react'
+import { type JSX, useEffect } from 'react'
 import GithubIcon from '../icons/github/github-icon'
 import LinkedinIcon from '../icons/linkedin/linkedin-icon'
 import MyLogo from '../icons/my-logo/my-logo'
@@ -43,7 +45,7 @@ const Cursor = () => {
 
     CURSOR_CLASSES.forEach((cls) => {
       cursorTexts[cls] = document.querySelector(
-        `.cursor-text-${cls}`
+        `.cursor-text-${cls}`,
       ) as HTMLSpanElement | null
     })
 
@@ -59,7 +61,7 @@ const Cursor = () => {
     const onMouseEnterElement = (event: Event) => {
       const target = event.target as HTMLElement
       const matchingClass = CURSOR_CLASSES.find((cls) =>
-        target.classList.contains(`cursor-${cls}`)
+        target.classList.contains(`cursor-${cls}`),
       )
 
       gsap.to(cursor, { scale: 2.5, duration: 0.2 })
@@ -78,7 +80,7 @@ const Cursor = () => {
     const onClick = (event: Event) => {
       const target = event.target as HTMLElement
       const matchingClass = CURSOR_CLASSES.find((cls) =>
-        target.classList.contains(`cursor-${cls}`)
+        target.classList.contains(`cursor-${cls}`),
       )
 
       if (matchingClass === 'collapse') {
@@ -118,15 +120,15 @@ const Cursor = () => {
 
   return (
     <div
-      id="custom-cursor"
-      className="custom-cursor text-white tracking-wide font-semibold"
+      id='custom-cursor'
+      className='custom-cursor text-white tracking-wide font-semibold'
     >
       {CURSOR_CLASSES.map((cls) => (
         <span
           key={cls}
           className={clsx(
             `cursor-text cursor-text-${cls}`,
-            'w-24 scale-150 hidden'
+            'w-24 scale-150 hidden',
           )}
         >
           {getIcon(cls)}
@@ -152,10 +154,10 @@ const getIcon = (cls: string) => {
     about: <IdentificationIcon />,
     'theme-toggle': (
       <>
-        <div className="hidden dark:block">
+        <div className='hidden dark:block'>
           <SunIcon />
         </div>
-        <div className="block dark:hidden">
+        <div className='block dark:hidden'>
           <MoonIcon />
         </div>
       </>

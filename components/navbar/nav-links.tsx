@@ -1,8 +1,8 @@
 'use client'
 
-import { poppins } from '@/app/fonts'
 import clsx from 'clsx'
 import Link from 'next/link'
+import { poppins } from '@/app/fonts'
 
 const links = [
   { name: 'Projects', href: '/#projects', cursor: 'cursor-projects' },
@@ -21,10 +21,10 @@ export default function NavLinks() {
             className={clsx(
               poppins.className,
               link.cursor,
-              'flex text-sm sm:text-lg md:text-xl hover:text-primary uppercase grow items-center justify-center gap-2'
+              'flex text-sm sm:text-lg md:text-xl hover:text-primary uppercase grow items-center justify-center gap-2',
             )}
           >
-            <span className="p-2">{link.name}</span>
+            <span className='p-2'>{link.name}</span>
           </Link>
         )
       })}

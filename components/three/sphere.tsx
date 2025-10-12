@@ -1,5 +1,5 @@
-import { JSX, useRef } from 'react'
-import { Mesh } from 'three'
+import { type JSX, useRef } from 'react'
+import type { Mesh } from 'three'
 
 const Sphere: React.FC<JSX.IntrinsicElements['mesh']> = (props) => {
   const meshRef = useRef<Mesh>(null)
@@ -7,7 +7,7 @@ const Sphere: React.FC<JSX.IntrinsicElements['mesh']> = (props) => {
   return (
     <mesh {...props} ref={meshRef}>
       <sphereGeometry args={[1, 64, 32]} />
-      <meshStandardMaterial color="#1A78C3" />
+      <meshStandardMaterial color='#1A78C3' />
     </mesh>
   )
 }

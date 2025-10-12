@@ -7,14 +7,14 @@ import SpheresLine from '@/components/three/spheres-line'
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className='relative'>
       <ProfileSection />
       <ProjectsSection />
-      <div className="relative">
+      <div className='relative'>
         <SpheresLine />
         <ExperienceSection />
       </div>
-      <div className="relative">
+      <div className='relative'>
         <SingleSphere />
         <AboutSection />
       </div>

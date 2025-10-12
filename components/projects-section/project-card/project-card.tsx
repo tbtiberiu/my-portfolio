@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Project from '@/types/project'
 import Link from 'next/link'
+import type Project from '@/types/project'
 
 interface ProjectCardProps {
   project: Project
@@ -10,34 +10,34 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <Link
       href={project.github}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="cursor-view bg-white dark:bg-gray-900 dark:border-transparent border-2 border-primary rounded-lg shadow-lg hover:shadow-lg hover:border-primary transition-all transform hover:scale-105 hover:-translate-y-2"
+      target='_blank'
+      rel='noopener noreferrer'
+      className='cursor-view bg-white dark:bg-gray-900 dark:border-transparent border-2 border-primary rounded-lg shadow-lg hover:shadow-lg hover:border-primary transition-all transform hover:scale-105 hover:-translate-y-2'
     >
-      <div className="relative h-48 md:h-52 overflow-hidden rounded-t-lg">
+      <div className='relative h-48 md:h-52 overflow-hidden rounded-t-lg'>
         <Image
           src={project.image}
           alt={project.title}
           fill
-          className="object-cover object-top"
+          className='object-cover object-top'
         />
       </div>
-      <div className="flex flex-col justify-between p-6">
+      <div className='flex flex-col justify-between p-6'>
         <div>
-          <div className="flex flex-wrap gap-2 mb-2">
+          <div className='flex flex-wrap gap-2 mb-2'>
             {project.tags.map((tag, i) => (
               <span
                 key={i}
-                className="text-xs md:text-sm bg-transparent text-black dark:text-white border-2 border-black dark:border-white px-3 py-1 rounded-full"
+                className='text-xs md:text-sm bg-transparent text-black dark:text-white border-2 border-black dark:border-white px-3 py-1 rounded-full'
               >
                 {tag}
               </span>
             ))}
           </div>
-          <h2 className="text-lg font-semibold mb-2">{project.title}</h2>
-          <p className="text-xs md:text-sm">{project.description}</p>
+          <h2 className='text-lg font-semibold mb-2'>{project.title}</h2>
+          <p className='text-xs md:text-sm'>{project.description}</p>
         </div>
-        <span className="block mt-4 text-gray-600 dark:text-gray-400 text-sm">
+        <span className='block mt-4 text-gray-600 dark:text-gray-400 text-sm'>
           {project.year}
         </span>
       </div>

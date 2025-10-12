@@ -1,12 +1,12 @@
 'use client'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
-import { Mesh } from 'three'
+import type { Mesh } from 'three'
 import Sphere from './sphere'
 
 const SingleSphere = () => {
   return (
-    <div className="absolute w-full h-full -z-20 mt-10">
+    <div className='absolute w-full h-full -z-20 mt-10'>
       <Canvas
         camera={{
           position: [0, 0, 10],

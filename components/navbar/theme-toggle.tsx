@@ -33,17 +33,18 @@ export default function ThemeToggle() {
 
   return (
     <button
-      className="cursor-theme-toggle relative w-16 h-8 flex item-center dark:bg-gray-900 bg-primary rounded-full p-1"
+      type='button'
+      className='cursor-theme-toggle relative w-16 h-8 flex item-center dark:bg-gray-900 bg-primary rounded-full p-1'
       onClick={() => setDarkMode(!darkMode)}
     >
-      <div className="w-6 text-white">
+      <div className='w-6 text-white'>
         <MoonIcon />
       </div>
       <div
-        className="absolute bg-white dark:bg-primary w-6 h-6 rounded-full shadow-md transform transition-transform duration-300"
+        className='absolute bg-white dark:bg-primary w-6 h-6 rounded-full shadow-md transform transition-transform duration-300'
         style={darkMode ? { right: '3px' } : { left: '3px' }}
       ></div>
-      <div className="ml-auto w-6 text-yellow-400">
+      <div className='ml-auto w-6 text-yellow-400'>
         <SunIcon />
       </div>
     </button>

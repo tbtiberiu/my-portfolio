@@ -1,9 +1,9 @@
 'use client'
 
 import { Canvas } from '@react-three/fiber'
-import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
-import { Mesh } from 'three'
+import { useEffect, useRef, useState } from 'react'
+import type { Mesh } from 'three'
 import Sphere from './sphere'
 
 const Background = () => {
@@ -19,7 +19,7 @@ const Background = () => {
   }, [])
 
   return (
-    <div className="absolute top-0 w-full h-[250vh] -z-10 hidden lg:block">
+    <div className='absolute top-0 w-full h-[250vh] -z-10 hidden lg:block'>
       <Canvas
         camera={{
           position: [0, 0, 10],

@@ -1,9 +1,9 @@
 'use client'
 
 import { Canvas } from '@react-three/fiber'
-import { useRef, useEffect } from 'react'
-import { Mesh, Group } from 'three'
 import gsap from 'gsap'
+import { useEffect, useRef } from 'react'
+import type { Group, Mesh } from 'three'
 import Sphere from './sphere'
 
 const SpheresLine = () => {
@@ -29,7 +29,7 @@ const SpheresLine = () => {
   }, [])
 
   return (
-    <div className="spheres-line absolute w-full h-[800px] top-0 -z-20 -mt-80">
+    <div className='spheres-line absolute w-full h-[800px] top-0 -z-20 -mt-80'>
       <Canvas
         camera={{
           position: [0, 0, 10],

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import './globals.scss'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { nunito } from '@/app/fonts'
 import Navbar from '@/components/navbar/navbar'
-import Background from '@/components/three/background'
-import SocialLinks from '@/components/social-links/social-links'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import Cursor from '@/components/shared/cursor/cursor'
+import SocialLinks from '@/components/social-links/social-links'
+import Background from '@/components/three/background'
 
 export const metadata: Metadata = {
   title: 'Tiberiu-Ioan Boșcan - Portfolio',
@@ -53,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={`${nunito.className} antialiased`}>
         <Cursor />
         <Background />

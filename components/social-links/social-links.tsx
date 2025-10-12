@@ -4,28 +4,28 @@ import LinkedinIcon from '../shared/icons/linkedin/linkedin-icon'
 
 export default function SocialLinks() {
   return (
-    <div className="sticky-socials sticky float-end top-24 mt-44 mx-5 z-50">
-      <div className="flex flex-col gap-5">
+    <div className='sticky-socials sticky float-end top-24 mt-44 mx-5 z-50'>
+      <div className='flex flex-col gap-5'>
         <Link
-          href="https://www.linkedin.com/in/tiberiu-boscan/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cursor-linkedin"
+          href='https://www.linkedin.com/in/tiberiu-boscan/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='cursor-linkedin'
         >
-          <div className="w-16 h-16 bg-primary hover:bg-secondary rounded-full flex justify-center items-center">
-            <div className="w-8 text-white">
+          <div className='w-16 h-16 bg-primary hover:bg-secondary rounded-full flex justify-center items-center'>
+            <div className='w-8 text-white'>
               <LinkedinIcon />
             </div>
           </div>
         </Link>
         <Link
-          href="https://github.com/tbtiberiu/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cursor-github"
+          href='https://github.com/tbtiberiu/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='cursor-github'
         >
-          <div className="w-16 h-16 bg-primary hover:bg-secondary rounded-full flex justify-center items-center">
-            <div className="w-8 text-white">
+          <div className='w-16 h-16 bg-primary hover:bg-secondary rounded-full flex justify-center items-center'>
+            <div className='w-8 text-white'>
               <GithubIcon />
             </div>
           </div>

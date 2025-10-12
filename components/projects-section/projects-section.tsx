@@ -1,8 +1,8 @@
 'use client'
 
-import { poppins } from '@/app/fonts'
 import { useState } from 'react'
-import Project from '@/types/project'
+import { poppins } from '@/app/fonts'
+import type Project from '@/types/project'
 import ProjectCard from './project-card/project-card'
 
 const projects: Project[] = [
@@ -57,13 +57,13 @@ export default function ProjectsSection() {
     selectedCategory === 'All'
       ? projects
       : projects.filter((project) =>
-          project.categories.includes(selectedCategory)
+          project.categories.includes(selectedCategory),
         )
 
   return (
     <section
-      id="projects"
-      className="lg:pt-24 pb-24 px-5 m-auto max-w-screen-xl"
+      id='projects'
+      className='lg:pt-24 pb-24 px-5 m-auto max-w-screen-xl'
     >
       <h2
         className={`${poppins.className} text-3xl md:text-4xl font-bold uppercase mb-4`}
@@ -71,13 +71,14 @@ export default function ProjectsSection() {
         Projects
       </h2>
 
-      <div className="flex md:items-center mb-8 text-xs md:text-lg flex-col md:flex-row">
-        <p className="pb-2 md:pb-0 md:font-normal hidden md:inline">
-          Filter by <span className="px-3">&#8226;</span>{' '}
+      <div className='flex md:items-center mb-8 text-xs md:text-lg flex-col md:flex-row'>
+        <p className='pb-2 md:pb-0 md:font-normal hidden md:inline'>
+          Filter by <span className='px-3'>&#8226;</span>{' '}
         </p>
         <div>
           {categories.map((category) => (
             <button
+              type='button'
               key={category}
               onClick={() => setSelectedCategory(category)}
               className={`cursor-filter mr-2 md:mr-0 md:ml-2 px-3 md:px-4 py-1 rounded-full transition-colors duration-300 ${
@@ -92,7 +93,7 @@ export default function ProjectsSection() {
         </div>
       </div>
 
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
+      <div className='grid gap-8 grid-cols-1 md:grid-cols-2'>
         {filteredProjects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}

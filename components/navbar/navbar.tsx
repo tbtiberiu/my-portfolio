@@ -1,9 +1,9 @@
 'use client'
 
-import NavLinks from './nav-links'
-import ThemeToggle from './theme-toggle'
 import { useEffect, useState } from 'react'
 import MyLogo from '../shared/icons/my-logo/my-logo'
+import NavLinks from './nav-links'
+import ThemeToggle from './theme-toggle'
 
 export default function Navbar() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -28,34 +28,35 @@ export default function Navbar() {
 
   return (
     <div
-      className="sticky-navbar sticky top-0 items-center z-50"
+      className='sticky-navbar sticky top-0 items-center z-50'
       style={{
         background: `rgba(var(--color-background-rgb), ${Math.min(
           scrollProgress / 5,
-          0.9
+          0.9,
         )})`,
         color: `rgb(var(--color-foreground-rgb))`,
       }}
     >
       <div
-        className="absolute top-0 left-1/2 h-[2px] bg-primary"
+        className='absolute top-0 left-1/2 h-[2px] bg-primary'
         style={{ width: `${scrollProgress / 2}%` }}
       ></div>
       <div
-        className="absolute top-0 right-1/2 h-[2px] bg-primary"
+        className='absolute top-0 right-1/2 h-[2px] bg-primary'
         style={{ width: `${scrollProgress / 2}%` }}
       ></div>
-      <nav className="flex justify-between w-full px-3 py-4 gap-4">
+      <nav className='flex justify-between w-full px-3 py-4 gap-4'>
         <button
-          className="cursor-logo mx-3 w-12 text-foreground hidden sm:block"
+          type='button'
+          className='cursor-logo mx-3 w-12 text-foreground hidden sm:block'
           onClick={handleLogoIconClick}
         >
           <MyLogo />
         </button>
-        <div className="flex items-center justify-between gap-2 md:gap-20">
+        <div className='flex items-center justify-between gap-2 md:gap-20'>
           <NavLinks />
         </div>
-        <div className="cursor-view flex items-center mx-3">
+        <div className='cursor-view flex items-center mx-3'>
           <ThemeToggle />
         </div>
       </nav>
