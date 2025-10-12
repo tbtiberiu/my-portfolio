@@ -1,4 +1,4 @@
-# Tiberiu-Ioan Boșcan — Full-stack Web Developer Portfolio
+# Tiberiu-Ioan Boșcan — Web Developer Portfolio
 
 Welcome to my portfolio! I’m a **Full-stack Web Developer** passionate about building interactive, performant, and visually appealing web applications from front to back.
 
