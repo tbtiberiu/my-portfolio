@@ -52,7 +52,7 @@ export default function Navbar() {
         >
           <MyLogo />
         </button>
-        <div className="flex items-center justify-between gap-6 md:gap-20">
+        <div className="flex items-center justify-between gap-2 md:gap-20">
           <NavLinks />
         </div>
         <div className="cursor-view flex items-center mx-3">

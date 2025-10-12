@@ -18,13 +18,13 @@ export default function SendMailButton({ title, mail }: ButtonProps) {
       target="_blank"
       rel="noopener noreferrer"
       className={clsx(
-        'cursor-mail p-3 rounded-full shadow-md absolute m-auto left-0 right-0 md:right-16 bottom-0 w-72 md:w-96 md:mr-0'
+        'cursor-mail p-3 rounded-full absolute m-auto left-0 right-0 md:right-16 bottom-0 w-72 md:w-96 md:mr-0'
       )}
     >
       <div
         className={clsx(
           styles.sendMailButton,
-          'cursor-mail p-3 rounded-full shadow-md absolute m-auto left-0 right-0 -bottom-2 w-72 md:w-96 md:mr-0'
+          'p-3 rounded-full shadow-md absolute m-auto left-0 right-0 -bottom-2'
         )}
       >
         <div

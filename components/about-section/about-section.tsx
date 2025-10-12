@@ -8,7 +8,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative py-10 px-5 m-auto max-w-screen-xl lg:my-10"
+      className="relative py-10 px-5 m-auto max-w-screen-xl lg:mt-10 mb-10"
     >
       <h2
         className={`${poppins.className} text-3xl md:text-4xl font-bold uppercase my-6`}
@@ -24,7 +24,7 @@ export default function AboutSection() {
             className="rounded-md h-full object-cover object-left"
           />
         </div>
-        <div className="cursor-default w-full lg:w-3/4 pl-8 p-10 flex flex-col justify-center leading-relaxed text-sm lg:text-base">
+        <div className="cursor-default w-full lg:w-3/4 md:pl-8 p-4 md:p-10 flex flex-col justify-center leading-relaxed text-sm lg:text-base">
           <p className="mb-6">
             I discovered programming at the start of high school when a friend
             taught me my first lines of{' '}
