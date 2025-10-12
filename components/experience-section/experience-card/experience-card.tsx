@@ -5,9 +5,12 @@ import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
 import ExperienceInfo from '@/types/experience-info'
 import { ClockIcon, MapPinIcon } from '@heroicons/react/24/solid'
 import WatersLogo from '@/components/shared/icons/waters/waters-icon'
-import EndavaLogo from '@/components/shared/icons/endava/endava-icon'
 import clsx from 'clsx'
 import { gsap } from 'gsap'
+import EndavaIcon from '@/components/shared/icons/endava/endava-icon'
+import WatersIcon from '@/components/shared/icons/waters/waters-icon'
+import SocieteGeneraleIcon from '@/components/shared/icons/societe-generale/societe-generale-icon'
+import UpworkIcon from '@/components/shared/icons/upwork/upwork-icon'
 
 interface ExperienceCardProps {
   experienceInfo: ExperienceInfo
@@ -22,11 +25,15 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   const contentRef = useRef<HTMLDivElement>(null)
 
   const renderCompanyLogo = (company: string) => {
-    switch (company.toLowerCase()) {
+    switch (company.toLowerCase().trim()) {
+      case 'société générale':
+        return <SocieteGeneraleIcon />
+      case 'upwork · freelance':
+        return <UpworkIcon />
       case 'waters corporation':
-        return <WatersLogo />
+        return <WatersIcon />
       case 'endava':
-        return <EndavaLogo />
+        return <EndavaIcon />
       default:
         return <div className="w-40 h-40 bg-gray-300 rounded-lg"></div>
     }

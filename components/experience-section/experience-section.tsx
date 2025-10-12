@@ -4,6 +4,40 @@ import { poppins } from '@/app/fonts'
 
 const experiences: ExperienceInfo[] = [
   {
+    title: 'Intern Backend Developer',
+    company: 'Société Générale',
+    location: 'Bucharest, Romania (Hybrid)',
+    dates: 'July 2025 - Present',
+    description:
+      'Worked on the backend of a large-scale CFD trading platform for major banks, focusing on end-of-day operations, server synchronization, and market data integration. Collaborated with frontend and senior engineers to maintain smooth data flow and reliable system performance.',
+    technologies: ['Java', 'Spring Boot', 'Linux', 'SQL', 'Git'],
+  },
+  {
+    title: 'Intern Frontend Developer',
+    company: 'Société Générale',
+    location: 'Bucharest, Romania (Hybrid)',
+    dates: 'February 2025 - July 2025',
+    description:
+      'Contributed to the Panther frontend team, building and improving React and React Native components for a CFD trading platform. Focused on accessibility, optimizing application flow, and enhancing performance, while consistently delivering on schedule and receiving positive feedback from stakeholders.',
+    technologies: ['React', 'React Native', 'TypeScript', 'CSS', 'Git'],
+  },
+  {
+    title: 'UI/UX Designer and WordPress Developer',
+    company: 'Upwork · Freelance',
+    location: 'Remote',
+    dates: 'February 2025 - May 2025',
+    description:
+      'Designed and built four custom WordPress websites as a freelance UI/UX designer, creating user-focused interfaces in Figma and responsive, feature-rich sites. Delivered modern, client-tailored solutions and received very good feedback for quality and timely delivery.',
+    technologies: [
+      'Figma',
+      'WordPress',
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Elementor',
+    ],
+  },
+  {
     title: 'Junior Frontend Developer',
     company: 'Waters Corporation',
     location: 'Brasov, Romania (Remote)',
