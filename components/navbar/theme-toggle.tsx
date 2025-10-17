@@ -34,7 +34,7 @@ export default function ThemeToggle() {
   return (
     <button
       type='button'
-      className='cursor-theme-toggle relative w-16 h-8 flex item-center dark:bg-gray-900 bg-primary rounded-full p-1'
+      className='cursor-theme-toggle cursor-pointer relative w-16 h-8 flex item-center dark:bg-gray-900 bg-primary rounded-full p-1'
       onClick={() => setDarkMode(!darkMode)}
     >
       <div className='w-6 text-white'>
