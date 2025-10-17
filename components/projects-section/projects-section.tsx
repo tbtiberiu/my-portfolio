@@ -81,7 +81,7 @@ export default function ProjectsSection() {
               type='button'
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`cursor-filter mr-2 md:mr-0 md:ml-2 px-3 md:px-4 py-1 rounded-full transition-colors duration-300 ${
+              className={`cursor-filter cursor-pointer mr-2 md:mr-0 md:ml-2 px-3 md:px-4 py-1 rounded-full transition-colors duration-300 ${
                 selectedCategory === category
                   ? 'bg-primary text-white'
                   : 'hover:bg-secondary hover:text-white'
