@@ -61,4 +61,4 @@ Make sure you have the following installed:
 Feel free to reach me out:
 
 - Email: tiberiuioan35@gmail.com
-- LinkedIn: [@tiberiu-boscan](https://www.linkedin.com/in/tiberiu-boscan/)
+- LinkedIn: [@tbtiberiu](https://www.linkedin.com/in/tbtiberiu/)

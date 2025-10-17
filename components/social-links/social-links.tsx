@@ -7,7 +7,7 @@ export default function SocialLinks() {
     <div className='sticky-socials sticky float-end top-24 mt-44 mx-5 z-50'>
       <div className='flex flex-col gap-5'>
         <Link
-          href='https://www.linkedin.com/in/tiberiu-boscan/'
+          href='https://www.linkedin.com/in/tbtiberiu/'
           target='_blank'
           rel='noopener noreferrer'
           className='cursor-linkedin'
