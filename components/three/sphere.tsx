@@ -7,7 +7,7 @@ const Sphere: React.FC<JSX.IntrinsicElements['mesh']> = (props) => {
   return (
     <mesh {...props} ref={meshRef}>
       <sphereGeometry args={[1, 64, 32]} />
-      <meshStandardMaterial color='#1A78C3' />
+      <meshStandardMaterial color='#1A78C3' roughness={1} metalness={0} />
     </mesh>
   )
 }

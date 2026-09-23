@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { poppins } from '@/app/fonts'
 
 const links = [
-  { name: 'Projects', href: '/#projects', cursor: 'cursor-projects' },
-  { name: 'Experience', href: '/#experience', cursor: 'cursor-experience' },
-  { name: 'About', href: '/#about', cursor: 'cursor-about' },
+  { name: 'Projects', href: '/#projects', cursorType: 'projects' },
+  { name: 'Experience', href: '/#experience', cursorType: 'experience' },
+  { name: 'About', href: '/#about', cursorType: 'about' },
 ]
 
 export default function NavLinks() {
@@ -18,13 +18,13 @@ export default function NavLinks() {
           <Link
             key={link.name}
             href={link.href}
+            data-cursor={link.cursorType}
             className={clsx(
               poppins.className,
-              link.cursor,
-              'flex text-sm sm:text-lg md:text-xl hover:text-primary uppercase grow items-center justify-center gap-2',
+              'relative py-1 text-sm sm:text-base font-light uppercase tracking-widest text-slate-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-200',
             )}
           >
-            <span className='p-2'>{link.name}</span>
+            <span>{link.name}</span>
           </Link>
         )
       })}

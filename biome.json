@@ -36,11 +36,7 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "preset": "recommended",
-      "suspicious": {
-        "noArrayIndexKey": "off",
-        "noUnknownAtRules": "off"
-      }
+      "preset": "recommended"
     },
     "domains": {
       "next": "recommended",

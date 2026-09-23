@@ -1,0 +1,8 @@
+export { default as EndavaIcon } from './endava/endava-icon'
+export { default as GithubIcon } from './github/github-icon'
+export { default as LinkedinIcon } from './linkedin/linkedin-icon'
+export { default as MyLogo } from './my-logo/my-logo'
+export { default as SendMailIcon } from './send-mail/send-mail-icon'
+export { default as SocieteGeneraleIcon } from './societe-generale/societe-generale-icon'
+export { default as UpworkIcon } from './upwork/upwork-icon'
+export { default as WatersIcon } from './waters/waters-icon'

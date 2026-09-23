@@ -2,53 +2,8 @@
 
 import { useState } from 'react'
 import { poppins } from '@/app/fonts'
-import type Project from '@/types/project'
+import { projectCategories, projects } from '@/data/projects'
 import ProjectCard from './project-card/project-card'
-
-const projects: Project[] = [
-  {
-    title: 'Nova Cars - Futuristic Cars Dealership',
-    description:
-      'Nova App is a concept website showcasing futuristic cars, developed with Node.js, Express, Handlebars, and MySQL. It features user authentication, dynamic content, and database integration. Deployed on Heroku, the app allows users to register, log in, and explore concept vehicles. Created as part of a Web Application Development course, the project earned a perfect score and includes independently explored features like server setup and deployment.',
-    tags: ['Web Development', 'Handlebars · CSS · Node.js · MySQL'],
-    categories: ['Web Development'],
-    year: '2024',
-    image: '/images/nova-app.png',
-    github: 'https://github.com/tbtiberiu/nova-app',
-  },
-  {
-    title: 'Chess Snapshot - Chess Recognition',
-    description:
-      'Chess Snapshot is an innovative computer vision project that automates the recognition of chessboard states from images. By using advanced image processing techniques and machine learning, it accurately identifies the positions of pieces on a chessboard, making it easy for chess enthusiasts to document and analyze games without manual input.',
-    tags: ['Computer Vision', 'Python · OpenCV · TensorFlow · Flutter'],
-    categories: ['Computer Vision'],
-    year: '2024',
-    image: '/images/chess-snapshot.png',
-    github: 'https://github.com/tbtiberiu/chess_snapshot_app',
-  },
-  {
-    title: 'Acme Shop - E-commerce Website Template',
-    description:
-      "Acme Shop is a dynamic e-commerce website template built with ReactJS and Redux, inspired by Webflow's Biznus Template. It features product listings, efficient state management, and smooth navigation with React Router. Easily customizable and perfect for online stores, the project is simple to set up and run locally.",
-    tags: ['Web Development', 'HTML · CSS · React.js'],
-    categories: ['Web Development'],
-    year: '2022',
-    image: '/images/acme-shop.png',
-    github: 'https://github.com/tbtiberiu/acme-shop',
-  },
-  {
-    title: 'John Doe Mountain - Birds Photo Gallery',
-    description:
-      'John Doe Mountain Birds Photo Gallery is a web-based showcase of stunning images captured by the fictional photographer, John Doe. This project was designed using Adobe XD and implemented using HTML and Sass.',
-    tags: ['Web Development', 'HTML · CSS · Adobe XD'],
-    categories: ['Web Development'],
-    year: '2019',
-    image: '/images/john-doe-gallery.png',
-    github: 'https://github.com/tbtiberiu/John-Doe-Photo-Gallery',
-  },
-]
-
-const categories = ['All', 'Web Development', 'Computer Vision']
 
 export default function ProjectsSection() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
@@ -63,28 +18,29 @@ export default function ProjectsSection() {
   return (
     <section
       id='projects'
-      className='lg:pt-24 pb-24 px-5 m-auto max-w-screen-xl'
+      className='lg:pt-24 pb-24 px-5 m-auto max-w-screen-xl scroll-mt-24'
     >
-      <h2
-        className={`${poppins.className} text-3xl md:text-4xl font-bold uppercase mb-4`}
-      >
-        Projects
-      </h2>
-
-      <div className='flex md:items-center mb-8 text-xs md:text-lg flex-col md:flex-row'>
-        <p className='pb-2 md:pb-0 md:font-normal hidden md:inline'>
-          Filter by <span className='px-3'>&#8226;</span>{' '}
-        </p>
+      <div className='flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4'>
         <div>
-          {categories.map((category) => (
+          <h2
+            className={`${poppins.className} text-3xl md:text-4xl uppercase font-light tracking-wide text-foreground`}
+          >
+            Projects
+          </h2>
+        </div>
+
+        <div className='inline-flex items-center p-1 rounded-full bg-gray-200/60 dark:bg-gray-800/60 backdrop-blur-sm border border-gray-300/40 dark:border-gray-700/50 self-start sm:self-auto overflow-x-auto max-w-full'>
+          {projectCategories.map((category) => (
             <button
               type='button'
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`cursor-filter cursor-pointer mr-2 md:mr-0 md:ml-2 px-3 md:px-4 py-1 rounded-full transition-colors duration-300 ${
+              aria-pressed={selectedCategory === category}
+              data-cursor='filter'
+              className={`cursor-pointer px-4 py-1.5 rounded-full text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                 selectedCategory === category
-                  ? 'bg-primary text-white'
-                  : 'hover:bg-secondary hover:text-white'
+                  ? 'bg-primary text-white shadow-sm'
+                  : 'text-gray-600 dark:text-gray-400 hover:text-foreground hover:bg-black/5 dark:hover:bg-white/5'
               }`}
             >
               {category}
@@ -95,7 +51,11 @@ export default function ProjectsSection() {
 
       <div className='grid gap-8 grid-cols-1 md:grid-cols-2'>
         {filteredProjects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <ProjectCard
+            key={project.title}
+            project={project}
+            priority={index === 0}
+          />
         ))}
       </div>
     </section>

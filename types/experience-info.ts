@@ -4,5 +4,6 @@ export default interface ExperienceInfo {
   location: string
   dates: string
   description: string
+  highlights?: string[]
   technologies: string[]
 }

@@ -1,4 +1,10 @@
-export default function EndavaIcon() {
+interface IconProps {
+  className?: string
+}
+
+export default function EndavaIcon({
+  className = 'h-11 sm:h-13 md:h-15 lg:h-16 w-auto max-w-[210px]',
+}: IconProps) {
   return (
     <svg
       version='1.0'
@@ -8,6 +14,7 @@ export default function EndavaIcon() {
       y='0px'
       viewBox='66 158 495 168'
       fill='currentColor'
+      className={className}
     >
       <title>Endava</title>
       <path

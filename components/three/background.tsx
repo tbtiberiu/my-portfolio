@@ -1,63 +1,76 @@
 'use client'
 
-import { Canvas } from '@react-three/fiber'
-import { gsap } from 'gsap'
-import { useEffect, useRef, useState } from 'react'
-import type { Mesh } from 'three'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { useEffect, useRef } from 'react'
+import type { Group } from 'three'
 import Sphere from './sphere'
 
 const Background = () => {
-  const [scrollY, setScrollY] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   return (
-    <div className='absolute top-0 w-full h-[250vh] -z-10 hidden lg:block'>
+    <div className='absolute top-0 w-full h-[250vh] -z-10 hidden lg:block pointer-events-none'>
       <Canvas
         camera={{
           position: [0, 0, 10],
           fov: 50,
         }}
       >
-        <ambientLight intensity={1.5} />
-        <directionalLight position={[-5, 5, 10]} intensity={2} />
-        <Spheres scrollY={scrollY} />
+        <ambientLight intensity={1.4} />
+        <directionalLight position={[-5, 5, 10]} intensity={1.0} />
+        <Spheres />
       </Canvas>
     </div>
   )
 }
 
-const Spheres: React.FC<{ scrollY: number }> = ({ scrollY }) => {
-  const groupRef = useRef<Mesh>(null)
+const Spheres = () => {
+  const groupRef = useRef<Group>(null)
+  const targetScrollY = useRef(0)
 
   useEffect(() => {
-    if (groupRef.current) {
-      gsap.to(groupRef.current.children[0].position, {
-        x: 3.7 + scrollY * 0.001,
-        y: 4.8 + scrollY * 0.005,
-        duration: 0.3,
-      })
+    targetScrollY.current = window.scrollY
 
-      gsap.to(groupRef.current.children[1].position, {
-        x: 1 + scrollY * 0.001,
-        y: scrollY * 0.005,
-        duration: 0.3,
-      })
-
-      gsap.to(groupRef.current.children[2].position, {
-        x: 4 - scrollY * 0.002,
-        y: -6 + scrollY * 0.005,
-        duration: 0.3,
-      })
+    const onScroll = () => {
+      targetScrollY.current = window.scrollY
     }
-  }, [scrollY])
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useFrame((state) => {
+    const group = groupRef.current
+    if (!group || group.children.length < 3) return
+
+    const scrollY = targetScrollY.current
+    const time = state.clock.getElapsedTime()
+
+    // Sphere 0 (top-right hero sphere): subtle floating + smooth parallax
+    const s0 = group.children[0]
+    if (s0) {
+      const targetX = 3.7 + Math.sin(time * 0.4) * 0.15
+      const targetY = 4.8 + scrollY * 0.003 + Math.cos(time * 0.35) * 0.1
+      s0.position.x += (targetX - s0.position.x) * 0.08
+      s0.position.y += (targetY - s0.position.y) * 0.08
+    }
+
+    // Sphere 1 (mid-right hero sphere)
+    const s1 = group.children[1]
+    if (s1) {
+      const targetX = 1.0 + Math.cos(time * 0.45) * 0.18
+      const targetY = scrollY * 0.0035 + Math.sin(time * 0.4) * 0.12
+      s1.position.x += (targetX - s1.position.x) * 0.08
+      s1.position.y += (targetY - s1.position.y) * 0.08
+    }
+
+    // Sphere 2 (lower right transition sphere)
+    const s2 = group.children[2]
+    if (s2) {
+      const targetX = 4.0 - scrollY * 0.0005 + Math.sin(time * 0.3) * 0.2
+      const targetY = -6.0 + scrollY * 0.004 + Math.cos(time * 0.4) * 0.15
+      s2.position.x += (targetX - s2.position.x) * 0.08
+      s2.position.y += (targetY - s2.position.y) * 0.08
+    }
+  })
 
   return (
     <group ref={groupRef}>

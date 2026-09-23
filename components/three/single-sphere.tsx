@@ -1,20 +1,20 @@
 'use client'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
-import type { Mesh } from 'three'
+import type { Group } from 'three'
 import Sphere from './sphere'
 
 const SingleSphere = () => {
   return (
-    <div className='absolute w-full h-full -z-20 mt-10'>
+    <div className='absolute -top-24 w-full h-[calc(100%+160px)] -z-20 pointer-events-none'>
       <Canvas
         camera={{
-          position: [0, 0, 10],
+          position: [0, 0, 11],
           fov: 50,
         }}
       >
-        <ambientLight intensity={1.25} />
-        <directionalLight position={[-5, 5, 10]} intensity={2} />
+        <ambientLight intensity={1.4} />
+        <directionalLight position={[-5, 5, 10]} intensity={1.0} />
         <Spheres />
       </Canvas>
     </div>
@@ -22,7 +22,7 @@ const SingleSphere = () => {
 }
 
 const Spheres: React.FC = () => {
-  const groupRef = useRef<Mesh>(null)
+  const groupRef = useRef<Group>(null)
 
   useFrame((state) => {
     if (!groupRef.current) return
@@ -32,7 +32,7 @@ const Spheres: React.FC = () => {
 
   return (
     <group ref={groupRef}>
-      <Sphere position={[0, 0, 0]} scale={4} />
+      <Sphere position={[0, 0, 0]} scale={3.6} />
     </group>
   )
 }

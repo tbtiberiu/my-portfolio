@@ -1,9 +1,5 @@
-'use client'
-
 import { ArrowDownTrayIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
-
-import './download-button.css'
 
 interface ButtonProps {
   title: string
@@ -17,14 +13,16 @@ export default function DownloadButton({ title, href }: ButtonProps) {
       download
       target='_blank'
       rel='noopener noreferrer'
-      className='downloadButton cursor-download w-64 rounded-full shadow-md'
+      aria-label={`${title} (PDF)`}
+      data-cursor='download'
+      className='cursor-download group rotating-border-btn shadow-md hover:shadow-[0_0_20px_rgba(45,129,255,0.4)] transition-shadow duration-300'
     >
-      <div className='downloadButtonInner w-full h-full px-6 py-3 text-white bg-backgroundStart font-medium rounded-full flex flex-row gap-2 items-center justify-around'>
-        <p>{title}</p>
-        <div className='w-6'>
-          <ArrowDownTrayIcon />
-        </div>
-      </div>
+      <span className='relative z-10 w-full h-full px-7 py-3 rounded-full bg-background dark:bg-[#13171b] flex items-center justify-center gap-3 transition-colors duration-200'>
+        <span className='font-semibold text-sm md:text-base text-gray-900 dark:text-white tracking-wide'>
+          {title}
+        </span>
+        <ArrowDownTrayIcon className='w-5 h-5' aria-hidden='true' />
+      </span>
     </Link>
   )
 }
