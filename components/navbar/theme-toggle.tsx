@@ -1,50 +1,41 @@
 'use client'
 
 import { MoonIcon, SunIcon } from '@heroicons/react/16/solid'
+import clsx from 'clsx'
+import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
 export default function ThemeToggle() {
-  const [darkMode, setDarkMode] = useState(true)
+  const [mounted, setMounted] = useState(false)
+  const { resolvedTheme, setTheme } = useTheme()
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem('theme')
-
-    const shouldUseDark =
-      storedTheme === 'dark' ||
-      (!storedTheme &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-
-    setDarkMode(shouldUseDark)
-
-    document.documentElement.classList.toggle('dark', shouldUseDark)
+    setMounted(true)
   }, [])
 
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark')
-      document.documentElement.classList.remove('light')
-      localStorage.setItem('theme', 'dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-      document.documentElement.classList.add('light')
-      localStorage.setItem('theme', 'light')
-    }
-  }, [darkMode])
+  const isDark = mounted ? resolvedTheme === 'dark' : true
+
+  const toggleTheme = () => {
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+  }
 
   return (
     <button
       type='button'
-      className='cursor-theme-toggle cursor-pointer relative w-16 h-8 flex item-center dark:bg-gray-900 bg-primary rounded-full p-1'
-      onClick={() => setDarkMode(!darkMode)}
+      aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+      className='cursor-theme-toggle cursor-pointer relative w-16 h-8 flex items-center dark:bg-gray-900 bg-primary rounded-full p-1 transition-colors duration-200'
+      onClick={toggleTheme}
     >
-      <div className='w-6 text-white'>
+      <div className='w-6 text-white' aria-hidden='true'>
         <MoonIcon />
       </div>
       <div
-        className='absolute bg-white dark:bg-primary w-6 h-6 rounded-full shadow-md transform transition-transform duration-300'
-        style={darkMode ? { right: '3px' } : { left: '3px' }}
-      ></div>
-      <div className='ml-auto w-6 text-yellow-400'>
+        className={clsx(
+          'absolute left-1 bg-white dark:bg-primary w-6 h-6 rounded-full shadow-md transition-transform duration-300 ease-in-out',
+          isDark ? 'translate-x-8' : 'translate-x-0',
+        )}
+      />
+      <div className='ml-auto w-6 text-yellow-400' aria-hidden='true'>
         <SunIcon />
       </div>
     </button>

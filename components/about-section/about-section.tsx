@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import { poppins } from '@/app/fonts'
 import SendMailButton from '../shared/send-mail-button/send-mail-button'
@@ -8,79 +6,75 @@ export default function AboutSection() {
   return (
     <section
       id='about'
-      className='relative py-10 px-5 m-auto max-w-screen-xl lg:mt-10 mb-10'
+      className='relative py-10 px-5 m-auto max-w-screen-xl lg:mt-10 mb-20 pb-16 scroll-mt-24'
     >
-      <h2
-        className={`${poppins.className} text-3xl md:text-4xl font-bold uppercase my-6`}
-      >
-        About Me
-      </h2>
-      <div className='bg-[rgba(255,255,255,0.9)] dark:bg-[rgba(17,17,17,0.9)] rounded-lg flex shadow-lg border-2 border-primary md:mr-20'>
-        <div className='relative lg:w-1/4 hidden md:block'>
+      <div className='mb-6'>
+        <h2
+          className={`${poppins.className} text-3xl md:text-4xl uppercase font-light tracking-wide text-foreground`}
+        >
+          About Me
+        </h2>
+      </div>
+
+      <div className='relative bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-2xl flex flex-col md:flex-row shadow-sm border border-slate-200 dark:border-gray-800 md:mr-20 overflow-hidden'>
+        <div className='relative md:w-1/3 min-h-[300px] hidden md:block overflow-hidden'>
           <Image
             src='/images/about-me.jpg'
             alt='Image with me coding at a hackathon'
             fill
-            className='rounded-md h-full object-cover object-left'
+            sizes='(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 25vw'
+            className='h-full object-cover scale-[1.3] origin-[64%_26%] transition-transform duration-500 hover:scale-[1.35]'
           />
         </div>
-        <div className='cursor-default w-full lg:w-3/4 md:pl-8 p-4 md:p-10 flex flex-col justify-center leading-relaxed text-sm lg:text-base'>
-          <p className='mb-6'>
+        <div className='cursor-default w-full md:w-2/3 p-6 md:p-10 md:pb-12 flex flex-col justify-center leading-relaxed text-sm md:text-base font-light text-slate-700 dark:text-gray-300 space-y-4'>
+          <p>
             I discovered programming at the start of high school when a friend
             taught me my first lines of{' '}
-            <span className='text-primary font-bold'>C++</span> code, along with
-            the basics of <span className='text-primary font-bold'>HTML</span>{' '}
-            and <span className='text-primary font-bold'>CSS</span>. That
-            initial spark led me to develop a strong interest in{' '}
-            <span className='text-primary font-bold'>web development</span>. In
-            school, I quickly became skilled at solving problems in pseudocode,
-            which deepened my passion for building and creating. I attended the
-            PepinTeen coding bootcamp and participated in various contests, but
-            the majority of my learning came from watching{' '}
-            <span className='text-primary font-bold'>online tutorials</span> and{' '}
-            <span className='text-primary font-bold'>
-              building personal projects
+            <span className='font-bold text-foreground dark:text-white'>
+              C++
+            </span>{' '}
+            code, along with the basics of{' '}
+            <span className='font-bold text-foreground dark:text-white'>
+              HTML
+            </span>{' '}
+            and{' '}
+            <span className='font-bold text-foreground dark:text-white'>
+              CSS
             </span>
-            .
+            . That initial spark led me to develop a strong interest in{' '}
+            <span className='font-bold text-foreground dark:text-white'>
+              web development
+            </span>
+            . In school, I quickly became skilled at solving algorithmic
+            problems, attended the PepinTeen coding bootcamp, and built hands-on
+            personal projects to understand systems from the ground up.
           </p>
-          <p className='mb-6'>
-            During university, I expanded beyond frontend development, diving
-            into <span className='text-primary font-bold'>backend</span>,{' '}
-            <span className='text-primary font-bold'>mobile</span>,{' '}
-            <span className='text-primary font-bold'>IoT technologies</span>,
-            and more. I earned my{' '}
-            <span className='text-primary font-bold'>
-              computer science degree
+          <p>
+            During university at Transilvania University of Brașov, I expanded
+            across full-stack development, mobile, and automation, earning my{' '}
+            <span className='font-bold text-foreground dark:text-white'>
+              Computer Science degree
             </span>{' '}
-            by developing a robust algorithm for detecting the state of a chess
-            game, blending{' '}
-            <span className='text-primary font-bold'>problem-solving</span> and{' '}
-            <span className='text-primary font-bold'>machine learning</span>{' '}
-            with practical application. Now, with{' '}
-            <span className='text-primary font-bold'>
-              two years of professional software development experience
+            by creating a Computer Vision algorithm for real-time chess state
+            recognition. Building on that foundation, I earned my{' '}
+            <span className='font-bold text-foreground dark:text-white'>
+              Master&apos;s degree in Advanced Techniques in Digital Imaging
+              (TAID)
             </span>{' '}
-            and a portfolio of diverse projects, I continue to push the
-            boundaries of what I can create, always{' '}
-            <span className='text-primary font-bold'>eager to learn</span>.
+            at Politehnica Bucharest, specializing in Machine Learning and
+            Computer Vision.
           </p>
-          <p className='mb-6'>
-            I&apos;m always excited to take on new challenges and collaborate on{' '}
-            <span className='text-primary font-bold'>innovative projects</span>.
-            With a solid{' '}
-            <span className='text-primary font-bold'>
-              background in development
-            </span>{' '}
-            and a{' '}
-            <span className='text-primary font-bold'>
-              passion for problem-solving
+          <p>
+            Today, I bring that same curiosity to my work at{' '}
+            <span className='font-bold text-foreground dark:text-white'>
+              Société Générale
             </span>
-            , I&apos;m confident I can contribute to your next digital venture.
-            Feel free to reach out, and let&apos;s discuss how{' '}
-            <span className='text-primary font-bold'>
-              I can bring value to your team
-            </span>
-            .
+            , focusing on thoughtful engineering and building software that
+            lasts.
+          </p>
+          <p>
+            Feel free to reach out. I&apos;m always excited to connect and
+            discuss interesting technical challenges.
           </p>
         </div>
       </div>

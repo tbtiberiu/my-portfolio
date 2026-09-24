@@ -1,4 +1,10 @@
-export default function WatersIcon() {
+interface IconProps {
+  className?: string
+}
+
+export default function WatersIcon({
+  className = 'h-9 sm:h-10 md:h-12 lg:h-13 w-auto max-w-[220px]',
+}: IconProps) {
   return (
     <svg
       version='1.1'
@@ -8,6 +14,7 @@ export default function WatersIcon() {
       y='0px'
       viewBox='0 0 171.1 43.1'
       fill='currentColor'
+      className={className}
     >
       <title>Waters Corporation</title>
       <g>
