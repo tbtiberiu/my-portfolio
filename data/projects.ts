@@ -50,7 +50,7 @@ export const projects: Project[] = [
   {
     title: 'Chess Snapshot - Chess Recognition & Analyzer',
     description:
-      'Computer vision system that recognizes physical chessboard states from photos. Combines a custom YOLOv8 detection model (mAP50 0.98), a Flask REST API with Stockfish engine evaluation, and a cross-platform Flutter app for game analysis and bot play.',
+      'Computer Vision system that recognizes physical chessboard states from photos. Combines a custom YOLOv8 detection model (mAP50 0.98), a Flask REST API with Stockfish engine evaluation, and a cross-platform Flutter app for game analysis and bot play.',
     tags: [
       'AI & Machine Learning',
       'Python · OpenCV · YOLOv8 · Flask · Flutter',

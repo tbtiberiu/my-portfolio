@@ -55,23 +55,22 @@ export default function AboutSection() {
             <span className='font-bold text-foreground dark:text-white'>
               Computer Science degree
             </span>{' '}
-            by creating a computer vision algorithm for real-time chess state
+            by creating a Computer Vision algorithm for real-time chess state
             recognition. Building on that foundation, I earned my{' '}
             <span className='font-bold text-foreground dark:text-white'>
               Master&apos;s degree in Advanced Techniques in Digital Imaging
               (TAID)
             </span>{' '}
-            at Politehnica Bucharest, specializing in machine learning and
-            computer vision.
+            at Politehnica Bucharest, specializing in Machine Learning and
+            Computer Vision.
           </p>
           <p>
-            In my current role at{' '}
+            Today, I bring that same curiosity to my work at{' '}
             <span className='font-bold text-foreground dark:text-white'>
               Société Générale
             </span>
-            , I work on scalable trading platforms and modern web interfaces. I
-            focus on writing clean, well-tested code, understanding end-to-end
-            architecture, and delivering software users can rely on.
+            , focusing on thoughtful engineering and building software that
+            lasts.
           </p>
           <p>
             Feel free to reach out. I&apos;m always excited to connect and

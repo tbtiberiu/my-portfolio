@@ -36,12 +36,12 @@ export default function ProfileSection() {
             TypeScript on the frontend.
           </p>
           <p>
-            Beyond enterprise work, I love building creative side projects:
-            interactive web apps, computer vision experiments, games, and
-            hackathon prototypes. I hold a Bachelor&apos;s in Computer Science
-            and a Master&apos;s in machine learning and computer vision from
-            Politehnica Bucharest. Lately, I&apos;ve been using AI-assisted
-            development workflows to move faster without cutting corners on
+            Outside of work, I love building creative side projects: interactive
+            web apps, Computer Vision experiments, games, and hackathon
+            prototypes. I hold a Bachelor&apos;s in Computer Science and a
+            Master&apos;s in Machine Learning and Computer Vision from
+            Politehnica Bucharest. I also enjoy exploring modern tooling, using
+            AI-assisted workflows to move faster without cutting corners on
             testing, code quality, or engineering judgment.
           </p>
         </div>
