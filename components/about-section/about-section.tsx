@@ -23,7 +23,7 @@ export default function AboutSection() {
             alt='Image with me coding at a hackathon'
             fill
             sizes='(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 25vw'
-            className='h-full object-cover object-left transition-transform duration-500 hover:scale-105'
+            className='h-full object-cover scale-[1.3] origin-[64%_26%] transition-transform duration-500 hover:scale-[1.35]'
           />
         </div>
         <div className='cursor-default w-full md:w-2/3 p-6 md:p-10 md:pb-12 flex flex-col justify-center leading-relaxed text-sm md:text-base font-light text-slate-700 dark:text-gray-300 space-y-4'>
