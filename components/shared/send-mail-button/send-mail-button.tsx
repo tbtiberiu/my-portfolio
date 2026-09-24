@@ -28,7 +28,7 @@ export default function SendMailButton({ title, mail }: ButtonProps) {
         </div>
       </div>
       <div
-        className='w-36 absolute bottom-0 right-0 -mr-10 z-10 hidden md:block pointer-events-none'
+        className='w-28 absolute bottom-0 right-0 -mr-8 z-10 hidden md:block pointer-events-none animate-plane-float'
         aria-hidden='true'
       >
         <SendMailIcon />
