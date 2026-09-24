@@ -36,12 +36,39 @@
 
   body {
     color: var(--color-foreground);
-    background: linear-gradient(
+    background-color: var(--color-background);
+    background-image: linear-gradient(
       180deg,
-      var(--color-background-start),
-      var(--color-background) 30% 100%
+      var(--color-background-start) 0%,
+      color-mix(
+          in srgb,
+          var(--color-background-start) 75%,
+          var(--color-background)
+        )
+        35%,
+      color-mix(
+          in srgb,
+          var(--color-background-start) 35%,
+          var(--color-background)
+        )
+        70%,
+      var(--color-background) 100%
     );
+    background-repeat: no-repeat;
+    background-size: 100% 760px;
     min-height: 100vh;
+  }
+
+  @media screen and (max-width: 1024px) {
+    body {
+      background-size: 100% 820px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    body {
+      background-size: 100% 880px;
+    }
   }
 
   .sticky-navbar {
@@ -116,7 +143,6 @@
 
   @media screen and (min-width: 1280px) {
     .sticky-navbar {
-      background: var(--color-background);
       padding-left: calc((100% - 1280px) / 2);
       padding-right: calc((100% - 1280px) / 2);
     }

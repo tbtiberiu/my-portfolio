@@ -8,7 +8,7 @@ export default function UpworkIcon({
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      viewBox='5.5 13.5 105.5 33.5'
+      viewBox='4.5 12.5 112 35'
       fill='currentColor'
       className={className}
     >

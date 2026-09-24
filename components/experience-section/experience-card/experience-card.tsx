@@ -98,37 +98,25 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         className={clsx(
           'cursor-pointer w-full overflow-hidden px-6 py-3.5 flex justify-between items-center rounded-xl transition-all ease-in-out duration-300 border',
           isOpen
-            ? 'cursor-collapse bg-primary text-white border-primary shadow-sm'
-            : 'cursor-expand bg-white/95 dark:bg-gray-900/80 backdrop-blur-sm border-slate-200 dark:border-gray-800 text-slate-900 dark:text-foreground hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-gray-800/80',
+            ? 'cursor-collapse bg-slate-50 dark:bg-gray-800/90 border-slate-300 dark:border-gray-700 text-slate-900 dark:text-white shadow-sm'
+            : 'cursor-expand bg-white/95 dark:bg-gray-900/80 backdrop-blur-sm border-slate-200 dark:border-gray-800 text-slate-900 dark:text-foreground hover:border-slate-300 dark:hover:border-gray-700 hover:bg-slate-50 dark:hover:bg-gray-800/80',
         )}
       >
         <div className='flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-left'>
-          <span className='font-normal text-sm md:text-base tracking-wide'>
+          <span className='font-medium text-sm md:text-base tracking-wide text-slate-900 dark:text-white'>
             {experienceInfo.title}
           </span>
-          <span
-            className={clsx(
-              'hidden sm:inline',
-              isOpen ? 'text-white/80' : 'text-slate-400 dark:text-gray-400',
-            )}
-          >
+          <span className='hidden sm:inline text-slate-400 dark:text-gray-400'>
             •
           </span>
-          <span
-            className={clsx(
-              'text-xs sm:text-base font-light',
-              isOpen ? 'text-white/90' : 'text-slate-600 dark:text-gray-400',
-            )}
-          >
+          <span className='text-xs sm:text-base font-normal text-slate-600 dark:text-gray-300'>
             {experienceInfo.company}
           </span>
         </div>
         <div
           className={clsx(
-            'w-5 h-5 transition-transform duration-300 flex-shrink-0 ml-4',
-            isOpen
-              ? 'rotate-180 text-white'
-              : 'text-slate-400 dark:text-gray-500',
+            'w-5 h-5 transition-transform duration-300 flex-shrink-0 ml-4 text-slate-400 dark:text-gray-400',
+            isOpen && 'rotate-180',
           )}
           aria-hidden='true'
         >
@@ -141,40 +129,40 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         className='overflow-hidden'
         style={defaultOpen ? undefined : { height: 0, opacity: 0 }}
       >
-        <div className='rounded-xl overflow-hidden bg-white/95 dark:bg-gray-900/90 border border-slate-200 dark:border-gray-800 shadow-sm mt-1.5 backdrop-blur-sm'>
+        <div className='rounded-xl overflow-hidden bg-white dark:bg-[#12161a] border border-slate-200 dark:border-gray-800/90 shadow-sm mt-1.5'>
           <div className='p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-6'>
             <div className='w-full md:w-[70%] flex-1 min-w-0 max-w-3xl'>
-              <div className='flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs sm:text-sm text-primary font-light mb-3'>
+              <div className='flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs sm:text-sm text-slate-600 dark:text-gray-400 font-normal mb-3'>
                 <div className='inline-flex items-center gap-1.5'>
                   <MapPinIcon
-                    className='w-4.5 h-4.5 flex-shrink-0 text-primary'
+                    className='w-4 h-4 flex-shrink-0 text-slate-400 dark:text-gray-500'
                     aria-hidden='true'
                   />
                   <span>{experienceInfo.location}</span>
                 </div>
                 <div className='inline-flex items-center gap-1.5'>
                   <ClockIcon
-                    className='w-4.5 h-4.5 flex-shrink-0 text-primary'
+                    className='w-4 h-4 flex-shrink-0 text-slate-400 dark:text-gray-500'
                     aria-hidden='true'
                   />
                   <span>{experienceInfo.dates}</span>
                 </div>
               </div>
 
-              <p className='text-sm sm:text-base mb-3 text-slate-700 dark:text-gray-300 font-light leading-relaxed'>
+              <p className='text-sm sm:text-base mb-3 text-slate-700 dark:text-gray-200 font-normal leading-relaxed'>
                 {experienceInfo.description}
               </p>
 
               {experienceInfo.highlights &&
                 experienceInfo.highlights.length > 0 && (
-                  <ul className='space-y-1.5 mb-4 text-xs sm:text-sm text-slate-700 dark:text-gray-300 font-light'>
+                  <ul className='space-y-1.5 mb-4 text-xs sm:text-sm text-slate-600 dark:text-gray-300 font-normal'>
                     {experienceInfo.highlights.map((item) => (
                       <li
                         key={item}
                         className='flex items-start gap-2 leading-relaxed'
                       >
                         <ChevronRightIcon
-                          className='w-3.5 h-3.5 text-primary mt-1 flex-shrink-0'
+                          className='w-3.5 h-3.5 text-primary/70 dark:text-sky-400/80 mt-1 flex-shrink-0'
                           aria-hidden='true'
                         />
                         <span>{item}</span>
@@ -187,7 +175,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
                 {experienceInfo.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className='text-xs font-medium bg-primary/10 text-primary dark:bg-primary/15 border border-primary/20 px-2.5 py-0.5 rounded-full'
+                    className='text-xs font-medium bg-slate-100 dark:bg-gray-800 text-slate-700 dark:text-gray-300 border border-slate-200 dark:border-gray-700/60 px-2.5 py-0.5 rounded-full'
                   >
                     {tech}
                   </span>

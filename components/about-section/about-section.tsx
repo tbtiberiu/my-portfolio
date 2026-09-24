@@ -30,32 +30,34 @@ export default function AboutSection() {
           <p>
             I discovered programming at the start of high school when a friend
             taught me my first lines of{' '}
-            <span className='text-foreground dark:text-white font-normal'>
+            <span className='font-bold text-foreground dark:text-white'>
               C++
             </span>{' '}
             code, along with the basics of{' '}
-            <span className='text-foreground dark:text-white font-normal'>
+            <span className='font-bold text-foreground dark:text-white'>
               HTML
             </span>{' '}
             and{' '}
-            <span className='text-foreground dark:text-white font-normal'>
+            <span className='font-bold text-foreground dark:text-white'>
               CSS
             </span>
             . That initial spark led me to develop a strong interest in{' '}
-            <span className='text-primary font-medium'>web development</span>.
-            In school, I quickly became skilled at solving algorithmic problems,
-            attended the PepinTeen coding bootcamp, and built hands-on personal
-            projects to understand systems from the ground up.
+            <span className='font-bold text-foreground dark:text-white'>
+              web development
+            </span>
+            . In school, I quickly became skilled at solving algorithmic
+            problems, attended the PepinTeen coding bootcamp, and built hands-on
+            personal projects to understand systems from the ground up.
           </p>
           <p>
             During university at Transilvania University of Brașov, I expanded
             across full-stack development, mobile, and automation, earning my{' '}
-            <span className='text-foreground dark:text-white font-normal'>
+            <span className='font-bold text-foreground dark:text-white'>
               Computer Science degree
             </span>{' '}
             by creating a computer vision algorithm for real-time chess state
             recognition. Building on that foundation, I earned my{' '}
-            <span className='text-foreground dark:text-white font-normal'>
+            <span className='font-bold text-foreground dark:text-white'>
               Master&apos;s degree in Advanced Techniques in Digital Imaging
               (TAID)
             </span>{' '}
@@ -64,12 +66,12 @@ export default function AboutSection() {
           </p>
           <p>
             In my current role at{' '}
-            <span className='text-foreground dark:text-white font-normal'>
+            <span className='font-bold text-foreground dark:text-white'>
               Société Générale
             </span>
             , I build high-availability trading systems and modern interfaces. I
             actively integrate{' '}
-            <span className='text-primary font-normal'>
+            <span className='font-bold text-foreground dark:text-white'>
               AI-assisted development workflows
             </span>{' '}
             to ship robust code faster while maintaining uncompromising
