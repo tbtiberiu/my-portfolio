@@ -61,23 +61,21 @@ export default function AboutSection() {
               Master&apos;s degree in Advanced Techniques in Digital Imaging
               (TAID)
             </span>{' '}
-            at National University of Science and Technology Politehnica
-            Bucharest.
+            at Politehnica Bucharest, specializing in machine learning and
+            computer vision.
           </p>
           <p>
             In my current role at{' '}
             <span className='font-bold text-foreground dark:text-white'>
               Société Générale
             </span>
-            , I build high-availability trading systems and modern interfaces. I
-            actively integrate{' '}
-            <span className='font-bold text-foreground dark:text-white'>
-              AI-assisted development workflows
-            </span>{' '}
-            to ship robust code faster while maintaining uncompromising
-            standards on automated testing and architecture. Feel free to reach
-            out—I&apos;m always excited to connect and collaborate on ambitious
-            technical challenges.
+            , I work on scalable trading platforms and modern web interfaces. I
+            focus on writing clean, well-tested code, understanding end-to-end
+            architecture, and delivering software users can rely on.
+          </p>
+          <p>
+            Feel free to reach out. I&apos;m always excited to connect and
+            discuss interesting technical challenges.
           </p>
         </div>
       </div>

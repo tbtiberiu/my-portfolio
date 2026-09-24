@@ -28,21 +28,21 @@ export default function ProfileSection() {
 
         <div className='mt-6 space-y-4 max-w-3xl text-slate-700 dark:text-gray-300 text-base sm:text-lg font-light leading-relaxed'>
           <p>
-            I build reliable, high-throughput software with Java and Spring Boot
-            on the backend, paired with modern React and TypeScript on the
-            frontend. Currently focused on financial trading architecture,
-            modular workspaces, and automated CI/CD pipelines, I thrive on
-            delivering resilient, end-to-end solutions.
+            I build reliable software, from responsive user interfaces to solid
+            backend services. With experience spanning frontend, backend, and
+            automated testing in enterprise environments, I have a clear sense
+            of how large systems fit together end-to-end. My core stack centers
+            on Java and Spring Boot on the backend, paired with React and
+            TypeScript on the frontend.
           </p>
           <p>
-            Beyond enterprise development, I build for fun: interactive games,
-            hackathon-winning algorithms, simulations, and intelligent web
-            applications. I hold a Master&apos;s degree in Advanced Techniques
-            in Digital Imaging (TAID) from National University of Science and
-            Technology Politehnica Bucharest, alongside a Bachelor&apos;s in
-            Computer Science. Lately, I have been focused on AI-assisted and
-            agentic development workflows—using modern tooling to accelerate
-            delivery while upholding rigorous software and testing standards.
+            Beyond enterprise work, I love building creative side projects:
+            interactive web apps, computer vision experiments, games, and
+            hackathon prototypes. I hold a Bachelor&apos;s in Computer Science
+            and a Master&apos;s in machine learning and computer vision from
+            Politehnica Bucharest. Lately, I&apos;ve been using AI-assisted
+            development workflows to move faster without cutting corners on
+            testing, code quality, or engineering judgment.
           </p>
         </div>
       </div>

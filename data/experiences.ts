@@ -7,13 +7,13 @@ export const experiences: ExperienceInfo[] = [
     location: 'Bucharest, Romania (Hybrid)',
     dates: 'February 2026 - Present',
     description:
-      'Driving full-stack enterprise software development across financial trading systems, focusing on Java/Spring Boot backend architecture and modern React workspace solutions.',
+      'Developing full-stack features for a financial trading platform, focusing primarily on Java and Spring Boot backend services alongside modern React trading interfaces.',
     highlights: [
-      'Architected the trading application new layout and workspace system using React and the Dockview library, implementing 8+ dynamic panel components.',
-      'Co-developed interactive in-chart trading mechanisms enabling direct order execution, position opening/closing, and take-profit/stop-loss management from live charts.',
-      'Engineered state persistence for user-configured filters, charts, and table layouts across sessions via session storage and backend APIs.',
-      'Contributed to the frontend migration from ExtJS to React, and established automated Jenkins CI/CD pipeline steps to eliminate manual deployment errors.',
-      'Maintained the Java & Spring Boot backend codebase, co-leading major release cycles with a strong focus on dependency updates and system stability.',
+      'Developed the application’s workspace and dockable layout system using React and Dockview, building 8+ dynamic panel components.',
+      'Co-developed in-chart trading features, allowing users to execute orders, manage positions, and adjust take-profit/stop-loss directly from live charts.',
+      'Implemented state persistence for user-configured filters, charts, and table layouts across sessions using browser storage and backend APIs.',
+      'Contributed to migrating legacy ExtJS components to React, and added automated Jenkins pipeline steps to eliminate manual deployment steps.',
+      'Maintained the Java & Spring Boot backend codebase and co-developed major release cycles focused on dependency updates, bug fixes, and system stability.',
     ],
     technologies: [
       'Java',
@@ -33,11 +33,11 @@ export const experiences: ExperienceInfo[] = [
     location: 'Bucharest, Romania (Hybrid)',
     dates: 'July 2025 - January 2026',
     description:
-      'Contributed to the core backend architecture of a high-throughput CFD trading platform on the Panther team, serving Tier-1 institutional brokers including Commerzbank.',
+      'Contributed to the backend of a large-scale CFD trading platform on the Panther team, used by institutional brokers including Commerzbank.',
     highlights: [
-      'Managed and optimized end-of-day (EOD) financial processing and database batch routines.',
-      'Implemented robust synchronization processes between internal servers, market maker price feeds, and web servers.',
-      'Collaborated closely with senior backend engineers and frontend teams to ensure high data integrity and minimal latency.',
+      'Maintained and optimized end-of-day (EOD) batch processing and database routines.',
+      'Implemented synchronization processes between internal servers, market maker price feeds, and frontend web servers.',
+      'Collaborated closely with senior backend engineers and frontend teams to ensure seamless data flow and high system reliability.',
     ],
     technologies: ['Java', 'Spring Boot', 'Linux', 'SQL', 'Git'],
   },
@@ -47,11 +47,11 @@ export const experiences: ExperienceInfo[] = [
     location: 'Bucharest, Romania (Hybrid)',
     dates: 'February 2025 - July 2025',
     description:
-      'Built and optimized React and React Native components for the Panther CFD trading application, prioritizing accessibility and user flow efficiency.',
+      'Built and optimized React and React Native components for the Panther CFD trading application, focusing on usability and accessibility.',
     highlights: [
-      'Revamped and streamlined the overall application flow, reducing key user action latency by up to 200ms.',
-      'Optimized client bundles, cutting production build size by ~12% while maintaining strict adherence to project deadlines.',
-      'Championed WCAG accessibility standards across mobile and web trading interfaces, earning praise from tech leads and clients.',
+      'Streamlined the application flow, reducing interaction latency on key user actions by up to 200ms.',
+      'Optimized client bundles to cut production build size by ~12% while consistently delivering on schedule.',
+      'Improved accessibility across mobile and web trading interfaces, earning positive feedback from tech leads, business analysts, and clients.',
     ],
     technologies: ['React', 'React Native', 'TypeScript', 'CSS', 'Git'],
   },
@@ -61,11 +61,11 @@ export const experiences: ExperienceInfo[] = [
     location: 'Remote',
     dates: 'February 2025 - May 2025',
     description:
-      'Designed and delivered four custom WordPress websites as a freelance designer and developer, creating tailored interfaces in Figma with bespoke branding.',
+      'Designed and delivered custom WordPress websites for freelance clients, creating tailored interfaces and branding in Figma.',
     highlights: [
-      'Crafted user-focused interfaces and interactive wireframes in Figma, including custom vector brand logos.',
-      'Built fully responsive, SEO-optimized WordPress websites with dynamic booking flows and live chat integrations.',
-      'Earned 100% 5-star ratings and positive client reviews for clear communication, high fidelity, and punctual delivery.',
+      'Designed user-friendly UI mockups and interactive wireframes in Figma, including custom logos.',
+      'Built responsive WordPress websites with integrated booking forms, contact flows, and live chat.',
+      'Earned consistent 5-star ratings and positive client feedback for clear communication and on-time delivery.',
     ],
     technologies: [
       'Figma',
@@ -82,11 +82,11 @@ export const experiences: ExperienceInfo[] = [
     location: 'Brasov, Romania (Remote)',
     dates: 'December 2023 - December 2024',
     description:
-      'Developed features and resolved performance bottlenecks across enterprise analytical software suites, including the Alliance iS HPLC System Kiosk, Console, and Method Editor apps.',
+      'Developed features and resolved performance bottlenecks across enterprise analytical software suites, including the Alliance iS HPLC System Kiosk, Console, and Method Editor applications.',
     highlights: [
-      'Implemented complex user stories, resolved defect backlogs, and reviewed pull requests across multiple Angular projects.',
+      'Implemented new features, resolved bugs, and reviewed pull requests across multiple Angular applications.',
       'Collaborated with UI/UX designers and backend engineers in daily standups, sprint planning, and retrospectives.',
-      'Troubleshot and resolved memory and render bottlenecks, ensuring optimal kiosk application speed and stability.',
+      'Troubleshot and resolved memory and rendering bottlenecks, ensuring optimal kiosk application speed and stability.',
     ],
     technologies: ['HTML', 'CSS', 'TypeScript', 'Angular', 'Git'],
   },
@@ -96,11 +96,11 @@ export const experiences: ExperienceInfo[] = [
     location: 'Brasov, Romania (Remote)',
     dates: 'December 2022 - December 2023',
     description:
-      'Engineered behavior-driven automated testing frameworks in C# and Python, with a strong emphasis on system reliability and diagnostics.',
+      'Developed automated testing suites in C# and Python, focusing on software reliability and diagnostic logging.',
     highlights: [
       'Built and maintained BDD test suites with MS Test, SpecFlow, and Python to validate chromatography software requirements.',
-      'Architected a major overhaul of the logging system for both instrument and emulator, boosting throughput and diagnostic readability.',
-      'Authored comprehensive documentation across Confluence and internal guides to support cross-team onboarding.',
+      'Overhauled the logging system for both the physical instrument and emulator, improving diagnostic clarity, maintainability, and event tracking.',
+      'Documented testing workflows and setups in Confluence and internal guides to support cross-team onboarding.',
     ],
     technologies: [
       'Python',
@@ -118,11 +118,11 @@ export const experiences: ExperienceInfo[] = [
     location: 'Brasov, Romania (Hybrid)',
     dates: 'August 2022 - November 2022',
     description:
-      'Acquired a strong foundation in full-stack development with React and ASP.NET Core APIs, practicing modern cloud infrastructure deployment.',
+      'Built a solid foundation in full-stack development with React and ASP.NET Core APIs, alongside cloud infrastructure and DevOps practices.',
     highlights: [
-      'Built responsive frontend components with React and interconnected them with ASP.NET Core backend endpoints.',
-      'Provisioned cloud infrastructure on Microsoft Azure using Terraform to deploy publicly accessible web applications.',
-      'Gained deep hands-on insight into Agile Scrum ceremonies, CI/CD pipelines, and DevOps best practices.',
+      'Built responsive frontend components with React and connected them to ASP.NET Core backend endpoints.',
+      'Provisioned cloud infrastructure on Microsoft Azure using Terraform to deploy and host web applications.',
+      'Gained hands-on experience with Agile Scrum ceremonies, CI/CD pipelines, and cloud deployment best practices.',
     ],
     technologies: [
       'JavaScript',

@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     title: "Dedal's Labyrinth - Maze Generator & Solver",
     description:
-      'Award-winning labyrinth path generation and shortest-path solver built during a 24-hour hackathon by UPB & SIE (securing 2nd place). Features a custom procedural maze generator, BFS shortest pathfinding algorithm, interactive React/TypeScript UI designed in Figma, and an ASP.NET Core 8 backend with MySQL and Entity Framework.',
+      'Labyrinth generator and shortest-path solver built during a 24-hour hackathon organized by Politehnica Bucharest and SIE (2nd place winner). Features procedural maze generation, BFS pathfinding, a responsive React/TypeScript UI designed in Figma, and an ASP.NET Core 8 backend with MySQL.',
     tags: ['Games', 'React · TypeScript · ASP.NET Core · MySQL · BFS'],
     categories: ['Games', 'Web Development'],
     year: '2024',
@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     title: 'DeForge-AI - AI-Generated Image Detector',
     description:
-      'Universal deepfake and synthetic image detector designed for generalization across unseen commercial generators. Combines a DINOv3 Vision Transformer with LoRA adaptation and a high-frequency SRM forensic CNN branch, achieving 94.66% accuracy on the AIGC benchmark and earning the maximum grade for a Master’s thesis.',
+      'AI image detector designed to spot visual deepfakes across unseen generative models. Combines a DINOv3 Vision Transformer with LoRA adaptation and a forensic CNN branch, achieving 94.66% accuracy on the AIGC benchmark and earning a 10/10 for my Master’s thesis.',
     tags: [
       'AI & Machine Learning',
       'PyTorch · Vision Transformers · CNN · LoRA',
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   {
     title: 'Nova Cars - Futuristic Cars Dealership',
     description:
-      'Nova App is a concept website showcasing futuristic concept cars, developed with Node.js, Express, Handlebars, and MySQL. It features user authentication, dynamic content rendering, and relational database integration. Deployed on Heroku, the project earned a perfect 10/10 score in Web Application Development.',
+      'Concept dealership website showcasing futuristic vehicles, developed with Node.js, Express, Handlebars, and MySQL. Includes user authentication, dynamic catalog rendering, and Heroku deployment, earning a 10/10 score in Web Application Development.',
     tags: [
       'Web Development',
       'Node.js · Express · Handlebars · MySQL · Heroku',
@@ -40,7 +40,7 @@ export const projects: Project[] = [
   {
     title: 'Blackjack - Interactive Card Game',
     description:
-      'Classic casino Blackjack game built with React.js on the frontend and an ASP.NET Core backend. Engineered with clean architecture and classic Gang of Four (GoF) design patterns to manage game state, deck shuffling, dealer rules, and player decision flows with high maintainability.',
+      'Interactive Blackjack game built with React on the frontend and ASP.NET Core on the backend. Implemented with clean architecture and design patterns to manage deck shuffling, dealer rules, and game state smoothly.',
     tags: ['Games', 'React · TypeScript · ASP.NET Core · C# · Design Patterns'],
     categories: ['Games', 'Web Development'],
     year: '2024',
@@ -50,7 +50,7 @@ export const projects: Project[] = [
   {
     title: 'Chess Snapshot - Chess Recognition & Analyzer',
     description:
-      'End-to-end chess recognition system that automates board state detection from real-world photos. Includes an object detection model trained with YOLOv8 & OpenCV (mAP50 0.98), a Flask REST API with Stockfish engine evaluation, and a cross-platform Flutter app for Windows and Android with local bot play and game analysis.',
+      'Computer vision system that recognizes physical chessboard states from photos. Combines a custom YOLOv8 detection model (mAP50 0.98), a Flask REST API with Stockfish engine evaluation, and a cross-platform Flutter app for game analysis and bot play.',
     tags: [
       'AI & Machine Learning',
       'Python · OpenCV · YOLOv8 · Flask · Flutter',
@@ -63,7 +63,7 @@ export const projects: Project[] = [
   {
     title: 'ARduino Simulation - Augmented Reality Circuit',
     description:
-      'Interactive mobile AR application developed in Unity with ARCore and C#. Simulates an operational Arduino microcontroller circuit in 3D space with an LED and interactive wiring, allowing users to physically connect wires, inspect the running circuit behavior, and read the embedded Arduino code.',
+      'Interactive mobile AR application built in Unity with ARCore and C#. Simulates an Arduino circuit in 3D space, allowing users to connect wires in augmented reality, inspect real-time circuit behavior, and view the underlying Arduino code.',
     tags: ['Games', 'Unity · ARCore · C# · Mobile AR · 3D Simulation'],
     categories: ['Games'],
     year: '2023',
@@ -73,7 +73,7 @@ export const projects: Project[] = [
   {
     title: 'Acme Shop - E-commerce Website Template',
     description:
-      'Dynamic e-commerce website template built with React and Redux, inspired by Webflow’s Biznus template. Features full product browsing, shopping cart state management, and client-side routing with React Router.',
+      'E-commerce website template built with React and Redux, inspired by Webflow’s Biznus design. Features product browsing, shopping cart state management, and client-side routing with React Router.',
     tags: ['Web Development', 'React · Redux · HTML · CSS · JavaScript'],
     categories: ['Web Development'],
     year: '2022',
@@ -83,7 +83,7 @@ export const projects: Project[] = [
   {
     title: 'John Doe Mountain - Birds Photo Gallery',
     description:
-      'Editorial web-based photo gallery showcase designed in Adobe XD and implemented with responsive HTML and Sass, featuring clean typography, grid layouts, and visual storytelling.',
+      'Responsive photo gallery showcase designed in Adobe XD and built with semantic HTML and Sass, focusing on typography, grid layouts, and visual presentation.',
     tags: ['Web Development', 'HTML · Sass · Adobe XD · Responsive Design'],
     categories: ['Web Development'],
     year: '2019',
