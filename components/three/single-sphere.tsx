@@ -6,7 +6,7 @@ import Sphere from './sphere'
 
 const SingleSphere = () => {
   return (
-    <div className='absolute -top-24 w-full h-[calc(100%+160px)] -z-20 pointer-events-none'>
+    <div className='absolute -top-[60px] w-full h-[calc(100%+160px)] -z-20 pointer-events-none'>
       <Canvas
         camera={{
           position: [0, 0, 11],
