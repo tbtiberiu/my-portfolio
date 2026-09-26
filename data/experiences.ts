@@ -9,7 +9,7 @@ export const experiences: ExperienceInfo[] = [
     description:
       'Developing full-stack features for a financial trading platform, focusing primarily on Java and Spring Boot backend services alongside modern React trading interfaces.',
     highlights: [
-      'Developed the application’s workspace and dockable layout system using React and Dockview, building 8+ dynamic panel components.',
+      "Developed the application's workspace and dockable layout system using React and Dockview, building 8+ dynamic panel components.",
       'Co-developed in-chart trading features, allowing users to execute orders, manage positions, and adjust take-profit/stop-loss directly from live charts.',
       'Implemented state persistence for user-configured filters, charts, and table layouts across sessions using browser storage and backend APIs.',
       'Contributed to migrating legacy ExtJS components to React, and added automated Jenkins pipeline steps to eliminate manual deployment steps.',
