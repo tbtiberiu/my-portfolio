@@ -51,7 +51,7 @@ export default function AboutSection() {
           </p>
           <p>
             During university at Transilvania University of Brașov, I expanded
-            across full-stack development, mobile, and automation, earning my{' '}
+            into full-stack development, mobile, and automation, earning my{' '}
             <span className='font-bold text-foreground dark:text-white'>
               Computer Science degree
             </span>{' '}
@@ -59,10 +59,9 @@ export default function AboutSection() {
             recognition. Building on that foundation, I earned my{' '}
             <span className='font-bold text-foreground dark:text-white'>
               Master&apos;s degree in Advanced Techniques in Digital Imaging
-              (TAID)
             </span>{' '}
-            at Politehnica Bucharest, specializing in Machine Learning and
-            Computer Vision.
+            at Politehnica University of Bucharest, specializing in Machine
+            Learning and Computer Vision.
           </p>
           <p>
             Today, I bring that same curiosity to my work at{' '}

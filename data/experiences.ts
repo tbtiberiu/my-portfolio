@@ -79,7 +79,7 @@ export const experiences: ExperienceInfo[] = [
   {
     title: 'Junior Frontend Developer',
     company: 'Waters Corporation',
-    location: 'Brasov, Romania (Remote)',
+    location: 'Brașov, Romania (Remote)',
     dates: 'December 2023 - December 2024',
     description:
       'Developed features and resolved performance bottlenecks across enterprise analytical software suites, including the Alliance iS HPLC System Kiosk, Console, and Method Editor applications.',
@@ -93,7 +93,7 @@ export const experiences: ExperienceInfo[] = [
   {
     title: 'Software Automation Intern',
     company: 'Waters Corporation',
-    location: 'Brasov, Romania (Remote)',
+    location: 'Brașov, Romania (Remote)',
     dates: 'December 2022 - December 2023',
     description:
       'Developed automated testing suites in C# and Python, focusing on software reliability and diagnostic logging.',
@@ -113,9 +113,9 @@ export const experiences: ExperienceInfo[] = [
     ],
   },
   {
-    title: 'Web Development Apprenticeship',
+    title: 'Web Development Apprentice',
     company: 'Endava',
-    location: 'Brasov, Romania (Hybrid)',
+    location: 'Brașov, Romania (Hybrid)',
     dates: 'August 2022 - November 2022',
     description:
       'Built a solid foundation in full-stack development with React and ASP.NET Core APIs, alongside cloud infrastructure and DevOps practices.',
