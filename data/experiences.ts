@@ -63,8 +63,8 @@ export const experiences: ExperienceInfo[] = [
     description:
       'Designed and delivered custom WordPress websites for freelance clients, creating tailored interfaces and branding in Figma.',
     highlights: [
-      'Designed user-friendly UI mockups and interactive wireframes in Figma, including custom logos.',
-      'Built responsive WordPress websites with integrated booking forms, contact flows, and live chat.',
+      'Designed and developed 4 client websites from concept to launch, creating UI mockups and prototypes in Figma alongside custom logos.',
+      'Built responsive websites with integrated booking forms, contact flows, and live chat.',
       'Earned consistent 5-star ratings and positive client feedback for clear communication and on-time delivery.',
     ],
     technologies: [
