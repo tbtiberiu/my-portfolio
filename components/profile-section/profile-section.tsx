@@ -16,7 +16,7 @@ export default function ProfileSection() {
         <p
           className={`${poppins.className} text-xl sm:text-2xl mt-2 font-light text-slate-700 dark:text-gray-300`}
         >
-          Full-Stack Software Developer
+          Software Developer
         </p>
 
         <div className='flex items-center mt-8 gap-2 text-sm text-slate-600 dark:text-gray-400 font-light'>
@@ -40,9 +40,9 @@ export default function ProfileSection() {
             web apps, Computer Vision experiments, games, and hackathon
             prototypes. I hold a Bachelor&apos;s in Computer Science and a
             Master&apos;s in Machine Learning and Computer Vision from
-            Politehnica Bucharest. I also enjoy exploring modern tooling, using
-            AI-assisted workflows to move faster without cutting corners on
-            testing, code quality, or engineering judgment.
+            Politehnica University of Bucharest. I also enjoy exploring modern
+            tooling, using AI-assisted workflows to move faster without cutting
+            corners on testing, code quality, or engineering judgment.
           </p>
         </div>
       </div>

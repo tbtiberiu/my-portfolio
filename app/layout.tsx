@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Tiberiu-Ioan Boșcan - Portfolio',
     description:
-      'Experienced Web Developer specializing in React, TypeScript, Java and Spring Boot. Passionate about building high-performance web applications.',
+      'Experienced Software Developer specializing in React, TypeScript, Java, and Spring Boot. Passionate about building high-performance web applications.',
     url: 'https://boscantiberiu.vercel.app',
     siteName: 'Tiberiu-Ioan Boșcan Portfolio',
     type: 'website',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Tiberiu-Ioan Boșcan - Portfolio',
     description:
-      'Web Developer skilled in React, TypeScript, Java and Spring Boot. Building high-performance, scalable applications.',
+      'Software Developer skilled in React, TypeScript, Java, and Spring Boot. Building high-performance, scalable applications.',
     images: ['https://boscantiberiu.vercel.app/og-icon.png'],
     creator: '@tiberiuboscan',
   },

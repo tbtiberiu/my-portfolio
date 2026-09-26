@@ -9,7 +9,7 @@ export const experiences: ExperienceInfo[] = [
     description:
       'Developing full-stack features for a financial trading platform, focusing primarily on Java and Spring Boot backend services alongside modern React trading interfaces.',
     highlights: [
-      'Developed the application’s workspace and dockable layout system using React and Dockview, building 8+ dynamic panel components.',
+      "Developed the application's workspace and dockable layout system using React and Dockview, building 8+ dynamic panel components.",
       'Co-developed in-chart trading features, allowing users to execute orders, manage positions, and adjust take-profit/stop-loss directly from live charts.',
       'Implemented state persistence for user-configured filters, charts, and table layouts across sessions using browser storage and backend APIs.',
       'Contributed to migrating legacy ExtJS components to React, and added automated Jenkins pipeline steps to eliminate manual deployment steps.',
@@ -63,8 +63,8 @@ export const experiences: ExperienceInfo[] = [
     description:
       'Designed and delivered custom WordPress websites for freelance clients, creating tailored interfaces and branding in Figma.',
     highlights: [
-      'Designed user-friendly UI mockups and interactive wireframes in Figma, including custom logos.',
-      'Built responsive WordPress websites with integrated booking forms, contact flows, and live chat.',
+      'Designed and developed 4 client websites from concept to launch, creating UI mockups and prototypes in Figma alongside custom logos.',
+      'Built responsive websites with integrated booking forms, contact flows, and live chat.',
       'Earned consistent 5-star ratings and positive client feedback for clear communication and on-time delivery.',
     ],
     technologies: [
@@ -79,7 +79,7 @@ export const experiences: ExperienceInfo[] = [
   {
     title: 'Junior Frontend Developer',
     company: 'Waters Corporation',
-    location: 'Brasov, Romania (Remote)',
+    location: 'Brașov, Romania (Remote)',
     dates: 'December 2023 - December 2024',
     description:
       'Developed features and resolved performance bottlenecks across enterprise analytical software suites, including the Alliance iS HPLC System Kiosk, Console, and Method Editor applications.',
@@ -93,7 +93,7 @@ export const experiences: ExperienceInfo[] = [
   {
     title: 'Software Automation Intern',
     company: 'Waters Corporation',
-    location: 'Brasov, Romania (Remote)',
+    location: 'Brașov, Romania (Remote)',
     dates: 'December 2022 - December 2023',
     description:
       'Developed automated testing suites in C# and Python, focusing on software reliability and diagnostic logging.',
@@ -113,9 +113,9 @@ export const experiences: ExperienceInfo[] = [
     ],
   },
   {
-    title: 'Web Development Apprenticeship',
+    title: 'Web Development Apprentice',
     company: 'Endava',
-    location: 'Brasov, Romania (Hybrid)',
+    location: 'Brașov, Romania (Hybrid)',
     dates: 'August 2022 - November 2022',
     description:
       'Built a solid foundation in full-stack development with React and ASP.NET Core APIs, alongside cloud infrastructure and DevOps practices.',

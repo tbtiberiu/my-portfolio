@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     title: "Dedal's Labyrinth - Maze Generator & Solver",
     description:
-      'Labyrinth generator and shortest-path solver built during a 24-hour hackathon organized by Politehnica Bucharest and SIE (2nd place winner). Features procedural maze generation, BFS pathfinding, a responsive React/TypeScript UI designed in Figma, and an ASP.NET Core 8 backend with MySQL.',
+      'Labyrinth generator and shortest-path solver built during a 24-hour hackathon organized by Politehnica University of Bucharest and SIE (Foreign Intelligence Service) (2nd place winner). Features procedural maze generation, BFS pathfinding, a responsive React/TypeScript UI designed in Figma, and an ASP.NET Core 8 backend with MySQL.',
     tags: ['Games', 'React · TypeScript · ASP.NET Core · MySQL · BFS'],
     categories: ['Games', 'Web Development'],
     year: '2024',
