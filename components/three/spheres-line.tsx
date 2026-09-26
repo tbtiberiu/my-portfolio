@@ -1,13 +1,19 @@
 'use client'
 
 import { Canvas, useFrame } from '@react-three/fiber'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { Group } from 'three'
 import Sphere from './sphere'
+import { isWebGLAvailable, WebGLErrorBoundary } from './webgl-guard'
 
 const SpheresLine = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const targetX = useRef(0)
+  const [canRender, setCanRender] = useState(false)
+
+  useEffect(() => {
+    setCanRender(isWebGLAvailable())
+  }, [])
 
   useEffect(() => {
     const updatePosition = () => {
@@ -31,21 +37,25 @@ const SpheresLine = () => {
     }
   }, [])
 
+  if (!canRender) return null
+
   return (
     <div
       ref={containerRef}
       className='spheres-line absolute w-full h-[850px] top-0 -z-20 -mt-72 pointer-events-none'
     >
-      <Canvas
-        camera={{
-          position: [0, 0, 10],
-          fov: 50,
-        }}
-      >
-        <ambientLight intensity={0.65} />
-        <directionalLight position={[-5, 5, 10]} intensity={1.2} />
-        <AnimatedSpheres targetX={targetX} />
-      </Canvas>
+      <WebGLErrorBoundary>
+        <Canvas
+          camera={{
+            position: [0, 0, 10],
+            fov: 50,
+          }}
+        >
+          <ambientLight intensity={0.65} />
+          <directionalLight position={[-5, 5, 10]} intensity={1.2} />
+          <AnimatedSpheres targetX={targetX} />
+        </Canvas>
+      </WebGLErrorBoundary>
     </div>
   )
 }
