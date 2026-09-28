@@ -28,22 +28,19 @@ export default function ProfileSection() {
 
         <div className='mt-6 space-y-4 max-w-3xl text-slate-700 dark:text-gray-300 text-base sm:text-lg font-light leading-relaxed'>
           <p>
-            I build reliable software, from responsive user interfaces to solid
-            backend services. With experience spanning frontend, backend, and
-            automated testing in enterprise environments, I have a clear sense
-            of how large systems fit together end-to-end. My core stack centers
-            on Java and Spring Boot on the backend, paired with React and
-            TypeScript on the frontend.
+            Software Developer with 3+ years of experience building software for
+            financial trading and analytical instrumentation. I work primarily
+            with Java and Spring Boot on backend services and React and
+            TypeScript on user interfaces, alongside automated testing and
+            CI/CD.
           </p>
           <p>
-            Outside of work, I love building creative side projects: interactive
-            web apps, Computer Vision experiments, games, and hackathon
-            prototypes. I hold a Bachelor's in Computer Science from
-            Transilvania University of Brașov and a Master's in Machine Learning
-            and Computer Vision from Politehnica University of Bucharest. I also
-            enjoy exploring modern tooling, using AI-assisted workflows to move
-            faster without cutting corners on testing, code quality, or
-            engineering judgment.
+            My projects include DeForge-AI, an AI-generated image detector;
+            Chess Snapshot, a chessboard recognition app; and Dedal's Labyrinth,
+            a second-place hackathon project. I hold a Bachelor's in Computer
+            Science from Transilvania University of Brașov and a Master's in
+            Advanced Techniques in Digital Imaging from Politehnica University
+            of Bucharest.
           </p>
         </div>
       </div>

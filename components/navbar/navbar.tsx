@@ -1,12 +1,15 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { MyLogo } from '../shared/icons'
 import NavLinks from './nav-links'
 import ThemeToggle from './theme-toggle'
 
 export default function Navbar() {
+  const pathname = usePathname()
+  const router = useRouter()
   const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
@@ -62,6 +65,36 @@ export default function Navbar() {
       >
         <Link
           href='/'
+          scroll
+          onClick={(event) => {
+            if (
+              event.defaultPrevented ||
+              event.button !== 0 ||
+              event.metaKey ||
+              event.ctrlKey ||
+              event.shiftKey ||
+              event.altKey
+            ) {
+              return
+            }
+
+            event.preventDefault()
+
+            if (pathname === '/') {
+              if (window.location.hash) {
+                window.history.pushState(null, '', '/')
+              }
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+              return
+            }
+
+            const root = document.documentElement
+            const previousScrollBehavior = root.style.scrollBehavior
+            root.style.scrollBehavior = 'auto'
+            window.scrollTo(0, 0)
+            root.style.scrollBehavior = previousScrollBehavior
+            router.push('/', { scroll: false })
+          }}
           data-cursor='logo'
           className='mx-2 w-10 text-foreground hidden sm:block transition-transform duration-200 hover:scale-105 cursor-pointer'
           aria-label='Home'

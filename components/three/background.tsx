@@ -1,6 +1,7 @@
 'use client'
 
 import { Canvas, useFrame } from '@react-three/fiber'
+import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import type { Group } from 'three'
 import Sphere from './sphere'
@@ -16,7 +17,7 @@ const Background = () => {
   if (!canRender) return null
 
   return (
-    <div className='absolute top-0 w-full h-[250vh] -z-10 hidden lg:block pointer-events-none'>
+    <div className='absolute top-0 w-full h-[250vh] -z-10 hidden lg:block pointer-events-none overflow-hidden'>
       <WebGLErrorBoundary>
         <Canvas
           camera={{
@@ -34,6 +35,8 @@ const Background = () => {
 }
 
 const Spheres = () => {
+  const pathname = usePathname()
+  const isResume = pathname === '/resume'
   const groupRef = useRef<Group>(null)
   const targetScrollY = useRef(0)
 
@@ -50,7 +53,7 @@ const Spheres = () => {
 
   useFrame((state) => {
     const group = groupRef.current
-    if (!group || group.children.length < 3) return
+    if (!group || group.children.length < 2) return
 
     const scrollY = targetScrollY.current
     const time = state.clock.getElapsedTime()
@@ -73,13 +76,15 @@ const Spheres = () => {
       s1.position.y += (targetY - s1.position.y) * 0.08
     }
 
-    // Sphere 2 (lower right transition sphere)
-    const s2 = group.children[2]
-    if (s2) {
-      const targetX = 4.0 - scrollY * 0.0005 + Math.sin(time * 0.3) * 0.2
-      const targetY = -6.0 + scrollY * 0.004 + Math.cos(time * 0.4) * 0.15
-      s2.position.x += (targetX - s2.position.x) * 0.08
-      s2.position.y += (targetY - s2.position.y) * 0.08
+    // Sphere 2 (lower right transition sphere): only on /resume
+    if (isResume && group.children.length >= 3) {
+      const s2 = group.children[2]
+      if (s2) {
+        const targetX = 4.0 - scrollY * 0.0005 + Math.sin(time * 0.3) * 0.2
+        const targetY = -6.0 + scrollY * 0.004 + Math.cos(time * 0.4) * 0.15
+        s2.position.x += (targetX - s2.position.x) * 0.08
+        s2.position.y += (targetY - s2.position.y) * 0.08
+      }
     }
   })
 
@@ -87,7 +92,7 @@ const Spheres = () => {
     <group ref={groupRef}>
       <Sphere position={[3.7, 4.8, 0]} scale={1.3} />
       <Sphere position={[1, 0, 0]} scale={1.7} />
-      <Sphere position={[4, -6, 0]} scale={2.7} />
+      {isResume && <Sphere position={[4, -6, 0]} scale={2.7} />}
     </group>
   )
 }

@@ -173,6 +173,17 @@ export default function Cursor() {
       })
     }
 
+    let scrollTicking = false
+    const onScroll = () => {
+      if (!hasMoved || scrollTicking) return
+      scrollTicking = true
+      requestAnimationFrame(() => {
+        const el = document.elementFromPoint(lastX, lastY) as HTMLElement | null
+        updateCursor(el)
+        scrollTicking = false
+      })
+    }
+
     const onMouseEnterWindow = () => {
       if (hasMoved) {
         gsap.to(cursorEl, { opacity: 1, duration: 0.2 })
@@ -187,6 +198,7 @@ export default function Cursor() {
     document.addEventListener('mouseover', onMouseOver, { passive: true })
     document.addEventListener('mouseout', onMouseOut, { passive: true })
     document.addEventListener('click', onClick, { passive: true })
+    window.addEventListener('scroll', onScroll, { passive: true })
     document.addEventListener('mouseenter', onMouseEnterWindow, {
       passive: true,
     })
@@ -199,6 +211,7 @@ export default function Cursor() {
       document.removeEventListener('mouseover', onMouseOver)
       document.removeEventListener('mouseout', onMouseOut)
       document.removeEventListener('click', onClick)
+      window.removeEventListener('scroll', onScroll)
       document.removeEventListener('mouseenter', onMouseEnterWindow)
       document.removeEventListener('mouseleave', onMouseLeaveWindow)
     }

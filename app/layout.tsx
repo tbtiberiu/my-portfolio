@@ -13,11 +13,10 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Tiberiu-Ioan Boșcan - Software Developer Portfolio',
   description:
-    'Software Developer at Société Générale specializing in Java, Spring Boot, React, and TypeScript. Building high-throughput enterprise systems, games, simulations, and intelligent web applications.',
+    'Software Developer with 3+ years of experience building financial trading and analytical software with Java, Spring Boot, React, and TypeScript.',
   keywords: [
     'Tiberiu-Ioan Boșcan',
     'Software Developer',
-    'Full Stack Developer',
     'Société Générale',
     'React',
     'TypeScript',
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Tiberiu-Ioan Boșcan - Portfolio',
     description:
-      'Experienced Software Developer specializing in React, TypeScript, Java, and Spring Boot. Passionate about building high-performance web applications.',
+      'Software Developer with 3+ years of experience in Java, Spring Boot, React, TypeScript, test automation, and computer vision.',
     url: 'https://boscantiberiu.vercel.app',
     siteName: 'Tiberiu-Ioan Boșcan Portfolio',
     type: 'website',
@@ -54,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Tiberiu-Ioan Boșcan - Portfolio',
     description:
-      'Software Developer skilled in React, TypeScript, Java, and Spring Boot. Building high-performance, scalable applications.',
+      'Software Developer with 3+ years of experience in Java, Spring Boot, React, and TypeScript.',
     images: ['https://boscantiberiu.vercel.app/og-icon.png'],
     creator: '@tbtiberiu',
   },

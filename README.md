@@ -45,7 +45,7 @@ Make sure you have the following installed:
 - **[TypeScript](https://www.typescriptlang.org/):** Strongly typed JavaScript for building scalable and maintainable applications.
 - **[Tailwind CSS v4](https://tailwindcss.com/):** Utility-first CSS framework for creating responsive and modern UI designs.
 - **[React Three Fiber](https://docs.pmnd.rs/react-three-fiber/) / [Three.js](https://threejs.org/):** 3D graphics library used to create interactive background spheres.
-- **[GSAP](https://greensock.com/gsap/):** High-performance animation library for smooth transitions and custom cursor effects.
+- **[GSAP](https://greensock.com/gsap/):** Animation library used for transitions and custom cursor effects.
 - **[next-themes](https://github.com/pacocoursey/next-themes):** Theme management for dark/light mode with system preference detection.
 - **[Heroicons](https://heroicons.com/):** SVG icon set used across the UI.
 - **[Biome](https://biomejs.dev/):** Fast formatter and linter for consistent, clean, and optimized code.
@@ -59,6 +59,7 @@ Make sure you have the following installed:
 - **3D Background:** Built using **React Three Fiber (Three.js)** for dynamic, visually engaging spheres.
 - **Smooth Animations:** Implemented with **GSAP** to create fluid transitions and a custom cursor effect.
 - **Project Filtering:** Browse projects by category (Web Development, Games, AI & Machine Learning).
+- **More Projects Archive:** Expand the archive to see additional projects and older work.
 - **Downloadable Resume:** One-click PDF resume download directly from the profile section.
 - **Clean Codebase:** Fully written in **TypeScript** and maintained with **Biome** for consistent formatting and linting.
 - **Modern UI/UX:** Minimal, elegant interface focused on readability and user engagement.

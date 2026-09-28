@@ -9,7 +9,7 @@ const SpheresLine = dynamic(() => import('@/components/three/spheres-line'))
 
 export default function Home() {
   return (
-    <main className='relative'>
+    <main className='relative overflow-x-clip'>
       <ProfileSection />
       <ProjectsSection />
       <div className='relative'>

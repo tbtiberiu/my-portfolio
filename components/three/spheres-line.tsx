@@ -42,7 +42,7 @@ const SpheresLine = () => {
   return (
     <div
       ref={containerRef}
-      className='spheres-line absolute w-full h-[850px] top-0 -z-20 -mt-72 pointer-events-none'
+      className='spheres-line absolute w-full h-[850px] top-0 -z-20 -mt-20 pointer-events-none overflow-hidden'
     >
       <WebGLErrorBoundary>
         <Canvas

@@ -7,13 +7,13 @@ export const experiences: ExperienceInfo[] = [
     location: 'Bucharest, Romania (Hybrid)',
     dates: 'February 2026 - Present',
     description:
-      'Developing full-stack features for a financial trading platform, focusing primarily on Java and Spring Boot backend services alongside modern React trading interfaces.',
+      'Developing features for a financial trading platform, focusing on Java and Spring Boot backend services alongside React and TypeScript interfaces.',
     highlights: [
       "Developed the application's workspace and dockable layout system using React and Dockview, building 8+ dynamic panel components.",
       'Co-developed in-chart trading features, allowing users to execute orders, manage positions, and adjust take-profit/stop-loss directly from live charts.',
       'Implemented state persistence for user-configured filters, charts, and table layouts across sessions using browser storage and backend APIs.',
-      'Contributed to migrating legacy ExtJS components to React, and added automated Jenkins pipeline steps to eliminate manual deployment steps.',
-      'Maintained the Java & Spring Boot backend codebase and co-developed major release cycles focused on dependency updates, bug fixes, and system stability.',
+      'Contributed to the ExtJS-to-React migration and added Jenkins pipeline stages for unit-test runs and deployment automation.',
+      'Maintained Java and Spring Boot backend services, reviewed code, and co-led quarterly releases covering security updates and stability fixes.',
     ],
     technologies: [
       'Java',
@@ -33,11 +33,11 @@ export const experiences: ExperienceInfo[] = [
     location: 'Bucharest, Romania (Hybrid)',
     dates: 'July 2025 - January 2026',
     description:
-      'Contributed to the backend of a large-scale CFD trading platform on the Panther team, used by institutional brokers including Commerzbank.',
+      'Contributed to backend services for the Panther CFD trading platform, used by institutional brokers including Commerzbank.',
     highlights: [
       'Maintained and optimized end-of-day (EOD) batch processing and database routines.',
       'Implemented synchronization processes between internal servers, market maker price feeds, and frontend web servers.',
-      'Collaborated closely with senior backend engineers and frontend teams to ensure seamless data flow and high system reliability.',
+      'Worked with backend engineers and frontend teams to troubleshoot data synchronization across services.',
     ],
     technologies: ['Java', 'Spring Boot', 'Linux', 'SQL', 'Git'],
   },
@@ -50,8 +50,8 @@ export const experiences: ExperienceInfo[] = [
       'Built and optimized React and React Native components for the Panther CFD trading application, focusing on usability and accessibility.',
     highlights: [
       'Streamlined the application flow, reducing interaction latency on key user actions by up to 200ms.',
-      'Optimized client bundles to cut production build size by ~12% while consistently delivering on schedule.',
-      'Improved accessibility across mobile and web trading interfaces, earning positive feedback from tech leads, business analysts, and clients.',
+      'Reduced production bundle size by about 12%.',
+      'Improved accessibility across mobile and web trading interfaces.',
     ],
     technologies: ['React', 'React Native', 'TypeScript', 'CSS', 'Git'],
   },
@@ -65,7 +65,7 @@ export const experiences: ExperienceInfo[] = [
     highlights: [
       'Designed and developed 4 client websites from concept to launch, creating UI mockups and prototypes in Figma alongside custom logos.',
       'Built responsive websites with integrated booking forms, contact flows, and live chat.',
-      'Earned consistent 5-star ratings and positive client feedback for clear communication and on-time delivery.',
+      'Earned five-star client ratings for clear communication and on-time delivery.',
     ],
     technologies: [
       'Figma',
@@ -86,7 +86,7 @@ export const experiences: ExperienceInfo[] = [
     highlights: [
       'Implemented new features, resolved bugs, and reviewed pull requests across multiple Angular applications.',
       'Collaborated with UI/UX designers and backend engineers in daily standups, sprint planning, and retrospectives.',
-      'Troubleshot and resolved memory and rendering bottlenecks, ensuring optimal kiosk application speed and stability.',
+      'Diagnosed and fixed memory leaks and rendering bottlenecks in the Alliance iS HPLC applications.',
     ],
     technologies: ['HTML', 'CSS', 'TypeScript', 'Angular', 'Git'],
   },
@@ -99,7 +99,7 @@ export const experiences: ExperienceInfo[] = [
       'Developed automated testing suites in C# and Python, focusing on software reliability and diagnostic logging.',
     highlights: [
       'Built and maintained BDD test suites with MS Test, SpecFlow, and Python to validate chromatography software requirements.',
-      'Overhauled the logging system for both the physical instrument and emulator, improving diagnostic clarity, maintainability, and event tracking.',
+      'Reworked diagnostic logging for physical instruments and emulators to make events easier to trace during troubleshooting.',
       'Documented testing workflows and setups in Confluence and internal guides to support cross-team onboarding.',
     ],
     technologies: [
@@ -118,7 +118,7 @@ export const experiences: ExperienceInfo[] = [
     location: 'Brașov, Romania (Hybrid)',
     dates: 'August 2022 - November 2022',
     description:
-      'Built a solid foundation in full-stack development with React and ASP.NET Core APIs, alongside cloud infrastructure and DevOps practices.',
+      'Built React interfaces and ASP.NET Core APIs, and used Azure, Terraform, and GitHub Actions for deployment workflows.',
     highlights: [
       'Built responsive frontend components with React and connected them to ASP.NET Core backend endpoints.',
       'Provisioned cloud infrastructure on Microsoft Azure using Terraform to deploy and host web applications.',

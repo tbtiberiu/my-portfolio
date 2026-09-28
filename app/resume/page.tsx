@@ -118,7 +118,7 @@ const sectionHeadingClass = `${poppins.className} mb-5 text-xl sm:text-2xl upper
 
 export default function ResumePage() {
   return (
-    <main className='relative z-10 mx-auto w-full max-w-5xl px-5 pb-20 pt-10 sm:pt-14'>
+    <main className='relative z-10 mx-auto w-full max-w-5xl px-5 pb-20 pt-10 sm:pt-14 overflow-x-clip'>
       <header className={`${cardClass} mb-6 p-6 sm:p-9`}>
         <p className='mb-2 text-sm uppercase tracking-[0.2em] text-primary'>
           Resume
@@ -159,11 +159,10 @@ export default function ResumePage() {
         </div>
 
         <p className='mt-6 max-w-4xl text-sm sm:text-base leading-relaxed text-slate-700 dark:text-gray-300'>
-          Software developer with 3+ years of experience across enterprise
-          financial platforms, analytical software, full-stack development, test
-          automation, and computer vision. I build on strong fundamentals,
-          choose tools pragmatically, and review AI-assisted code carefully. My
-          core stack is Java and Spring Boot alongside React and TypeScript.
+          Software Developer with 3+ years of experience building software for
+          financial trading and analytical instrumentation. My core stack is
+          Java and Spring Boot alongside React and TypeScript, with additional
+          experience in test automation, CI/CD, and computer vision.
         </p>
 
         <div className='mt-6 flex flex-wrap items-center gap-3'>
@@ -266,9 +265,11 @@ export default function ResumePage() {
                 <h3 className='font-semibold text-slate-900 dark:text-white'>
                   {project.title}
                 </h3>
-                <span className='shrink-0 text-sm text-slate-500 dark:text-gray-400'>
-                  {project.year}
-                </span>
+                {project.year && (
+                  <span className='shrink-0 text-sm text-slate-500 dark:text-gray-400'>
+                    {project.year}
+                  </span>
+                )}
               </div>
               <p className='mt-1 text-sm leading-relaxed text-slate-700 dark:text-gray-300'>
                 {project.description}
