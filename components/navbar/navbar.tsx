@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { MyLogo } from '../shared/icons'
 import NavLinks from './nav-links'
@@ -34,11 +35,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const handleLogoIconClick = () => {
-    window.history.replaceState(null, '', '/')
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
   return (
     <div
       className='sticky-navbar sticky top-0 items-center z-50 backdrop-blur-md'
@@ -64,16 +60,15 @@ export default function Navbar() {
         className='flex justify-between items-center w-full px-4 py-3.5 gap-4'
         aria-label='Main navigation'
       >
-        <button
-          type='button'
+        <Link
+          href='/'
           data-cursor='logo'
           className='mx-2 w-10 text-foreground hidden sm:block transition-transform duration-200 hover:scale-105 cursor-pointer'
-          onClick={handleLogoIconClick}
-          aria-label='Scroll to top'
+          aria-label='Home'
         >
           <MyLogo />
-        </button>
-        <div className='flex items-center gap-6 sm:gap-8 md:gap-10'>
+        </Link>
+        <div className='flex items-center gap-3 sm:gap-6 md:gap-10'>
           <NavLinks />
         </div>
         <div className='flex items-center mx-2' data-cursor='theme-toggle'>

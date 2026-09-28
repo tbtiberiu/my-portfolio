@@ -7,6 +7,7 @@ import {
   BriefcaseIcon,
   ChevronDownIcon,
   ChevronUpIcon,
+  DocumentTextIcon,
   EnvelopeIcon,
   FunnelIcon,
   IdentificationIcon,
@@ -30,6 +31,7 @@ const CURSOR_CLASSES = [
   'projects',
   'experience',
   'about',
+  'resume',
   'theme-toggle',
 ]
 
@@ -59,6 +61,8 @@ const getCursorIcon = (type: string): JSX.Element | null => {
       return <BriefcaseIcon className='w-full h-full' />
     case 'about':
       return <IdentificationIcon className='w-full h-full' />
+    case 'resume':
+      return <DocumentTextIcon className='w-full h-full' />
     case 'theme-toggle':
       return (
         <>

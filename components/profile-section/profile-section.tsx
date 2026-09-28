@@ -2,7 +2,7 @@ import { MapPinIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import { poppins } from '@/app/fonts'
 import { GithubIcon, LinkedinIcon } from '@/components/shared/icons'
-import DownloadButton from '../shared/download-button/download-button'
+import ResumeButton from '../shared/resume-button/resume-button'
 
 export default function ProfileSection() {
   return (
@@ -49,10 +49,7 @@ export default function ProfileSection() {
       </div>
 
       <div className='mt-8 relative z-10 flex flex-wrap items-center gap-4'>
-        <DownloadButton
-          title='Download Resume'
-          href='/Tiberiu-Ioan_Boscan_resume.pdf'
-        />
+        <ResumeButton title='View Resume' href='/resume' />
         <div className='flex items-center gap-2.5'>
           <Link
             href='https://github.com/tbtiberiu/'

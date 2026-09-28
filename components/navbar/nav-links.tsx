@@ -8,6 +8,7 @@ const links = [
   { name: 'Projects', href: '/#projects', cursorType: 'projects' },
   { name: 'Experience', href: '/#experience', cursorType: 'experience' },
   { name: 'About', href: '/#about', cursorType: 'about' },
+  { name: 'Resume', href: '/resume', cursorType: 'resume' },
 ]
 
 export default function NavLinks() {
