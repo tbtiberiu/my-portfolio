@@ -20,7 +20,7 @@ export default function AboutSection() {
         <div className='relative md:w-1/3 min-h-[300px] hidden md:block overflow-hidden'>
           <Image
             src='/images/about-me.jpg'
-            alt='Image with me coding at a hackathon'
+            alt='Tiberiu-Ioan Boșcan coding at a hackathon'
             fill
             sizes='(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 25vw'
             className='h-full object-cover scale-[1.3] origin-[64%_26%] transition-transform duration-500 hover:scale-[1.35]'
@@ -58,7 +58,7 @@ export default function AboutSection() {
             by creating a Computer Vision algorithm for real-time chess state
             recognition. Building on that foundation, I earned my{' '}
             <span className='font-bold text-foreground dark:text-white'>
-              Master&apos;s degree in Advanced Techniques in Digital Imaging
+              Master's degree in Advanced Techniques in Digital Imaging
             </span>{' '}
             at Politehnica University of Bucharest, specializing in Machine
             Learning and Computer Vision.
@@ -72,8 +72,8 @@ export default function AboutSection() {
             lasts.
           </p>
           <p>
-            Feel free to reach out. I&apos;m always excited to connect and
-            discuss interesting technical challenges.
+            Feel free to reach out. I'm always excited to connect and discuss
+            interesting technical challenges.
           </p>
         </div>
       </div>

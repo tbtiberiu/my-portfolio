@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     description:
       'Software Developer skilled in React, TypeScript, Java, and Spring Boot. Building high-performance, scalable applications.',
     images: ['https://boscantiberiu.vercel.app/og-icon.png'],
-    creator: '@tiberiuboscan',
+    creator: '@tbtiberiu',
   },
   alternates: {
     canonical: 'https://boscantiberiu.vercel.app',

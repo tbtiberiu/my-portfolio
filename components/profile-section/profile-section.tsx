@@ -38,11 +38,12 @@ export default function ProfileSection() {
           <p>
             Outside of work, I love building creative side projects: interactive
             web apps, Computer Vision experiments, games, and hackathon
-            prototypes. I hold a Bachelor&apos;s in Computer Science and a
-            Master&apos;s in Machine Learning and Computer Vision from
-            Politehnica University of Bucharest. I also enjoy exploring modern
-            tooling, using AI-assisted workflows to move faster without cutting
-            corners on testing, code quality, or engineering judgment.
+            prototypes. I hold a Bachelor's in Computer Science from
+            Transilvania University of Brașov and a Master's in Machine Learning
+            and Computer Vision from Politehnica University of Bucharest. I also
+            enjoy exploring modern tooling, using AI-assisted workflows to move
+            faster without cutting corners on testing, code quality, or
+            engineering judgment.
           </p>
         </div>
       </div>
