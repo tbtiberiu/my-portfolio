@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { poppins } from '@/app/fonts'
 import DownloadButton from '@/components/shared/download-button/download-button'
+import BuildFrame from '@/components/shared/scroll-build/build-frame'
 import { experiences } from '@/data/experiences'
 import { projects } from '@/data/projects'
 
@@ -113,26 +114,40 @@ const selectedProjects = selectedProjectTitles
   .filter((project) => project !== undefined)
 
 const cardClass =
-  'rounded-2xl border border-slate-200 dark:border-gray-800 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-sm'
+  'build-surface relative rounded-2xl border border-slate-200 dark:border-gray-800 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-sm'
 const sectionHeadingClass = `${poppins.className} mb-5 text-xl sm:text-2xl uppercase font-light tracking-wide text-foreground`
 
 export default function ResumePage() {
   return (
     <main className='relative z-10 mx-auto w-full max-w-5xl px-5 pb-20 pt-10 sm:pt-14 overflow-x-clip'>
-      <header className={`${cardClass} mb-6 p-6 sm:p-9`}>
-        <p className='mb-2 text-sm uppercase tracking-[0.2em] text-primary'>
+      <header
+        data-build='resume-header'
+        className={`${cardClass} mb-6 p-6 sm:p-9`}
+      >
+        <BuildFrame />
+        <p
+          data-build-item
+          className='mb-2 text-sm uppercase tracking-[0.2em] text-primary'
+        >
           Resume
         </p>
         <h1
+          data-build-item
           className={`${poppins.className} text-3xl sm:text-4xl lg:text-5xl font-light tracking-wide text-foreground`}
         >
           Tiberiu-Ioan Boșcan
         </h1>
-        <p className='mt-2 text-lg sm:text-xl text-slate-700 dark:text-gray-300'>
+        <p
+          data-build-item
+          className='mt-2 text-lg sm:text-xl text-slate-700 dark:text-gray-300'
+        >
           Software Developer
         </p>
 
-        <div className='mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-600 dark:text-gray-400'>
+        <div
+          data-build-item
+          className='mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-600 dark:text-gray-400'
+        >
           <span>Bucharest, Romania</span>
           <a
             className='hover:text-primary'
@@ -158,21 +173,24 @@ export default function ResumePage() {
           </a>
         </div>
 
-        <p className='mt-6 max-w-4xl text-sm sm:text-base leading-relaxed text-slate-700 dark:text-gray-300'>
+        <p
+          data-build-item
+          className='mt-6 max-w-4xl text-sm sm:text-base leading-relaxed text-slate-700 dark:text-gray-300'
+        >
           Software Developer with 3+ years of experience building software for
           financial trading and analytical instrumentation. My core stack is
           Java and Spring Boot alongside React and TypeScript, with additional
           experience in test automation, CI/CD, and computer vision.
         </p>
 
-        <div className='mt-6 flex flex-wrap items-center gap-3'>
+        <div data-build-item className='mt-6 flex flex-wrap items-center gap-3'>
           <DownloadButton
             title='Download PDF'
             href='/Tiberiu-Ioan_Boscan_resume.pdf'
           />
           <Link
             href='/#projects'
-            className='px-5 py-3 text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-primary transition-colors'
+            className='relative inline-flex px-5 py-3 text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-primary transition-colors'
           >
             View portfolio projects
           </Link>
@@ -180,16 +198,19 @@ export default function ResumePage() {
       </header>
 
       <section
+        data-build='resume-skills'
         className={`${cardClass} mb-6 p-6 sm:p-8`}
         aria-labelledby='skills'
       >
-        <h2 id='skills' className={sectionHeadingClass}>
+        <BuildFrame />
+        <h2 data-build-item id='skills' className={sectionHeadingClass}>
           Technical Skills
         </h2>
         <div className='space-y-4'>
           {skillGroups.map((group) => (
             <div
               key={group.name}
+              data-build-item
               className='grid gap-2 sm:grid-cols-[10rem_1fr] sm:gap-5'
             >
               <h3 className='text-sm font-semibold text-slate-800 dark:text-gray-200'>
@@ -211,16 +232,19 @@ export default function ResumePage() {
       </section>
 
       <section
+        data-build='resume-experience'
         className={`${cardClass} mb-6 p-6 sm:p-8`}
         aria-labelledby='experience'
       >
-        <h2 id='experience' className={sectionHeadingClass}>
+        <BuildFrame />
+        <h2 data-build-item id='experience' className={sectionHeadingClass}>
           Work Experience
         </h2>
         <div className='space-y-6'>
           {experiences.map((experience) => (
             <article
               key={`${experience.company}-${experience.title}`}
+              data-build-item
               className='border-l-2 border-primary/50 pl-4 sm:pl-5'
             >
               <div className='flex flex-col justify-between gap-1 sm:flex-row sm:gap-4'>
@@ -252,15 +276,17 @@ export default function ResumePage() {
       </section>
 
       <section
+        data-build='resume-projects'
         className={`${cardClass} mb-6 p-6 sm:p-8`}
         aria-labelledby='projects'
       >
-        <h2 id='projects' className={sectionHeadingClass}>
+        <BuildFrame />
+        <h2 data-build-item id='projects' className={sectionHeadingClass}>
           Selected Projects
         </h2>
         <div className='space-y-5'>
           {selectedProjects.map((project) => (
-            <article key={project.title}>
+            <article key={project.title} data-build-item>
               <div className='flex flex-col justify-between gap-1 sm:flex-row sm:gap-4'>
                 <h3 className='font-semibold text-slate-900 dark:text-white'>
                   {project.title}
@@ -291,15 +317,17 @@ export default function ResumePage() {
       </section>
 
       <section
+        data-build='resume-education'
         className={`${cardClass} mb-6 p-6 sm:p-8`}
         aria-labelledby='education'
       >
-        <h2 id='education' className={sectionHeadingClass}>
+        <BuildFrame />
+        <h2 data-build-item id='education' className={sectionHeadingClass}>
           Education
         </h2>
         <div className='space-y-5'>
           {education.map((item) => (
-            <article key={item.degree}>
+            <article key={item.degree} data-build-item>
               <div className='flex flex-col justify-between gap-1 sm:flex-row sm:gap-4'>
                 <div>
                   <h3 className='font-semibold text-slate-900 dark:text-white'>
@@ -322,14 +350,16 @@ export default function ResumePage() {
       </section>
 
       <section
+        data-build='resume-additional'
         className={`${cardClass} p-6 sm:p-8`}
         aria-labelledby='additional'
       >
-        <h2 id='additional' className={sectionHeadingClass}>
+        <BuildFrame />
+        <h2 data-build-item id='additional' className={sectionHeadingClass}>
           Additional Information
         </h2>
         <div className='grid gap-5 sm:grid-cols-2 lg:grid-cols-3'>
-          <div>
+          <div data-build-item>
             <h3 className='font-semibold text-slate-900 dark:text-white'>
               Certifications
             </h3>
@@ -341,7 +371,7 @@ export default function ResumePage() {
               <li>Meta Front-End Developer and related certificates (2025)</li>
             </ul>
           </div>
-          <div>
+          <div data-build-item>
             <h3 className='font-semibold text-slate-900 dark:text-white'>
               Languages
             </h3>
@@ -349,7 +379,7 @@ export default function ResumePage() {
               Romanian (native); English (full professional proficiency).
             </p>
           </div>
-          <div>
+          <div data-build-item>
             <h3 className='font-semibold text-slate-900 dark:text-white'>
               Awards
             </h3>

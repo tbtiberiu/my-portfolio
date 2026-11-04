@@ -4,6 +4,7 @@ import { MoonIcon, SunIcon } from '@heroicons/react/16/solid'
 import clsx from 'clsx'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import BuildFrame from '@/components/shared/scroll-build/build-frame'
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false)
@@ -23,9 +24,13 @@ export default function ThemeToggle() {
     <button
       type='button'
       aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+      data-build='theme-toggle'
+      data-build-button
+      data-build-enter='top-right'
       className='cursor-theme-toggle cursor-pointer relative w-16 h-8 flex items-center dark:bg-gray-900 bg-primary rounded-full p-1 transition-colors duration-200'
       onClick={toggleTheme}
     >
+      <BuildFrame button />
       <div className='w-6 text-white' aria-hidden='true'>
         <MoonIcon />
       </div>

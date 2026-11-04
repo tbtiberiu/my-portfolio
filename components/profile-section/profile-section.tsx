@@ -2,6 +2,7 @@ import { MapPinIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import { poppins } from '@/app/fonts'
 import { GithubIcon, LinkedinIcon } from '@/components/shared/icons'
+import BuildFrame from '@/components/shared/scroll-build/build-frame'
 import ResumeButton from '../shared/resume-button/resume-button'
 
 export default function ProfileSection() {
@@ -53,10 +54,7 @@ export default function ProfileSection() {
         </div>
       </div>
 
-      <div
-        data-build-item
-        className='mt-8 relative z-10 flex flex-wrap items-center gap-4'
-      >
+      <div className='mt-8 relative z-10 flex flex-wrap items-center gap-4'>
         <ResumeButton title='View Resume' href='/resume' />
         <div className='flex items-center gap-2.5'>
           <Link
@@ -65,8 +63,12 @@ export default function ProfileSection() {
             rel='noopener noreferrer'
             aria-label='GitHub Profile'
             data-cursor='github'
-            className='w-11 h-11 rounded-full border border-slate-300 dark:border-gray-800 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm text-slate-800 dark:text-gray-200 hover:text-primary hover:border-primary/50 flex items-center justify-center transition-all duration-200 hover:scale-105 shadow-sm'
+            data-build='profile-github'
+            data-build-button
+            data-build-enter='bottom-left'
+            className='relative w-11 h-11 rounded-full border border-slate-300 dark:border-gray-800 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm text-slate-800 dark:text-gray-200 hover:text-primary hover:border-primary/50 flex items-center justify-center transition-all duration-200 hover:scale-105 shadow-sm'
           >
+            <BuildFrame button />
             <div className='w-5 h-5'>
               <GithubIcon />
             </div>
@@ -77,8 +79,12 @@ export default function ProfileSection() {
             rel='noopener noreferrer'
             aria-label='LinkedIn Profile'
             data-cursor='linkedin'
-            className='w-11 h-11 rounded-full border border-slate-300 dark:border-gray-800 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm text-slate-800 dark:text-gray-200 hover:text-[#0077b5] hover:border-[#0077b5]/50 flex items-center justify-center transition-all duration-200 hover:scale-105 shadow-sm'
+            data-build='profile-linkedin'
+            data-build-button
+            data-build-enter='bottom-right'
+            className='relative w-11 h-11 rounded-full border border-slate-300 dark:border-gray-800 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm text-slate-800 dark:text-gray-200 hover:text-[#0077b5] hover:border-[#0077b5]/50 flex items-center justify-center transition-all duration-200 hover:scale-105 shadow-sm'
           >
+            <BuildFrame button />
             <div className='w-5 h-5'>
               <LinkedinIcon />
             </div>

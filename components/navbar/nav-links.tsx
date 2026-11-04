@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { poppins } from '@/app/fonts'
+import BuildFrame from '@/components/shared/scroll-build/build-frame'
 
 const links = [
   { name: 'Projects', href: '/#projects', cursorType: 'projects' },
@@ -70,11 +71,15 @@ export default function NavLinks() {
               window.scrollTo({ top: 0, behavior: 'smooth' })
             }}
             data-cursor={link.cursorType}
+            data-build={`nav-${link.name}`}
+            data-build-button
+            data-build-enter='top'
             className={clsx(
               poppins.className,
               'relative py-1 text-sm sm:text-base font-light uppercase tracking-widest text-slate-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-200',
             )}
           >
+            <BuildFrame button />
             <span>{link.name}</span>
           </Link>
         )

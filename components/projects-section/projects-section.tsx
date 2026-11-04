@@ -92,25 +92,29 @@ export default function ProjectsSection() {
         </div>
 
         <div
-          data-build-item
-          className='inline-flex items-center p-1 rounded-full bg-gray-200/60 dark:bg-gray-800/60 backdrop-blur-sm border border-gray-300/40 dark:border-gray-700/50 self-start sm:self-auto overflow-x-auto max-w-full'
+          data-build='project-filters'
+          data-build-button
+          className='relative self-start sm:self-auto max-w-full'
         >
-          {projectCategories.map((category) => (
-            <button
-              type='button'
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              aria-pressed={selectedCategory === category}
-              data-cursor='filter'
-              className={`cursor-pointer px-4 py-1.5 rounded-full text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
-                selectedCategory === category
-                  ? 'bg-primary text-white shadow-sm'
-                  : 'text-gray-600 dark:text-gray-400 hover:text-foreground hover:bg-black/5 dark:hover:bg-white/5'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
+          <BuildFrame button />
+          <div className='inline-flex items-center p-1 rounded-full bg-gray-200/60 dark:bg-gray-800/60 backdrop-blur-sm border border-gray-300/40 dark:border-gray-700/50 overflow-x-auto max-w-full'>
+            {projectCategories.map((category) => (
+              <button
+                type='button'
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                aria-pressed={selectedCategory === category}
+                data-cursor='filter'
+                className={`relative cursor-pointer px-4 py-1.5 rounded-full text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap ${
+                  selectedCategory === category
+                    ? 'bg-primary text-white shadow-sm'
+                    : 'text-gray-600 dark:text-gray-400 hover:text-foreground hover:bg-black/5 dark:hover:bg-white/5'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -135,13 +139,15 @@ export default function ProjectsSection() {
             aria-expanded={moreProjectsOpen}
             aria-controls='more-projects-list'
             data-cursor={moreProjectsOpen ? 'collapse' : 'expand'}
-            className={`cursor-pointer w-full px-5 py-4 sm:px-6 sm:py-5 flex justify-between items-center gap-4 transition-all duration-300 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
+            data-build='more-projects-toggle'
+            className={`build-surface relative cursor-pointer w-full px-5 py-4 sm:px-6 sm:py-5 flex justify-between items-center gap-4 transition-all duration-300 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
               moreProjectsOpen
                 ? 'bg-slate-50/80 dark:bg-gray-800/50 text-foreground'
                 : 'bg-transparent text-foreground hover:bg-slate-50/60 dark:hover:bg-gray-800/40'
             }`}
           >
-            <span>
+            <BuildFrame />
+            <span data-build-item>
               <span className='block font-semibold text-foreground'>
                 More projects ({filteredMoreProjects.length})
               </span>
@@ -149,7 +155,10 @@ export default function ProjectsSection() {
                 Earlier work and additional projects
               </span>
             </span>
-            <span className='flex shrink-0 items-center text-primary'>
+            <span
+              data-build-item
+              className='flex shrink-0 items-center text-primary'
+            >
               <span
                 className={`w-5 h-5 transition-transform duration-300 flex-shrink-0 text-slate-400 dark:text-gray-400 ${
                   moreProjectsOpen ? 'rotate-180' : ''
@@ -238,9 +247,10 @@ export default function ProjectsSection() {
                   type='button'
                   onClick={handleToggle}
                   data-cursor='collapse'
-                  className='cursor-pointer inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary py-1.5 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-gray-800/80 transition-colors'
+                  data-build='fewer-projects-toggle'
+                  className='relative cursor-pointer inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary py-1.5 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-gray-800/80 transition-colors'
                 >
-                  <span>Show fewer projects</span>
+                  <span data-build-item>Show fewer projects</span>
                   <ChevronUpIcon className='w-4 h-4' aria-hidden='true' />
                 </button>
               </div>

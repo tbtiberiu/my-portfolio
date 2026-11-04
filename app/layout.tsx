@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import { nunito } from '@/app/fonts'
 import Navbar from '@/components/navbar/navbar'
 import Cursor from '@/components/shared/cursor/cursor'
+import ScrollBuild from '@/components/shared/scroll-build/scroll-build'
 import SocialLinks from '@/components/social-links/social-links'
 
 const Background = dynamic(() => import('@/components/three/background'))
@@ -76,9 +77,11 @@ export default function RootLayout({
         <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
           <Cursor />
           <Background />
-          <Navbar />
-          <SocialLinks />
-          {children}
+          <ScrollBuild>
+            <Navbar />
+            <SocialLinks />
+            {children}
+          </ScrollBuild>
           <SpeedInsights />
         </ThemeProvider>
       </body>
