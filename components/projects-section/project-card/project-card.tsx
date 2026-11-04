@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import Image from 'next/image'
+import BuildFrame from '@/components/shared/scroll-build/build-frame'
 import type Project from '@/types/project'
 
 interface ProjectCardProps {
@@ -12,9 +13,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   priority = false,
 }) => {
   return (
-    <article className='group flex flex-col justify-between bg-white dark:bg-[#12161a] border border-slate-200 dark:border-gray-800/90 hover:border-primary/50 dark:hover:border-primary/40 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden'>
+    <article
+      data-build={`project-${project.title}`}
+      className='build-surface relative group flex flex-col justify-between bg-white dark:bg-[#12161a] border border-slate-200 dark:border-gray-800/90 hover:border-primary/50 dark:hover:border-primary/40 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden'
+    >
+      <BuildFrame />
       {project.image && (
-        <div className='relative h-52 md:h-56 overflow-hidden bg-slate-100 dark:bg-gray-800'>
+        <div
+          data-build-image
+          className='relative h-52 md:h-56 overflow-hidden bg-slate-100 dark:bg-gray-800'
+        >
           <Image
             src={project.image}
             alt={`${project.title} screenshot`}
@@ -27,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       )}
       <div className='flex flex-col justify-between p-6 flex-1'>
         <div>
-          <div className='flex flex-wrap gap-1.5 mb-3'>
+          <div data-build-item className='flex flex-wrap gap-1.5 mb-3'>
             {project.tags.map((tag, index) => (
               <span
                 key={tag}
@@ -42,14 +50,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               </span>
             ))}
           </div>
-          <h3 className='text-lg md:text-xl font-medium mb-2 text-foreground'>
+          <h3
+            data-build-item
+            className='text-lg md:text-xl font-medium mb-2 text-foreground'
+          >
             {project.title}
           </h3>
-          <p className='text-sm text-slate-600 dark:text-gray-300 font-normal leading-relaxed'>
+          <p
+            data-build-item
+            className='text-sm text-slate-600 dark:text-gray-300 font-normal leading-relaxed'
+          >
             {project.description}
           </p>
         </div>
-        <div className='mt-5 pt-3 border-t border-slate-100 dark:border-gray-800/80 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3'>
+        <div
+          data-build-item
+          className='mt-5 pt-3 border-t border-slate-100 dark:border-gray-800/80 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3'
+        >
           {project.year && (
             <span className='text-xs font-medium text-slate-500 dark:text-gray-400'>
               {project.year}

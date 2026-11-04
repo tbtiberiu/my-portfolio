@@ -8,8 +8,9 @@ const ExperienceSection: React.FC = () => {
       id='experience'
       className='lg:pt-24 pb-16 px-5 m-auto max-w-screen-xl md:pr-24 scroll-mt-24'
     >
-      <div className='mb-6'>
+      <div data-build='experience-heading' className='mb-6'>
         <h2
+          data-build-item
           className={`${poppins.className} text-3xl md:text-4xl uppercase font-light tracking-wide text-foreground`}
         >
           Experience

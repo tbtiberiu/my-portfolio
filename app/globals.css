@@ -177,3 +177,207 @@
     }
   }
 }
+
+.build-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0;
+}
+
+.build-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-image:
+    linear-gradient(
+      color-mix(in srgb, var(--color-primary) 15%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--color-primary) 15%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 24px 24px;
+}
+
+.build-frame svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.build-frame rect {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 1.5px;
+  stroke-dasharray: 0 0.25;
+  stroke-dashoffset: 0.125;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-build-state="pending"] [data-build-item] {
+    opacity: 0;
+  }
+
+  [data-build-state="pending"] [data-build-image] {
+    opacity: 0;
+  }
+
+  .build-surface[data-build-state="pending"] {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  [data-build-state="revealing"] [data-build-item] {
+    animation: build-ink 0.58s steps(24, end) both;
+    animation-delay: calc(0.12s + var(--build-order, 0) * 0.055s);
+  }
+
+  [data-build="profile"][data-build-state="revealing"] [data-build-item] {
+    animation-delay: calc(var(--build-order, 0) * 0.055s);
+  }
+
+  [data-build-state="revealing"] :is(h1, h2, h3) {
+    position: relative;
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  [data-build-state="revealing"] :is(h1, h2, h3)::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 5px;
+    pointer-events: none;
+    background:
+      linear-gradient(var(--color-primary), var(--color-primary)) left bottom /
+      100% 1px no-repeat,
+      repeating-linear-gradient(
+        90deg,
+        var(--color-primary) 0 1px,
+        transparent 1px 24px
+      );
+    transform-origin: left;
+    animation: build-guide 0.75s ease-out both;
+    animation-delay: calc(var(--build-order, 0) * 0.055s);
+  }
+
+  .build-surface[data-build-state="revealing"] {
+    animation: build-surface 0.45s ease-out 0.12s both;
+  }
+
+  [data-build-state="revealing"] .build-frame {
+    opacity: 1;
+  }
+
+  [data-build-state="revealing"] .build-frame::before {
+    animation: build-grid 0.85s ease-out both;
+  }
+
+  [data-build-state="revealing"] .build-frame rect {
+    animation: build-outline 0.9s ease-in-out both;
+  }
+
+  [data-build-state="revealing"] [data-build-image] {
+    mask-image:
+      linear-gradient(#000 0 0), linear-gradient(#000 0 0),
+      linear-gradient(#000 0 0), linear-gradient(#000 0 0),
+      linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+    mask-repeat: no-repeat;
+    mask-position:
+      0% 0%,
+      20% 100%,
+      40% 0%,
+      60% 100%,
+      80% 0%,
+      100% 100%;
+    animation: build-panels 0.78s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+  }
+
+  @keyframes build-ink {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+    85% {
+      clip-path: inset(0);
+    }
+    100% {
+      clip-path: none;
+    }
+  }
+
+  @keyframes build-surface {
+    from {
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  @keyframes build-outline {
+    0% {
+      stroke-dasharray: 0 0.25;
+      opacity: 1;
+    }
+    70% {
+      stroke-dasharray: 0.25 0;
+      opacity: 1;
+    }
+    100% {
+      stroke-dasharray: 0.25 0;
+      opacity: 0;
+    }
+  }
+
+  @keyframes build-panels {
+    from {
+      mask-size: calc(100% / 6 + 1px) 0%;
+    }
+    35% {
+      mask-size:
+        calc(100% / 6 + 1px) 85%,
+        calc(100% / 6 + 1px) 35%,
+        calc(100% / 6 + 1px) 5%,
+        calc(100% / 6 + 1px) 5%,
+        calc(100% / 6 + 1px) 35%,
+        calc(100% / 6 + 1px) 85%;
+    }
+    to {
+      mask-size: calc(100% / 6 + 1px) 100%;
+    }
+  }
+
+  @keyframes build-guide {
+    from {
+      transform: scaleX(0);
+      opacity: 1;
+    }
+    65% {
+      transform: scaleX(1);
+      opacity: 0.6;
+    }
+    to {
+      transform: scaleX(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes build-grid {
+    0%,
+    25% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}

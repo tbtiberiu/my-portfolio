@@ -12,6 +12,7 @@ import {
   UpworkIcon,
   WatersIcon,
 } from '@/components/shared/icons'
+import BuildFrame from '@/components/shared/scroll-build/build-frame'
 import type ExperienceInfo from '@/types/experience-info'
 
 interface ExperienceCardProps {
@@ -88,7 +89,11 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   }, [isOpen, defaultOpen])
 
   return (
-    <div className='mb-3 overflow-hidden'>
+    <div
+      data-build={`experience-${experienceInfo.company}-${experienceInfo.title}`}
+      className='relative mb-3 overflow-hidden'
+    >
+      <BuildFrame />
       <button
         type='button'
         onClick={() => setIsOpen(!isOpen)}
@@ -102,7 +107,10 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
             : 'cursor-expand bg-white/95 dark:bg-gray-900/80 backdrop-blur-sm border-slate-200 dark:border-gray-800 text-slate-900 dark:text-foreground hover:border-slate-300 dark:hover:border-gray-700 hover:bg-slate-50 dark:hover:bg-gray-800/80',
         )}
       >
-        <div className='flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-left'>
+        <div
+          data-build-item
+          className='flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-left'
+        >
           <span className='font-medium text-sm md:text-base tracking-wide text-slate-900 dark:text-white'>
             {experienceInfo.title}
           </span>
@@ -129,7 +137,10 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         className='overflow-hidden'
         style={defaultOpen ? undefined : { height: 0, opacity: 0 }}
       >
-        <div className='rounded-xl overflow-hidden bg-white dark:bg-[#12161a] border border-slate-200 dark:border-gray-800/90 shadow-sm mt-1.5'>
+        <div
+          data-build-item
+          className='rounded-xl overflow-hidden bg-white dark:bg-[#12161a] border border-slate-200 dark:border-gray-800/90 shadow-sm mt-1.5'
+        >
           <div className='p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-6'>
             <div className='w-full md:w-[70%] flex-1 min-w-0 max-w-3xl'>
               <div className='flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs sm:text-sm text-slate-600 dark:text-gray-400 font-normal mb-3'>

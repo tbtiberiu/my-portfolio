@@ -4,6 +4,7 @@ import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline'
 import { gsap } from 'gsap'
 import { useEffect, useRef, useState } from 'react'
 import { poppins } from '@/app/fonts'
+import BuildFrame from '@/components/shared/scroll-build/build-frame'
 import { moreProjects, projectCategories, projects } from '@/data/projects'
 import ProjectCard from './project-card/project-card'
 
@@ -78,8 +79,11 @@ export default function ProjectsSection() {
       id='projects'
       className='lg:pt-24 pb-24 px-5 m-auto max-w-screen-xl md:pr-24 scroll-mt-24'
     >
-      <div className='flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4'>
-        <div>
+      <div
+        data-build='projects-heading'
+        className='flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4'
+      >
+        <div data-build-item>
           <h2
             className={`${poppins.className} text-3xl md:text-4xl uppercase font-light tracking-wide text-foreground`}
           >
@@ -87,7 +91,10 @@ export default function ProjectsSection() {
           </h2>
         </div>
 
-        <div className='inline-flex items-center p-1 rounded-full bg-gray-200/60 dark:bg-gray-800/60 backdrop-blur-sm border border-gray-300/40 dark:border-gray-700/50 self-start sm:self-auto overflow-x-auto max-w-full'>
+        <div
+          data-build-item
+          className='inline-flex items-center p-1 rounded-full bg-gray-200/60 dark:bg-gray-800/60 backdrop-blur-sm border border-gray-300/40 dark:border-gray-700/50 self-start sm:self-auto overflow-x-auto max-w-full'
+        >
           {projectCategories.map((category) => (
             <button
               type='button'
@@ -164,10 +171,15 @@ export default function ProjectsSection() {
               {filteredMoreProjects.map((project) => (
                 <article
                   key={project.title}
-                  className='rounded-xl border border-slate-200 dark:border-gray-800/90 bg-slate-50/50 dark:bg-gray-900/60 hover:border-primary/40 dark:hover:border-primary/40 p-4 sm:p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-sm'
+                  data-build={`project-${project.title}`}
+                  className='build-surface relative rounded-xl border border-slate-200 dark:border-gray-800/90 bg-slate-50/50 dark:bg-gray-900/60 hover:border-primary/40 dark:hover:border-primary/40 p-4 sm:p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-sm'
                 >
+                  <BuildFrame />
                   <div>
-                    <div className='flex items-start justify-between gap-4'>
+                    <div
+                      data-build-item
+                      className='flex items-start justify-between gap-4'
+                    >
                       <h3 className='font-semibold text-foreground text-base'>
                         {project.title}
                       </h3>
@@ -177,14 +189,23 @@ export default function ProjectsSection() {
                         </span>
                       )}
                     </div>
-                    <p className='mt-2 text-sm leading-relaxed text-slate-600 dark:text-gray-300 font-normal'>
+                    <p
+                      data-build-item
+                      className='mt-2 text-sm leading-relaxed text-slate-600 dark:text-gray-300 font-normal'
+                    >
                       {project.description}
                     </p>
-                    <p className='mt-2.5 text-xs text-slate-500 dark:text-gray-400'>
+                    <p
+                      data-build-item
+                      className='mt-2.5 text-xs text-slate-500 dark:text-gray-400'
+                    >
                       {project.tags.join(' · ')}
                     </p>
                   </div>
-                  <div className='mt-4 pt-3 border-t border-slate-200/60 dark:border-gray-800/60 flex flex-wrap items-center gap-x-4 gap-y-2'>
+                  <div
+                    data-build-item
+                    className='mt-4 pt-3 border-t border-slate-200/60 dark:border-gray-800/60 flex flex-wrap items-center gap-x-4 gap-y-2'
+                  >
                     <a
                       href={project.github}
                       target='_blank'
