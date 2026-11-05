@@ -1,4 +1,5 @@
 import { useId } from 'react'
+import { orbPalette } from './orb-palette.js'
 
 export default function ThemeOrb() {
   const id = useId()
@@ -13,11 +14,19 @@ export default function ThemeOrb() {
         focusable='false'
       >
         <defs>
-          <radialGradient id={`${id}-surface`} cx='30%' cy='25%' r='80%'>
-            <stop className='theme-orb-highlight' />
-            <stop offset='.5' className='theme-orb-midtone' />
-            <stop offset='1' className='theme-orb-shadow' />
-          </radialGradient>
+          {Object.entries(orbPalette).map(([theme, palette]) => (
+            <radialGradient
+              key={theme}
+              id={`${id}-${theme}-surface`}
+              cx='30%'
+              cy='25%'
+              r='80%'
+            >
+              <stop stopColor={palette.highlight} />
+              <stop offset='.5' stopColor={palette.midtone} />
+              <stop offset='1' stopColor={palette.shadow} />
+            </radialGradient>
+          ))}
           <mask id={`${id}-phase`} maskUnits='userSpaceOnUse'>
             <rect width='640' height='640' fill='white' />
             <circle
@@ -37,7 +46,20 @@ export default function ThemeOrb() {
           />
         </g>
         <g mask={`url(#${id}-phase)`}>
-          <circle cx='320' cy='320' r='208' fill={`url(#${id}-surface)`} />
+          <circle
+            className='theme-orb-surface theme-orb-surface-light'
+            cx='320'
+            cy='320'
+            r='208'
+            fill={`url(#${id}-light-surface)`}
+          />
+          <circle
+            className='theme-orb-surface theme-orb-surface-dark'
+            cx='320'
+            cy='320'
+            r='208'
+            fill={`url(#${id}-dark-surface)`}
+          />
           <circle
             cx='320'
             cy='320'
@@ -45,7 +67,7 @@ export default function ThemeOrb() {
             stroke='white'
             strokeOpacity='.12'
           />
-          <g className='theme-orb-craters' fill='#0f4fab'>
+          <g className='theme-orb-craters' fill={orbPalette.dark.shadow}>
             <circle cx='180' cy='360' r='22' />
             <circle cx='225' cy='430' r='12' />
             <circle cx='290' cy='478' r='17' />

@@ -29,8 +29,6 @@ const Background = () => {
               fov: 50,
             }}
           >
-            <ambientLight intensity={1.4} />
-            <directionalLight position={[-5, 5, 10]} intensity={1.0} />
             <Spheres />
           </Canvas>
         </WebGLErrorBoundary>
@@ -86,8 +84,8 @@ const Spheres = () => {
 
   return (
     <group ref={groupRef}>
-      <Sphere position={[1, 0, 0]} scale={1.7} />
-      {isResume && <Sphere position={[4, -6, 0]} scale={2.7} />}
+      <Sphere planet='earth' position={[1, 0, 0]} scale={1.7} />
+      {isResume && <Sphere planet='mars' position={[4, -6, 0]} scale={1.4} />}
     </group>
   )
 }
