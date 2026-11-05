@@ -12,7 +12,7 @@ Welcome to my portfolio! I'm a **Software Developer** passionate about building 
 
 Make sure you have the following installed:
 
-- [Node.js](https://nodejs.org/) (v18 or later)
+- [Node.js](https://nodejs.org/) (v26.x)
 - npm or yarn
 
 ### Installation
