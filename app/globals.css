@@ -217,16 +217,7 @@
 .build-frame rect {
   fill: none;
   stroke: var(--color-primary);
-  stroke-width: 1.5px;
-  stroke-dasharray: 0 0.25;
-  stroke-dashoffset: 0.125;
-}
-
-.build-frame:not(.build-button-frame) rect {
-  x: 1px;
-  y: 1px;
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
+  stroke-width: 1px;
 }
 
 span.build-frame.build-button-frame {
@@ -243,12 +234,6 @@ span.build-frame.build-button-frame {
 
 .build-button-frame svg {
   overflow: visible;
-}
-
-.build-frame.build-button-frame svg rect {
-  stroke-width: 1px;
-  stroke-dasharray: none;
-  animation: none;
 }
 
 .build-button-frame > span {
@@ -419,10 +404,6 @@ span.build-frame.build-button-frame {
     animation: build-grid 0.35s ease-out both;
   }
 
-  [data-build-state="revealing"] > .build-frame rect {
-    animation: build-outline 0.35s ease-in-out both;
-  }
-
   [data-build-state="revealing"] [data-build-image] {
     mask-image:
       linear-gradient(#000 0 0), linear-gradient(#000 0 0),
@@ -453,32 +434,9 @@ span.build-frame.build-button-frame {
 
   @keyframes build-surface {
     from {
-      transform: translate(
-          calc(var(--build-x) * var(--build-distance)),
-          calc(var(--build-y) * var(--build-distance))
-        )
-        scale(var(--build-scale));
       background-color: transparent;
       border-color: transparent;
       box-shadow: none;
-    }
-    to {
-      transform: translate(0) scale(1);
-    }
-  }
-
-  @keyframes build-outline {
-    0% {
-      stroke-dasharray: 0 0.25;
-      opacity: 1;
-    }
-    70% {
-      stroke-dasharray: 0.25 0;
-      opacity: 1;
-    }
-    100% {
-      stroke-dasharray: 0.25 0;
-      opacity: 0;
     }
   }
 
