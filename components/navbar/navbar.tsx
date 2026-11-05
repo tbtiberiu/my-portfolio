@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import BuildFrame from '@/components/shared/scroll-build/build-frame'
 import { MyLogo } from '../shared/icons'
 import NavLinks from './nav-links'
 import ThemeToggle from './theme-toggle'
@@ -96,9 +97,13 @@ export default function Navbar() {
             router.push('/', { scroll: false })
           }}
           data-cursor='logo'
-          className='mx-2 w-10 text-foreground hidden sm:block transition-transform duration-200 hover:scale-105 cursor-pointer'
+          data-build='nav-home'
+          data-build-button
+          data-build-enter='top-left'
+          className='relative mx-2 w-10 text-foreground hidden sm:block transition-transform duration-200 hover:scale-105 cursor-pointer'
           aria-label='Home'
         >
+          <BuildFrame button />
           <MyLogo />
         </Link>
         <div className='flex items-center gap-3 sm:gap-6 md:gap-10'>

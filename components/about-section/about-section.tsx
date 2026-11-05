@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { poppins } from '@/app/fonts'
+import BuildFrame from '@/components/shared/scroll-build/build-frame'
 import SendMailButton from '../shared/send-mail-button/send-mail-button'
 
 export default function AboutSection() {
@@ -8,16 +9,24 @@ export default function AboutSection() {
       id='about'
       className='relative py-10 px-5 m-auto max-w-screen-xl lg:mt-10 mb-20 pb-16 scroll-mt-24'
     >
-      <div className='mb-6'>
+      <div data-build='about-heading' className='mb-6'>
         <h2
+          data-build-item
           className={`${poppins.className} text-3xl md:text-4xl uppercase font-light tracking-wide text-foreground`}
         >
           About Me
         </h2>
       </div>
 
-      <div className='relative bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-2xl flex flex-col md:flex-row shadow-sm border border-slate-200 dark:border-gray-800 md:mr-20 overflow-hidden'>
-        <div className='relative md:w-1/3 min-h-[300px] hidden md:block overflow-hidden'>
+      <div
+        data-build='about-content'
+        className='build-surface relative bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-2xl flex flex-col md:flex-row shadow-sm border border-slate-200 dark:border-gray-800 md:mr-20 overflow-hidden'
+      >
+        <BuildFrame />
+        <div
+          data-build-image
+          className='relative md:w-1/3 min-h-[300px] hidden md:block overflow-hidden'
+        >
           <Image
             src='/images/about-me.jpg'
             alt='Tiberiu-Ioan Boșcan coding at a hackathon'
@@ -27,7 +36,7 @@ export default function AboutSection() {
           />
         </div>
         <div className='cursor-default w-full md:w-2/3 p-6 md:p-10 md:pb-12 flex flex-col justify-center leading-relaxed text-sm md:text-base font-light text-slate-700 dark:text-gray-300 space-y-4'>
-          <p>
+          <p data-build-item>
             I discovered programming at the start of high school when a friend
             taught me my first lines of{' '}
             <span className='font-bold text-foreground dark:text-white'>
@@ -49,7 +58,7 @@ export default function AboutSection() {
             problems, attended the PepinTeen coding bootcamp, and built hands-on
             personal projects to understand systems from the ground up.
           </p>
-          <p>
+          <p data-build-item>
             During university at Transilvania University of Brașov, I expanded
             into full-stack development, mobile, and automation, earning my{' '}
             <span className='font-bold text-foreground dark:text-white'>
@@ -63,7 +72,7 @@ export default function AboutSection() {
             at Politehnica University of Bucharest, specializing in Machine
             Learning and Computer Vision.
           </p>
-          <p>
+          <p data-build-item>
             Today, I bring that same curiosity to my work at{' '}
             <span className='font-bold text-foreground dark:text-white'>
               Société Générale
@@ -71,7 +80,7 @@ export default function AboutSection() {
             , focusing on thoughtful engineering and building software that
             lasts.
           </p>
-          <p>
+          <p data-build-item>
             Feel free to reach out. I'm always excited to connect and discuss
             interesting technical challenges.
           </p>

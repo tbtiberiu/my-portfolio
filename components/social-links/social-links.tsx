@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { GithubIcon, LinkedinIcon } from '@/components/shared/icons'
+import BuildFrame from '@/components/shared/scroll-build/build-frame'
 
 export default function SocialLinks() {
   return (
@@ -18,9 +19,13 @@ export default function SocialLinks() {
           rel='noopener noreferrer'
           aria-label='LinkedIn Profile'
           data-cursor='linkedin'
-          className='block rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
+          data-build='sidebar-linkedin'
+          data-build-button
+          data-build-enter='right'
+          className='relative block rounded-full transition-transform duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
         >
-          <div className='w-13 h-13 sm:w-14 sm:h-14 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border border-slate-300 dark:border-gray-800 text-slate-800 dark:text-gray-200 hover:text-white hover:bg-[#0077b5] dark:hover:bg-[#0077b5] hover:border-[#0077b5] rounded-full flex justify-center items-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-md hover:shadow-lg cursor-pointer group'>
+          <BuildFrame button />
+          <div className='w-13 h-13 sm:w-14 sm:h-14 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border border-slate-300 dark:border-gray-800 text-slate-800 dark:text-gray-200 hover:text-white hover:bg-[#0077b5] dark:hover:bg-[#0077b5] hover:border-[#0077b5] rounded-full flex justify-center items-center transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer group'>
             <div
               className='w-6 h-6 sm:w-7 sm:h-7 transition-colors'
               aria-hidden='true'
@@ -35,9 +40,13 @@ export default function SocialLinks() {
           rel='noopener noreferrer'
           aria-label='GitHub Profile'
           data-cursor='github'
-          className='block rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
+          data-build='sidebar-github'
+          data-build-button
+          data-build-enter='right'
+          className='relative block rounded-full transition-transform duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
         >
-          <div className='w-13 h-13 sm:w-14 sm:h-14 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border border-slate-300 dark:border-gray-800 text-slate-800 dark:text-gray-200 hover:text-white hover:bg-gray-900 dark:hover:bg-black hover:border-gray-900 dark:hover:border-black rounded-full flex justify-center items-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-md hover:shadow-lg cursor-pointer group'>
+          <BuildFrame button />
+          <div className='w-13 h-13 sm:w-14 sm:h-14 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border border-slate-300 dark:border-gray-800 text-slate-800 dark:text-gray-200 hover:text-white hover:bg-gray-900 dark:hover:bg-black hover:border-gray-900 dark:hover:border-black rounded-full flex justify-center items-center transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer group'>
             <div
               className='w-6 h-6 sm:w-7 sm:h-7 transition-colors'
               aria-hidden='true'

@@ -51,8 +51,6 @@ const SpheresLine = () => {
             fov: 50,
           }}
         >
-          <ambientLight intensity={0.65} />
-          <directionalLight position={[-5, 5, 10]} intensity={1.2} />
           <AnimatedSpheres targetX={targetX} />
         </Canvas>
       </WebGLErrorBoundary>
@@ -80,14 +78,13 @@ const AnimatedSpheres: React.FC<{
 
   return (
     <group ref={groupRef}>
-      <Sphere position={[-12, 1.5, 0]} scale={0.9} />
-      <Sphere position={[-7, -2.2, 0]} scale={0.75} />
-      <Sphere position={[-4, 2.8, 0]} scale={0.95} />
-      <Sphere position={[2, 3.5, 0]} scale={1.1} />
-      <Sphere position={[7, 1.2, 0]} scale={0.85} />
-      <Sphere position={[11, -2.0, 0]} scale={1.05} />
-      <Sphere position={[15, 2.2, 0]} scale={0.9} />
-      <Sphere position={[18, -1.5, 0]} scale={1.1} />
+      <Sphere planet='mercury' position={[-12, 1.5, 0]} scale={0.55} />
+      <Sphere planet='venus' position={[-7, -2.2, 0]} scale={0.75} />
+      <Sphere planet='mars' position={[-4, 2.8, 0]} scale={0.7} />
+      <Sphere planet='jupiter' position={[2, 3.5, 0]} scale={1.25} />
+      <Sphere planet='saturn' position={[7, 1.2, 0]} scale={0.95} />
+      <Sphere planet='uranus' position={[11, -2.0, 0]} scale={0.85} />
+      <Sphere planet='neptune' position={[15, 2.2, 0]} scale={0.9} />
     </group>
   )
 }

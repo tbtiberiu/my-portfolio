@@ -23,8 +23,6 @@ const SingleSphere = () => {
             fov: 50,
           }}
         >
-          <ambientLight intensity={1.4} />
-          <directionalLight position={[-5, 5, 10]} intensity={1.0} />
           <Spheres />
         </Canvas>
       </WebGLErrorBoundary>
@@ -43,7 +41,7 @@ const Spheres: React.FC = () => {
 
   return (
     <group ref={groupRef}>
-      <Sphere position={[0, 0, 0]} scale={3.6} />
+      <Sphere planet='pluto' position={[0, 0, 0]} scale={3.6} />
     </group>
   )
 }
