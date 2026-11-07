@@ -31,8 +31,15 @@ export const projects: Project[] = [
     title: "Dedal's Labyrinth - Maze Generator & Solver",
     description:
       'Second-place hackathon project: a React and TypeScript maze interface with procedural generation and BFS shortest-path visualization, backed by ASP.NET Core and MySQL.',
-    tags: ['Games', 'React', 'TypeScript', 'ASP.NET Core', 'MySQL', 'BFS'],
-    categories: ['Games', 'Web Development'],
+    tags: [
+      'Web Development',
+      'React',
+      'TypeScript',
+      'ASP.NET Core',
+      'MySQL',
+      'BFS',
+    ],
+    categories: ['Web Development'],
     year: '2024',
     image: '/images/dedal-labyrinth.png',
     github: 'https://github.com/tbtiberiu/DedalLabyrinth',
@@ -138,6 +145,5 @@ export const moreProjects: Project[] = [
 export const projectCategories = [
   'All',
   'Web Development',
-  'Games',
   'AI & Machine Learning',
 ] as const
